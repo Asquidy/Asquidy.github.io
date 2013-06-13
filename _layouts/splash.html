@@ -4,28 +4,42 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>Andrey Fradkin - {{ page.title }}</title>
-    <link type="text/css" rel="stylesheet" media="all" href="/default.css"/>
+    
+    <link type="text/css" rel="stylesheet" media="all" href="/css/bootstrap.css"/>
+    <link type="text/css" rel="stylesheet" media="all" href="/css/default.css"/>
     <link rel="alternate" type="application/atom+xml" title="Feed" href="/posts/atom.xml" />
+  
   </head>
   <body>
-    <h4 id="name">
-        <span class="primary-name">
-            <a href="/">Andrey Fradkin</a>
-            <a href="/posts">Posts</a> 
-            <a href="/posts">Posts</a>
-        </span>
-    </h4>
-    {{ content }}
-    
-    <div id="footer">
-      <a href="/concepts">Concepts</a> &mdash;
-      <span class="nav_current">Notes</span> &mdash;
-      <a href="https://github.com/maxhodak/">Code</a> &copy; 2013
+    <div class="container">
+      <div class="row">
+        <div class="span7">
+          <h4 id="name">
+              <span class="primary-name">
+                  <a href="/">Andrey Fradkin</a> 
+              </span>
+          </h4>
+        </div>
+        <div class="span3 offset2">
+          <div class="linksbox">
+            <a href="/about">About</a> &mdash;
+            <a href="/cv">CV</a>
+          </div>
+        </div>
+      </div>
+
+      {{ content }}
+      
+      <div id="footer">
+        <a href="/concepts">Concepts</a> &mdash;
+        <span class="nav_current">Notes</span> &mdash;
+        <a href="https://github.com/maxhodak/">Code</a> &copy; 2013
+      </div>
     </div>
-    
+
     <script type="text/javascript">
       var _gaq = _gaq || [];
-
+      
       // TODO: Google Analytics
       // _gaq.push(['_setAccount', 'UA-5833716-2']);
       _gaq.push(['_trackPageview']);

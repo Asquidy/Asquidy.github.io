@@ -1,0 +1,19 @@
+body {
+    font-family: Georgia, serif;
+    font-size: 16px;
+    line-height: 18px;
+    -webkit-text-size-adjust: 100%; /* Stops Mobile Safari from auto-adjusting font-sizes */
+
+}
+
+#name {
+    font-size: 32px;
+    font-style:oblique;
+    line-height: 36px;
+    margin-bottom: 25px;
+}
+
+.linksbox{
+    margin-top: 10px;
+    line-height: 36px;
+}

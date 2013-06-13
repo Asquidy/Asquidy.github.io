@@ -1,0 +1,14 @@
+--- 
+layout: splash
+---
+
+Hi I'm Andrey
+
+<ul>
+
+{% for project in site.categories.projects %}
+  <li> <p> {{ project.date | date_to_string }} &raquo; <a href="{{ project.url }}">{{ project.title }}</a><p></li>
+{% endfor %}
+
+</ul>
+
