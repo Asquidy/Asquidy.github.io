@@ -78,7 +78,7 @@ body {
     font-size: 18px;
     line-height: 24px;
     width: 500px;
-    text-indent:0px;
+    text-align: justify;
 } 
 
 #about{
