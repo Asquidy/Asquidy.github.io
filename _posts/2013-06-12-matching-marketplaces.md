@@ -6,7 +6,8 @@ category: projects
 
 Abstract / [Non-Technical Overview] (#NTO) / Slides / Code / Data
 
-{:#NTO}
+{:#NTO} Non-Technical Overview:
+
 People search for jobs, houses, spouses and many other goods. Theory tells us that markets where search is important can work very differently than standard competitive marketplaces. However, it has been difficult to test theories of search in practice because search behavior is typically unobserved. I use a novel dataset of over a million search spells in an online marketplace to study search frictions.
 
 My paper makes three distinct contributions. First, I demonstrate how to use detailed data on communication and transactions in marketplaces in order to quantify the welfare cost of search frictions. Second, I apply my methodology to Airbnb, a large and growing online marketplace for accommodations. Lastly, I study how a market designer can create a set of policies to improve market outcomes.
