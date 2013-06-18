@@ -1,5 +1,5 @@
 body {
-    font-family: Georgia, serif;
+    font-family: Baskerville, serif;
     font-size: 18px;
     line-height: 20px;
     -webkit-text-size-adjust: 100%; /* Stops Mobile Safari from auto-adjusting font-sizes */
@@ -27,11 +27,11 @@ body {
 }
 
 .content-header{
-    font-size: 20px;
-    line-height: 22px;
+    font-size: 22px;
+    line-height: 26px;
     margin-bottom: 10px;
-    font-style: ;
     padding-top: 20px;
+    font-style: bold;
 }
 
 #footer{
@@ -75,15 +75,15 @@ body {
 }
 
 #post{
-    font-size: 18px;
-    line-height: 24px;
-    width: 500px;
-    text-align: justify;
+    font-size: 16px;
+    line-height: 22px;
+    width: 600px;
+    text-align: left;
 } 
 
 #about{
-    font-size: 18px;
-    line-height: 24px;
+    font-size: 16px;
+    line-height: 20px;
     width: 500px;
     text-indent:0px;
 }
