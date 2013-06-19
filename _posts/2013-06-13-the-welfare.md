@@ -5,9 +5,7 @@ description: ""
 category: projects
 tags: [research]
 ---
-
-The Impact of Unemployment Insurance on Job Search: Evidence from Google Search Data
-(\w [Douglas Bernheim] (http://www.stanford.edu/~bernheim/) and Igor Popov)
+**The Welfare Economics of Default Options: A Theoretical and Empirical Analysis of 401(k) Plans** (\w [Douglas Bernheim] (http://www.stanford.edu/~bernheim/) and Igor Popov)
 
 [Abstract](#abstract) / Non-Technical Overview / Slides / Code / Data
 

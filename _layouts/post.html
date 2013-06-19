@@ -35,8 +35,9 @@
       </div>
 
       <div id="post">
+        {% if page.category != "projects" %}
             <div class="content-header"> {{ page.title }} </div>
-
+        {% endif %}
             {{ content }}
       </div>
 
