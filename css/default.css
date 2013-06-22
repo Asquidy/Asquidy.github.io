@@ -97,3 +97,8 @@ body {
     width: 500px;
     text-indent:0px;
 }
+
+.front_date{
+    font-size: 12px;
+    text-align: inline;
+}

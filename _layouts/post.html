@@ -37,6 +37,18 @@
       <div id="post">
         {% if page.category != "projects" %}
             <div class="content-header"> {{ page.title }} </div>
+
+            {% if post.modified-date == nil %}
+            <div class="front_date"> {{ page.date | date: "%B %Y" }} </div>
+
+            {% else %}
+            <div class="front_date"> First Posted:  {{ post.modified-date | date: "%B %Y" }} </div>
+            <div class="front_date"> {{ page.date | date: "%B %Y" }} </div>
+
+            {% endif %}
+        <p> 
+        </p>
+
         {% endif %}
             {{ content }}
       </div>
