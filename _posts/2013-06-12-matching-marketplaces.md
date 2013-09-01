@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Matching in Marketplaces
-category: projects
+category: research
 ---
 
 **Matching in Marketplaces**

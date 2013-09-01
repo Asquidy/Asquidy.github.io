@@ -2,7 +2,7 @@
 layout: post
 title: "The Welfare Economics of Default Options"
 description: ""
-category: projects
+category: research
 tags: research
 ---
 [The Welfare Economics of Default Options in 401(k) Plans](/assets/Defaults-and-Welfare-July-2013.pdf) (\w [Douglas Bernheim] (http://www.stanford.edu/~bernheim/) and Igor Popov)

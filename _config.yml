@@ -17,13 +17,13 @@ show_drafts: nil
 limit_posts: 0
 pygments:    true
 
-relative_permalinks: true
+relative_permalinks: false
 
 permalink:     date
 paginate_path: 'page:num'
 
 markdown:      maruku
-markdown_ext:  markdown,mkd,mkdn,md
+markdown_ext:  md, markdown
 textile_ext:   textile
 
 excerpt_separator: "\n\n"
@@ -55,7 +55,7 @@ kramdown:
   footnote_nr: 1
   entity_output: as_char
   toc_levels: 1..6
-  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  smart_quotes: lsquo, rsquo,ldquo,rdquo
   use_coderay: false
 
   coderay:
@@ -73,9 +73,9 @@ permalink: /:categories/:year/:month/:day/:title
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
 auto: true
 
-markdown: kramdown
-kramdown:
-  use_coderay: true
+## markdown: kramdown
+## kramdown:
+##   use_coderay: true
 
 pygments: true
 
@@ -147,11 +147,11 @@ JB :
   # Some JB helpers refer to these paths; change them here if needed.
   #
 
-  archive_path: /archive.html
-  categories_path : /categories.html
-  tags_path : /tags.html
-  atom_path : /atom.xml
-  rss_path : /rss.xml
+  ### archive_path: /archive.html
+  ### categories_path : /categories.html
+  ### tags_path : /tags.html
+  ### atom_path : /atom.xml
+  ### rss_path : /rss.xml
 
   # Settings for comments helper
   # Set 'provider' to the comment provider you want to use.
@@ -160,7 +160,6 @@ JB :
   comments :
     provider : disqus
     disqus : andreyfradkin
-      short_name : 
   #  livefyre :
   #    site_id : 123
   #  intensedebate :
