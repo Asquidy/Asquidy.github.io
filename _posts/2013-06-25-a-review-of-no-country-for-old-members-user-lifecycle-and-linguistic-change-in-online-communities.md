@@ -38,7 +38,7 @@ They then posit two competing hypotheses for the increasing distance between the
 
 The authors use three measures of linguistic change within a user \(See Figure Below\). First, they use [Jaccard similarity](http://en.wikipedia.org/wiki/Jaccard_index)[^4] to show that self-similarity of language increases initially and then stabilizes. They suggest that this fact implies that the user stops adapting the language of the community. They then show that user's language at the beginning of site entry is similar to the language used in the future of the site as opposed to the past. Lastly, they show that new users are more likely than old users to use verbal "innovations". 
 
-![Measures of linguistic change]({{ site.url }}/assets/linguistic_evolution.png)
+![Measures of linguistic change](/assets/linguistic_evolution.png)
 
 The authors fail to consider the most obvious hypothesis to explain the data, that the demographics of users change over time and that different demographics use different words. The demographic hypothesis can explain the above facts because a gradual demographic change will look like an evolution of language use within the platform. On average, at the beginning of entry, a user's demographic has not yet achieved its maximum representation in the platform. Thus, what looks like language adoption and innovation can really be the addition of similar users over time.
 
