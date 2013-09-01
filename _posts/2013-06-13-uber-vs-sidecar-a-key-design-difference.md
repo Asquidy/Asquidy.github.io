@@ -3,7 +3,7 @@ layout: post
 title: "Uber vs Sidecar: A key design difference"
 description: ""
 category: posts 
-tags: []
+tags: 
 post_type: Thought
 ---
 

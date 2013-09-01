@@ -3,7 +3,7 @@ layout: post
 title: "The (Possible) Shift Toward A Self Employed Economy"
 description: ""
 category: 
-tags: []
+tags: 
 post_type: Thought
 publish: False
 ---

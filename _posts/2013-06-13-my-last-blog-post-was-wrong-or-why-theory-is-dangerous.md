@@ -3,7 +3,7 @@ layout: post
 title: "Why Theory is Dangerous: An Example"
 description: ""
 category: posts
-tags: []
+tags: 
 post_type: Thought
 ---
 In my last blog post I claimed that taxi dispatchers faced a fundamental problem: how much to favor drivers versus passengers.  The specific example that I gave was that drivers do not want to give rides to far off destinations because they would have to waste gas to get back to the city center and because it would take them longer to find the next ride. I claimed that Uber, the mobile app for hailing cabs, favored its passengers because it did not ask them were they were going before they requested a ride.
