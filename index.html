@@ -10,7 +10,7 @@ Research Projects:
 </div> 
 
 <ul>
-{% assign sorted_projects = site.categories.research  | sort:"name" %}
+{% assign sorted_projects = site.categories.research %}
 {% for item in sorted_projects %}
   <li style="list-style: none;"> <p><a href="{{ item.url }}">{{ item.title }}</a><p></li>
 {% endfor %}
