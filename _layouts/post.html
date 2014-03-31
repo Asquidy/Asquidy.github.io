@@ -37,6 +37,7 @@
       <div id="post">
         {% if page.category != "research" %}
             <div class="content-header"> {{ page.title }} </div>
+            <div class="content-subtitle"> {{ page.subtitle }} </div>
 
             {% if post.modified-date == nil %}
             <div class="front_date"> {{ page.date | date: "%B %Y" }} </div>
