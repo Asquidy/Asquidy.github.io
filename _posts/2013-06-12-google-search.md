@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Job Search
+title: The Impact of Unemployment Insurance on Job Search: Evidence from Google Search Data
 category: research
 ---
 
