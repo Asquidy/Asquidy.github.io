@@ -22,7 +22,7 @@ relative_permalinks: false
 permalink:     date
 paginate_path: 'page:num'
 
-markdown:      maruku
+markdown: kramdown
 markdown_ext:  md, markdown
 textile_ext:   textile
 
