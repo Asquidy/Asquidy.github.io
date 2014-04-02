@@ -8,7 +8,7 @@ category: research
 
 [Abstract](#Abstract) / Non-Technical Overview / Slides / Code / Data
 
-<a name="abstract"></a> 
+<a name="Abstract"></a> 
 Abstract:
 
 I use data on searches and transactions in an online marketplace to study market efficiency and policy. The setting of this paper is Airbnb, a prominent online marketplace for short-term housing rentals. Search on Airbnb occurs when potential guests browse the website and send inquiries to hosts about rooms to stay in. Despite the substantial reduction in search costs due to the marketplace, only 48% of searchers who send inquiries eventually match. I build a model with directed search, heterogeneous agents, and multiple search frictions to explain the match rate and other market outcomes. I find that if search frictions were removed, there would be 78% more matches in the marketplace and that host revenue would increase by $62 per searcher. I study a set of policies aimed at reducing the impact of search frictions. Of these policies, personalized ranking algorithms lead to the biggest improvement, increasing the match rate by 7% over the baseline. Finally, I show that the A/B search experiments favored by internet platforms overstate these improvements by more than 90%. 

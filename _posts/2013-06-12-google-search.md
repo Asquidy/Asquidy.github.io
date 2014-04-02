@@ -4,7 +4,7 @@ title: The Impact of Unemployment Insurance on Job Search
 category: research
 ---
 
-[The Impact of Unemployment Insurance on Job Search: Evidence from Google Search Data](/assets/FullTexasJobSearch.pdf)(\w [Scott Baker](https://sites.google.com/site/srbaker/))
+[The Impact of Unemployment Insurance on Job Search: Evidence from Google Search Data](/assets/FullTexasJobSearch.pdf) (\w [Scott Baker](https://sites.google.com/site/srbaker/))
 
 [Abstract](#abstract) / Non-Technical Overview / Slides / Code / Data
 
