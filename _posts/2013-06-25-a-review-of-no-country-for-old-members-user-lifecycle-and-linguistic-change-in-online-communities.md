@@ -7,9 +7,9 @@ tags:
 post_type: review
 ---
 
-Language is fundamentally important for understanding human behavior. Yet describing language in useful ways is difficult due to the complexity and size of textual data. Natural language processing (NLP), the field at the intersection of linguistics and computer science has made great progress in describing and classifying textual data. Nonetheless, applications of natural language processing with convincing causal implications are few[^1].
+Language is fundamentally important for understanding human behavior. Yet describing language in useful ways is difficult due to the complexity and size of textual data. Natural language processing (NLP), the field at the intersection of linguistics and computer science has made great progress in describing and classifying textual data. Nonetheless, applications of natural language processing with convincing causal implications are few.[^1]
 
-[No Country for Old Members](http://cs.stanford.edu/people/jure/pubs/language-www13.pdf) represents the cutting edge of the application of NLP to understanding human behavior[^2]. The paper describes how language use evolves over time on two beer rating platforms and claims to test theories of language use. 
+[No Country for Old Members](http://cs.stanford.edu/people/jure/pubs/language-www13.pdf) represents the cutting edge of the application of NLP to understanding human behavior.[^2] The paper describes how language use evolves over time on two beer rating platforms and claims to test theories of language use. 
 
 Why do we care about how language use changes over time in a community? 
 
@@ -48,7 +48,7 @@ A more general problem with the authors' approach is that the distribution of be
 
 The final piece of the paper includes a prediction exercise in which linguistic features improve predictions of user exit. I find increased predictive accuracy uninteresting because a lot of other, correlated pieces of data such as cohort or demographics could improve predictive accuracy as well. 
 
-The authors cut up the data using an impressive assortment of techniques but they do not take the problem of causal inference seriously. Identifying the causal effects of social influence is an immensely difficult problem[^5]. Distinguishing between learning and time-trends is also difficult. The paper treats competing explanations of the data generating process in an ad-hoc manner, always favoring explanations based on learning and social influence. 
+The authors cut up the data using an impressive assortment of techniques but they do not take the problem of causal inference seriously. Identifying the causal effects of social influence is an immensely difficult problem.[^5] Distinguishing between learning and time-trends is also difficult. The paper treats competing explanations of the data generating process in an ad-hoc manner, always favoring explanations based on learning and social influence. 
 
 The analysis in the paper would benefit from a formal mathematical model of linguistic choice. Without a model, I am not sure how to interpret the magnitudes described in the paper. How many specific new words were learned? Is the change in cross-entropy greater or less than expected? 
 
