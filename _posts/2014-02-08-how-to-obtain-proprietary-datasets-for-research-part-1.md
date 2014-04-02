@@ -13,15 +13,16 @@ Private sector data is increasingly used in economics and other social science r
 
 The guide is organized into the following parts:
 
-1. [The Pros and Cons of Using Private Sector Data] (#why)
+1. [The Pros and Cons of Using Private Sector Data](#why)
 
-2. [Getting Access to Private Sector Data] (#access)
+2. [Getting Access to Private Sector Data](#access)
 
-3. [Effectively Doing Research with Private Data] (#effectively) 
+3. [Effectively Doing Research with Private Data](#effectively) 
 
 ___
 
-{:#why} 
+<a name="why"></a>
+
 *The Pros and Cons of Using Private Sector Data*
 
 The main draw of private sector data is that it allows social scientists to observe previously unobservable data. Much of economic theory involves theoretical objects, such as search activity, consumption, communication and production costs, for which empirical analogues are hard to obtain. Social scientists have typically tried to get around their lack of data by making strong assumptions about behavior. For example, in the field of industrial organization, the costs of production are typically inferred from the production and pricing decisions of firms. Similarly, macroeconomics and labor economics typically make assumption about the process of search and matching. Private sector data provides new ways of allowing us to directly test those assumptions and to quantify the importance of theoretical mechanisms in the real world. For example, in my work with Scott Baker, we use data on Google Searches for the term 'jobs' to create a proxy for aggregate job search effort. We then use this data to study what happened to job search in response to the expansions of unemployment insurance benefits. 
@@ -34,17 +35,20 @@ There are other important risks when working with the private sector as a resear
 
 - *Ambiguous Relationships:* The company justifiably does not want negative information to be released. Even if there is a formal agreement between the company and the researcher, there is often unspoken pressure to suppress any potentially negative information. Potential conflicts of interest highlight why, when engaged in a formal agreement with the company, it is prudent to stay out of political issues. Therefore, some avenues of research are closed off to the researcher. On the other hand, if the data is being obtained without permission, though scraping, there are different pitfalls. Specifically, the company can often detect scraping activity and fight it by banning specific ips or by serving false data to the scraper.
 
-- *Reproducibility:* Company data is often subject to a Non-Disclosure Agreement (NDA). NDA's typically state that raw data cannot be released to the public for reproduction. Furthermore, some data, such as summary statistics, are also embargoed by company lawyers. This is a big problem for researchers using private data because reproducibility is a huge problem and is becoming an important requirement for journal submission. Even 'simple' data analysis is oftentimes non-reproducible. Reproducibility is even more important for sophisticated econometric strategies, which have a much higher chance of programming error. See [this Economist article](http://www.economist.com/news/briefing/21588057-scientists-think-science-self-correcting-alarming-degree-it-not-trouble) for a good overview of the state of reproducibility in science. 
+- *Reproducibility:* Company data is often subject to a Non-Disclosure Agreement (NDA). NDA's typically state that raw data cannot be released to the public for reproduction. Furthermore, some data, such as summary statistics, are also embargoed by company lawyers. This is a big problem for researchers using private data because reproducibility is a huge problem and is becoming an important requirement for journal submission. Even 'simple' data analysis is oftentimes non-reproducible. Reproducibility is even more important for sophisticated econometric strategies, which have a much higher chance of programming error.[^1]
 
 - *Time Horizon:* Lastly, research takes a long time, especially in economics where the time from journal submission to publishing often exceeds 2 years even without a rejection. It is very difficult for a company to commit to such a long-term relationship if only because the employees of the company are likely to change within that span of time. Therefore, undertaking long-run research agendas with internal company data is inherently dangerous This is also a problem with scraping research strategies because the company may shut off the ability to scrape at some future time. Lastly, doing research on a company also involves making a bet on the future of a company. For example, Ned Augenblick's [paper](http://faculty.haas.berkeley.edu/ned/Augenblick_JMP_Penny_Auction.pdf) about penny options would probably be more read today if the site he studies, Swoopo, did not go bankrupt.
 
 
-{:#access} 
+<a name="access"></a>
+
 *Getting Access to Private Sector Data*
 
 (Coming Soon)
 
-{:#effectively} 
+<a name="effectively"></a>
 *Effectively Doing Research with Private Data*
 
 (Coming Soon)
+
+[^1]: See [this Economist article](http://www.economist.com/news/briefing/21588057-scientists-think-science-self-correcting-alarming-degree-it-not-trouble) for a good overview of the state of reproducibility in science. 

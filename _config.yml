@@ -1,7 +1,9 @@
 # This is the default format. 
 # For more see: https://github.com/mojombo/jekyll/wiki/Permalinks
 name: Andrey Fradkin
-description: A repository of economics, data analysis, thoughts and code.
+
+description: "A repository of economics, data analysis, thoughts and code."
+
 url: http://www.andreyfradkin.com/posts/
 
 source:      .
@@ -22,7 +24,7 @@ relative_permalinks: false
 permalink:     date
 paginate_path: 'page:num'
 
-markdown: kramdown
+markdown: rdiscount
 markdown_ext:  md, markdown
 textile_ext:   textile
 
@@ -37,26 +39,29 @@ baseurl:     /
 url:         http://localhost:4000
 lsi:         false
 
-### rdiscount:
-###  extensions: []
+rdiscount:
+  extensions:
+    - autolink      # greedily urlify links
+    - footnotes     # footnotes
+    - smart         # typographic substitutions with SmartyPants
 ### redcarpet:
 ###  extensions: []
 
-kramdown:
-  auto_ids: true
-  footnote_nr: 1
-  entity_output: as_char
-  toc_levels: 1..6
-  smart_quotes: [lsquo,rsquo,ldquo,rdquo]
-  use_coderay: false
+# kramdown:
+#   auto_ids: true
+#   footnote_nr: 1
+#   entity_output: as_char
+#   toc_levels: 1..6
+#   smart_quotes: [lsquo,rsquo,ldquo,rdquo]
+#   use_coderay: false
 
-  coderay:
-    coderay_wrap: div
-    coderay_line_numbers: inline
-    coderay_line_numbers_start: 1
-    coderay_tab_width: 4
-    coderay_bold_every: 10
-    coderay_css: style
+#   coderay:
+#     coderay_wrap: div
+#     coderay_line_numbers: inline
+#     coderay_line_numbers_start: 1
+#     coderay_tab_width: 4
+#     coderay_bold_every: 10
+#     coderay_css: style
 
 redcloth:
   hard_breaks: true
@@ -64,10 +69,6 @@ redcloth:
 permalink: /:categories/:year/:month/:day/:title 
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
 auto: true
-
-## markdown: kramdown
-## kramdown:
-##   use_coderay: true
 
 pygments: true
 
