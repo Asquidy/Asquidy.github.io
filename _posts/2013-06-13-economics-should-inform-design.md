@@ -13,8 +13,8 @@ Online platforms mediate the interaction of different types of users with each o
 
 Yahoo ran the best documented use of market design of all the online platforms. In 2008, Yahoo changed its auctions to include a reserve price (i.e. a price beneath which the ad could not be sold). Following the change, revenues increased [significantly](http://faculty-gsb.stanford.edu/ostrovsky/papers/rp.pdf).  The reason that a reserve price increased revenue is that the previous auction format, a second price auction, allowed advertisers to pay a lot less than they were willing to pay. The reserve price allowed Yahoo to use its market power to extract more revenue. 
 
-Two other examples of platforms that have used the principles of mechanism design are Quora and LinkedIn. Quora's [credit system](http://www.quora.com/Quora-Credits/What-are-Quora-Credits) rewards good actions on the site such as writing great answers or questions. 
-LinkedIn gathers information about users' expertise through low friction prompts to [endorse] (http://www.forbes.com/sites/susanadams/2012/12/04/everything-you-need-to-know-about-linkedin-endorsements/)  connections. 
+Two other examples of platforms that have used the principles of mechanism design are Quora and LinkedIn. Quora&#8217;s [credit system](http://www.quora.com/Quora-Credits/What-are-Quora-Credits) rewards good actions on the site such as writing great answers or questions. 
+LinkedIn gathers information about users&#8217; expertise through low friction prompts to [endorse] (http://www.forbes.com/sites/susanadams/2012/12/04/everything-you-need-to-know-about-linkedin-endorsements/)  connections. 
 
 Below are some other examples of interesting platform design questions.
 
@@ -24,4 +24,4 @@ Below are some other examples of interesting platform design questions.
 
 * Applicants for jobs on Monster.com can cheaply send resumes to positions that the applicants are not likely to accept or are unqualified for. Employers must then exert costly effort in screening job seekers for qualifications and figuring out if the candidates are truly interested. How should Monster design the platform so that applicants send an appropriate amount of applications to the right positions?
 
-If you want to learn more, Al Roth's market design [page](http://kuznets.fas.harvard.edu/~aroth/alroth.html) and [blog](http://marketdesigner.blogspot.com/) are great starting resources.
+If you want to learn more, Al Roth&#8217;s market design [page](http://kuznets.fas.harvard.edu/~aroth/alroth.html) and [blog](http://marketdesigner.blogspot.com/) are great starting resources.
