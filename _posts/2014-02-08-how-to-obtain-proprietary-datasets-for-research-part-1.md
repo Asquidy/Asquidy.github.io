@@ -17,7 +17,7 @@ The guide is organized into the following parts:
 
 2. [How to Obtain Access to Private Sector Data](#access)
 
-3. [Thoughts About Working with Private Data](#effectively) (Coming Soon)
+3. [Thoughts About Working with Private Sector Data](#effectively) (Coming Soon)
 
 If you have any comments, questions or stories please email me at: afradkin (at) gmail (dot) com
 ___
