@@ -84,7 +84,7 @@ Even if the initial agreement is not great, do not despair. Initial arrangements
 In conclusion:
 
 - Consider all options for data sources.
-- Don not spend too much time on the proposal.
+- Don't spend too much time on the proposal.
 - Make a good impression in the meeting.
 - Fight for as much access as possible.
 - Be aware that the process can take a long time.
