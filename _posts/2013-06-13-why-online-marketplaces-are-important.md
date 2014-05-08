@@ -7,6 +7,7 @@ quality: good
 tags: 
 comments : true
 post_type: Essay
+status: final
 ---
 
 Capitalism is based on mutually beneficial trade. In the idealized version of the free market, goods and services are allocated in an efficient manner. However, in the real world, existing opportunities for mutually beneficial trade are often not realized. For example, potentially productive workers across the world waste time working on low productivity projects because of their country of birth. Houses, machines and cars sit idle while their owners are doing something else. Used goods remain in garages because owners don't want to expend the effort to try to sell them. Valuable goods and services aren't provided because there is no good way to sell them.

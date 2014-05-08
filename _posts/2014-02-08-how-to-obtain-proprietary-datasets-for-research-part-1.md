@@ -5,6 +5,8 @@ category: posts
 tags:
 quality: good
 post_type: essay
+modified: 5/2014
+status: final
 ---
 
 *Introduction* 
@@ -19,7 +21,8 @@ The guide is organized into three parts:
 
 3. [Thoughts About Working with Corporate Data](#effectively)
 
-If you have any comments,[^0] questions or stories please email me at: afradkin (at) gmail (dot) com
+If you have any comments[^0], questions or stories please email me at: afradkin (at) gmail (dot) com
+
 ___
 
 <a name="why"></a>
@@ -30,11 +33,15 @@ The main draw of corporate data for social scientists is the ability to observe 
 
 The are several other advantages to working with private sector data and the private sector more generally. First, companies are often more open than governments to running experiments or changing policies. These experiments can provide the identification required to publish in top journals. Furthermore, working with a company gives researchers a view inside of a company and this view often informs research in a positive way. For example, when I started researching Airbnb, I was mostly interested in how the platform reduces transaction costs and improves matches. However, while working at the company and talking to decision makers, I realized that experimental design is important and challenging for marketplaces. This lesson was reflected in my thesis research, which explicitly models the differences between the true effects of experiments and the estimated effects of experiments obtained by standard, but biased, methods. 
 
-There is also a specific set of skills that is useful for working with data but is not taught in grad school. These skills include, data cleaning, database management and programmatic manipulation of file-systems. Working with company data gives researchers an opportunity to develop those skills and to learn new ones --- such as Hadoop, Hive and Github. Learning these tools is useful not only because they make research more efficient but also because they establish your credibility with engineers. It is easier to convince an engineer to share data if you understand how the data infrastructure of a company works. An additional benefit is that programming skills are a pre-requisite for becoming a consultant or full time employee in a tech company. I was able to finance part of my grad school by working a part-time job with Airbnb. 
+There is also a specific set of skills that is useful for working with data but is not taught in grad school. These skills include data cleaning, database management and programmatic manipulation of file-systems. Researchers gain an opportunity to develop those skills while working with the corporate sector and to learn new ones --- such as Hadoop, Hive and Github. Learning these tools is useful not only because they make research more efficient but also because they establish your credibility with engineers. It is easier to convince an engineer to share data if you understand how the data infrastructure of a company works. An additional benefit is that programming skills are a pre-requisite for becoming a consultant or full time employee in a tech company. I was able to finance part of my grad school by working a part-time job with Airbnb. Further, some companies have teams of data scientists who have a thorough understanding of the data. Further, data scientists are often interested and capable of collaborating on research.
 
-However, working with private data is risky because the internal data are often incomplete and difficult to access. Almost any plans for a project with a dataset will be greatly complicated by missing documentation and data. It typically takes a year to learn enough about a company's data infrastructure to do good research. This also highlights why relationships where the researcher has direct access to the company databases are better. Researchers learn about data by manipulating it, asking further questions and iterating. If each iteration step required work from a company employee then progress would be slow and the company employees could become resentful of the researcher. These problems matter less if the data is very standardized, as in the case of auction data with bids and final sales. Publicly posted data also poses statistical dangers because it is often transformed in a peculiar way from the underlying data. For example, Google Trends is a public dataset that is supposed to be a proxy for the aggregate volume of searches for a particular term on Google. However, because Google oftentimes changes its product (by changing the suggested terms for a term or the algorithm), the aggregate data series may move in ways unrelated to the underlying behavior of interest. It is typically difficult to correct for these imperfections using statistical techniques. See [this Science article](http://www.sciencemag.org/content/343/6176/1203) for more discussion of the pitfalls of aggregated private sector data.
+However, corporate data is difficult to convert into good academic research. It's not worth getting a new dataset unless you have a research agenda related to that data. Top researchers get offers to work with all types of data but typically say no. These researchers say no to random data offers because they are already tackling their research agendas in a more direct manner.
 
-There are other important risks when working with the private sector as a researcher:
+Even conditional on having a good research project in mind when getting a corporate dataset, the process is still risky. Almost any project will be complicated by missing documentation and data. It typically takes a year to learn enough about a company's data infrastructure to do good research. This learning curve is an important reason why research agreements where the researcher has direct access to the company databases are better. Researchers learn about data by manipulating it, asking further questions and iterating. If each iteration step requires work from a company employee then progress would be slow and the company employees could become resentful of the researcher. These problems matter less if the data is very standardized, as in the case of auction data with bids and final sales.
+
+Another common risk is that the corporate data is transformed in a peculiar way from the underlying data. For example, Google Trends is a public dataset that is designed to be a proxy for the aggregate volume of searches for a particular term on Google. However, because Google oftentimes changes its product (by changing the suggested terms for a term or the algorithm), the aggregate data series may move in ways unrelated to the underlying behavior of interest. It is typically difficult to correct for these imperfections using statistical techniques. See [this Science article](http://www.sciencemag.org/content/343/6176/1203) for more discussion of the pitfalls of aggregated corporate data.
+
+Here are other important risks when working with the private sector as a researcher:
 
 - *Ambiguous Relationships:* The company justifiably does not want negative information to be released. Even if there is a formal agreement between the company and the researcher, there is often unspoken pressure to suppress potentially negative information. It is therefore prudent to avoid doing research on overtly political issues. On the other hand, if the data is being obtained without permission, through scraping, there are other pitfalls. The company can often detect scraping activity and fight it by banning specific IP addresses, by serving false data to the scraper or by suing the scraper. Furthermore, scrapers can develop a bad reputation, making other companies hesitant to work with them.
 
@@ -46,7 +53,7 @@ ___
 <a name="access"></a>
 
 *How to Obtain Access to Corporate Data*
-<!--- Mention Company Size? -->
+
 Suppose you've thought seriously about a research project and decided that you want a specific type of data. There are three ways to get it: ask for it directly from a company, get it from a third-party or collect the data yourself (through scraping, surveys or field studies). To take a concrete example, suppose that you transaction level data from an e-commerce site so that you can estimate models of online search. Here are some strategies you might take:
 
 1. Ask a company like Amazon, Ebay or Walmart for data.
@@ -88,6 +95,7 @@ In conclusion:
 - Make a good impression in the meeting.
 - Fight for as much access as possible.
 - Be aware that the process can take a long time.
+
 ___
 <a name="effectively"></a>
 *Thoughts About Working with Corporate Data*
@@ -104,7 +112,8 @@ The way to get at these questions is by talking to engineers and by exploring th
 
 Once you understand how the dataset works, you can start to write academic papers. This is a difficult process because the variety and size of the data is overwhelming. There is a risk that people view your research as merely a consulting project which is not useful outside of its particular domain. Choosing an appropriate research project is a core skill of being an academic and one that I have yet to master. My advice is to get frequent feedback from the set of academics that are your principal audience. That way, you never stray too far from the important questions in the field. Some of my prior projects were, in retrospect, too domain specific to be of general interest and I would've been able to figure that out earlier if I had more exposure. __Remember, cool data does not automatically make cool research.__
 
-[^0]: Thanks to John Horton for comments.
+---
+[^0]: Thanks to John Horton and Dan Knoepfle for comments.
 [^1]: See [ this Economist article ](http://www.economist.com/news/briefing/21588057-scientists-think-science-self-correcting-alarming-degree-it-not-trouble) for a good overview of the state of reproducibility in science. 
 [^2]: Companies are sometimes willing to provide free access to researchers. Furthermore, universities often have funds available for purchasing this type of data.
 [^3]: For a couple of particularly interesting applications of scraping see: [The Billion Prices Project](http://bpp.mit.edu/) and ["Traveling the silk road: a measurement analysis of a large anonymous online marketplace,"](http://dl.acm.org/citation.cfm?id=2488408) a paper that uses data scraped from the now-defunct anonymous marketplace [Silk Road](http://en.wikipedia.org/wiki/Silk_Road_%28marketplace%29).

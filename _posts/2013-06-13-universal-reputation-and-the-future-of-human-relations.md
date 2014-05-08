@@ -6,6 +6,7 @@ category: posts
 tags: 
 quality: good
 post_type: Essay
+status: final
 ---
 When humans lived in small tribes the first name was enough. Humans needed names to tell stories about each other. The set of stories told about an individual formed his reputation. Some individuals became known as great hunters while others became known for their laziness.  Individuals needed to know others' reputations to determine who to work with and who to mate with. 
 

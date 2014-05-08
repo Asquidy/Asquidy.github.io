@@ -5,6 +5,7 @@ description: ""
 category: posts 
 tags: 
 post_type: Thought
+status: final
 ---
 
 Recently, I was struck by a seemingly minor design difference between the taxi apps Uber[^1] and Sidecar: I need to tell Sidecar where I'm going before I hail a ride whereas I don't need to tell Uber.

@@ -6,6 +6,7 @@ category: posts
 post_type: essay
 quality: good
 tags: 
+status: final
 ---
 Online platforms mediate the interaction of different types of users with each other. Whenever users interact there is the potential for both positive and negative externalities. Some users, by doing what is rational for themselves, create additional costs for others. For example, people choose to drive without considering the impact the have on traffic for others. Externalities can often be mitigated by carefully choosing the rules by which users interact with each other and the platform. 
 

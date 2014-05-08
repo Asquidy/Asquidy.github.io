@@ -5,6 +5,7 @@ description: ""
 category: posts
 post_type: thought 
 tags: 
+status: final
 ---
 Recently, former LinkedIn Data Scientist, DJ Patil, made the claim that what data science is really about is telling stories. 
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Search Frictions and the Design of Online Marketplaces
+title: "Search Frictions and the Design of Online Marketplaces"
 category: research
 ---
 

@@ -1,8 +1,9 @@
---- 
+---
 layout: splash
 ---
+
 <div class="headline"> A repository of economics, data analysis, thoughts and code.
-</div> 
+</div>
 
 
 <!-- <div class="content-header">
@@ -12,10 +13,10 @@ Please visit my job market site at:
  -->
 <div class="content-header">
 Recent Research:
-</div> 
+</div>
 
 <ul>
-{% assign sorted_projects = site.categories.research %}
+{% assign sorted_projects = site.papers %}
 {% for item in sorted_projects %}
   <li style="list-style: none;"> <p><a href="{{ item.url }}">{{ item.title }}</a><p></li>
 {% endfor %}
@@ -23,7 +24,7 @@ Recent Research:
 
 <div class="content-header">
 Selected Content:
-</div> 
+</div>
 
 <ul>
 {% assign sorted_posts = site.categories.posts  | sort:"name" %}
@@ -40,24 +41,23 @@ Selected Content:
 Recent Posts:
 </div> 
 
-
 <ul>
 {% assign sorted_posts = site.categories.posts %}
 {% for post in sorted_posts %}
-  <li style="list-style: none;"> 
-    <p> 
-    <div class='post_type'> 
-        {{ post.post_type }}: 
-    </div>  
-    <div class='list_title'>
-        <a href="{{ post.url }}">{{ post.title }}</a>  
+{% if post.status == "final" %}
+  <li style="list-style: none;">
+    <p>
+    <div class='post_type'>
+        {{ post.post_type }}:
     </div>
-       
-
+    <div class='list_title'>
+        <a href="{{ post.url }}">{{ post.title }}</a>
+    </div>
     <p>
   </li>
+{% endif %}  
 {% endfor %}
-</ul>
+</ul> 
 
 
 

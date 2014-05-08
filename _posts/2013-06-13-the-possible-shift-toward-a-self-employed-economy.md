@@ -6,6 +6,7 @@ category:
 tags: 
 post_type: Thought
 publish: False
+status: not final
 ---
 Labor institutions in the United States have been based on long-run exclusive relationships between a worker and a firm. However, for many people the rigidity of full time work for one company is very constraining. Long-term employees are often tied to sub-optimal specific work hours, work days and locations. There are strong forces that are making full time employment less necessary as a form of organizing production. 
 

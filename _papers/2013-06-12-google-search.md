@@ -1,6 +1,6 @@
 ---
 layout: post
-title: The Impact of Unemployment Insurance on Job Search
+title: "The Impact of Unemployment Insurance on Job Search"
 category: research
 ---
 

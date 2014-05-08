@@ -1,13 +1,18 @@
---- 
+---
 layout: splash
 ---
+
 <div class="content-header">
 Research Projects:
-</div> 
+</div>
 
 <ul>
-{% assign sorted_projects = site.categories.research  | sort:"name" %}
+{% assign sorted_projects = site.papers | sort="title" %}
+
 {% for project in sorted_projects %}
-  <li style="list-style: none;"> <p><a href="{{ project.url }}">{{ project.title }}</a><p></li>
+  <li style="list-style: none;"><p>
+  <a href="{{ project.url }}">{{ project.title }}</a>
+  </li>
 {% endfor %}
+
 </ul>

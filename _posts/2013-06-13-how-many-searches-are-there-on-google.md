@@ -5,6 +5,7 @@ description: ""
 category: posts
 tags: 
 published: false
+status: not final
 ---
 
 I have long been fascinated by the question: what is the value of online search? Online search came out of the blue in the 90's and has become a ubiquitous part of life. Nonetheless, no one as far as I know has ever estimated the value of search. Advertising revenue numbers do not get at the true value of search because they do not take into account the benefit of search to searchers. Kevin Kelly has done an interesting [exercise](http://www.kk.org/thetechnium/archives/2007/10/how_much_does_o.php) in which he calculated an upper bound on the cost of a search to be 3 cents. 

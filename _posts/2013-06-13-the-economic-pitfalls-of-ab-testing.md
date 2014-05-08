@@ -5,6 +5,7 @@ description: ""
 category: 
 tags: 
 post_type: Essay
+status: final
 ---
 
 A/B testing within companies is on the rise but so is it's misuse.  As a reminder, an A/B test is set up to show some users differing versions of a website. The test then determines if outcomes of interest such as click through rate are higher for one version of the site than the other. 

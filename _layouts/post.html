@@ -39,12 +39,12 @@
             <div class="content-header"> {{ page.title }} </div>
             <div class="content-subtitle"> {{ page.subtitle }} </div>
 
-            {% if post.modified-date == nil %}
-            <div class="front_date"> {{ page.date | date: "%B %Y" }} </div>
+            {% if page.modified == nil %}
+            <div class="front_date"> Posted: {{ page.date | date: "%B %Y" }} </div>
 
             {% else %}
-            <div class="front_date"> First Posted:  {{ post.modified-date | date: "%B %Y" }} </div>
-            <div class="front_date"> {{ page.date | date: "%Bsu %Y" }} </div>
+            <div class="front_date">
+            Updated:  {{ page.modified | date: "%B %Y" }} </div>
 
             {% endif %}
         <p> 
@@ -55,7 +55,7 @@
       </div>
 
       <div id="please-comment"> 
-        Please email comments to: afrad (at)  stanford (dot)  edu
+        Please email comments to: afradkin (at) gmail (dot) com
       </div>
       <div id="footer">
         <div> </div>

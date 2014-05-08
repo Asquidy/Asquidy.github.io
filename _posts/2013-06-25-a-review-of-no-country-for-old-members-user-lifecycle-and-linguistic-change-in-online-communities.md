@@ -5,6 +5,7 @@ description: ""
 category: posts
 tags:
 post_type: review
+status: final
 ---
 
 Language is fundamentally important for understanding human behavior. Yet describing language in useful ways is difficult due to the complexity and size of textual data. Natural language processing (NLP), the field at the intersection of linguistics and computer science has made great progress in describing and classifying textual data. Nonetheless, applications of natural language processing with convincing causal implications are few.[^1]

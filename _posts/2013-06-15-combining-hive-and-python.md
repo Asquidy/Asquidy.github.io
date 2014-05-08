@@ -4,6 +4,7 @@ title: "Combining Hive and Python"
 description: ""
 category: posts 
 post_type: code
+status: final
 ---
 
 Querying large datasets with Hive is trivial. However, there are times when Hive's built in functions are insufficient. For example, I recently needed to extract the ordering of elements in an array.
