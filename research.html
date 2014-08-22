@@ -5,14 +5,17 @@ layout: splash
 <div class="content-header">
 Working Papers:
 </div>
-</ul>
+<ul style="list-style: none;">
 {% assign papers = site.papers %}
 {% for paper in papers %}
-        <li style="list-style: none;">{{ paper.title }} {{paper.coauthors}}
+        <li style="list-style: none;padding-bottom: 2px;">
+        <div  style="padding-bottom: 1px;">
+        {{ paper.title }}
+        </div>
+        
+        <div>
+        <div style = "font-size: 14px;"> {{paper.coauthors}} </div>
 
-        
-        <div style = "font-size: 16px;">
-        
         {% if paper.journal %} 
         <div style = "font-size: 14px; font-style:italic">  
             {{ paper.journal}} 
@@ -29,7 +32,8 @@ Working Papers:
             <a href= {{ paper.appendix }}> Appendix </a>|  
         {% endif %} 
             <a href= {{ paper.bibtex }}> Bibtex </a> 
-        </div> </span>
+        </div>
+
         <!-- Click to display bibtex for the paper. Force click to do nothing by returning false. -->
         <div id={{ paper.js_abbrev }} style="display: none; font-size: 18px;"> <!-- style makes it hidden by default -->
            {{ paper.abstract }}
@@ -37,16 +41,17 @@ Working Papers:
         </div> 
         <p></p>
         </div>
-</li>
+        </li>
 {% endfor %}
 </ul>
 
 <div class="content-header">
 In Progress:
 </div>
-<ul>
+
+<ul style="list-style: none;">
 <li style="list-style: none;"> <p> The Economics of Peer to Peer Markets: Evidence from the Accommodations Industry  (with Chiara Farronato) <p></p></li> 
 <li style="list-style: none;"><p> The Effect of Family Insurance on Early Career Outcomes (with Frederic Panier and Ilan Tojerow) <p></p></li> 
 <li style="list-style: none;"><p> Reporting Bias and Reciprocity in Online Reviews: Evidence from Field Experiments on Airbnb (with Elena Grewal, David Holtz and Matthew Pearson) <p></p></li> 
 <li style="list-style: none;"><p> How Do People Form Consideration Sets On The Internet? Evidence from Large Scale Field Experiments in Search Engine Design <p></p></li> 
-<ul>
+</ul>
