@@ -5,36 +5,41 @@ layout: splash
 <div class="content-header">
 Working Papers:
 </div>
-
+</ul>
 {% assign papers = site.papers %}
 {% for paper in papers %}
-        <li style="list-style: none;"><a href={{ paper.link }}>{{ paper.title }}</a> {{paper.coauthors}}
+        <li style="list-style: none;">{{ paper.title }} {{paper.coauthors}}
 
         
-        <div style = "font-size: 18px;">
+        <div style = "font-size: 16px;">
+        
         {% if paper.journal %} 
-            <div style = "font-size: 18px; font-style:italic">  {{ paper.journal}} 
-            </div>
+        <div style = "font-size: 14px; font-style:italic">  
+            {{ paper.journal}} 
+        </div>
         {% endif %}
 
-        <span> <div style = "font-size: 18px; font-style:italic"> 
+        <div style = "font-size: 14px; font-style:italic"> 
             {{ paper.other}} 
         </div>
+        <div style = "font-size: 14px"> 
         <a href="#" onclick={{ paper.js }}>Abstract</a> |
+        <a href={{ paper.link }}> PDF </a> |
         {% if paper.appendix %} 
             <a href= {{ paper.appendix }}> Appendix </a>|  
         {% endif %} 
             <a href= {{ paper.bibtex }}> Bibtex </a> 
         </div> </span>
         <!-- Click to display bibtex for the paper. Force click to do nothing by returning false. -->
-        <div id={{ paper.js_abbrev }} style="display: none"> <!-- style makes it hidden by default -->
+        <div id={{ paper.js_abbrev }} style="display: none; font-size: 18px;"> <!-- style makes it hidden by default -->
            {{ paper.abstract }}
+           <br></br>
         </div> 
-<p></p>
+        <p></p>
+        </div>
 </li>
-
 {% endfor %}
-
+</ul>
 
 <div class="content-header">
 In Progress:
