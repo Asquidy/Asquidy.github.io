@@ -11,25 +11,27 @@ Working Papers:
         <li style="list-style: none;"><a href={{ paper.link }}>{{ paper.title }}</a> {{paper.coauthors}}
 
         
-        <div style = "font-size: 18px;">
-        {% if paper.journal %} 
-            <div style = "font-size: 18px; font-style:italic">  {{ paper.journal}} 
-            </div>
-        {% endif %}
-
-        <span> <div style = "font-size: 18px; font-style:italic"> 
-            {{ paper.other}} 
-        </div>
-        <a href="#" onclick={{ paper.js }}>Abstract</a> |
+        <div style = "font-size: 18px;"> 
         {% if paper.appendix %} 
             <a href= {{ paper.appendix }}> Appendix </a>|  
         {% endif %} 
             <a href= {{ paper.bibtex }}> Bibtex </a> 
-        </div> </span>
-        <!-- Click to display bibtex for the paper. Force click to do nothing by returning false. -->
-        <div id={{ paper.js_abbrev }} style="display: none"> <!-- style makes it hidden by default -->
-           {{ paper.abstract }}
-        </div> 
+        </div>   
+        {% if paper.journal %} 
+            <div style = "font-size: 18px; font-style:italic">  {{ paper.journal}} 
+            </div>
+        <p></p>
+        {% endif %}
+
+        <div style = "font-size: 18px; font-style:italic"> 
+            {{ paper.other}} 
+        </div>
+        <p></p>
+
+        <div>
+        {{ paper.abstract }}
+        </div>
+
 <p></p>
 </li>
 
@@ -42,6 +44,6 @@ In Progress:
 <ul>
 <li style="list-style: none;"> <p> The Economics of Peer to Peer Markets: Evidence from the Accommodations Industry  (with Chiara Farronato) <p></p></li> 
 <li style="list-style: none;"><p> The Effect of Family Insurance on Early Career Outcomes (with Frederic Panier and Ilan Tojerow) <p></p></li> 
-<li style="list-style: none;"><p> Reporting Bias and Reciprocity in Online Reviews: Evidence from Field Experiments on Airbnb (with Elena Grewal, David Holtz and Matthew Pearson) <p></p></li> 
+<li style="list-style: none;"><p> Reporting Bias and Reciprocity in Online Reviews: Evidence From Field Experiments on Airbnb (with Elena Grewal, David Holtz and Matthew Pearson) <p></p></li> 
 <li style="list-style: none;"><p> How Do People Form Consideration Sets On The Internet? Evidence from Large Scale Field Experiments in Search Engine Design <p></p></li> 
 <ul>

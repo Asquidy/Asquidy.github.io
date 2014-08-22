@@ -12,6 +12,8 @@ bibtex: "http://andreyfradkin.com/assets/bibtex_papers/welfare_bib.html"
 priority: '2'
 coauthors: (with <a href = "http://www.stanford.edu/~bernheim/">Douglas Bernheim</a> and Igor Popov)
 appendix: "/assets/Defaults-and-Welfare-Appendix-July-2013.pdf"
+js: "toggleMe('welfare'); return false;"
+js_abbrev: 'welfare'
 ---
 
 [The Welfare Economics of Default Options in 401(k) Plans](/assets/Defaults-and-Welfare-July-2013.pdf)(\w [Douglas Bernheim](http://www.stanford.edu/~bernheim/) and Igor Popov) 

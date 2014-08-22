@@ -6,6 +6,8 @@ abstract: Search and matching markets are increasingly intermediated by online m
 journal: 
 bibtex: "http://andreyfradkin.com/assets/bibtex_papers/fradkin_JMP.html"
 link: "/assets/Fradkin_JMP.pdf"
+js: "toggleMe('jmp'); return false;"
+js_abbrev: 'jmp'
 priority: 1
 other: Job Market Paper (New Version)
 Data: 

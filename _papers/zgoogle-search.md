@@ -7,5 +7,8 @@ link: /assets/FullTexasJobSearch.pdf
 priority: '3'
 other:
 bibtex: "http://andreyfradkin.com/assets/bibtex_papers/jobsearch.html"
-coauthors: (with <a href = "https://sites.google.com/site/srbaker/"> Scott Baker </a>)
+coauthors: (with <a href = "https://sites.google.com/site/srbaker/"> Scott Baker</a>)
+js: "toggleMe('google'); return false;"
+js_abbrev: 'google'
+other: Submitted
 ---
