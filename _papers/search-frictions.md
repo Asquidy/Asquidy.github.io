@@ -10,6 +10,12 @@ js: "toggleMe('jmp'); return false;"
 js_abbrev: 'jmp'
 priority: 1
 other: Job Market Paper (New Version)
+bib: <br> @article{fradkin2014search,
+  title={Search Frictions and the Design of Online Marketplaces},
+  author={Fradkin, Andrey},
+  year={2014}}
+bibjs: "toggleMe('jmp_bib'); return false;"
+bib_abbrev: 'jmp_bib'
 Data: 
 Nontechnical: "People search for jobs, houses, spouses and many other goods. Theory tells us that markets where search is important can work very differently than standard competitive marketplaces. However, it has been difficult to test theories of search in practice because search behavior is typically unobserved. I use a novel dataset of over a million search spells in an online marketplace to study search frictions.
 

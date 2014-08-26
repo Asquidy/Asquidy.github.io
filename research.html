@@ -29,16 +29,21 @@ Working Papers:
         <a href="#" onclick={{ paper.js }}>Abstract</a> |
         <a href={{ paper.link }}> PDF </a> |
         {% if paper.appendix %} 
-            <a href= {{ paper.appendix }}> Appendix </a>|  
+            <a href= {{ paper.appendix }}> Appendix </a> |
         {% endif %} 
-            <a href= {{ paper.bibtex }}> Bibtex </a> 
+        <a href="#" onclick={{ paper.bibjs }}> Bibtex </a> 
         </div>
 
-        <!-- Click to display bibtex for the paper. Force click to do nothing by returning false. -->
-        <div id={{ paper.js_abbrev }} style="display: none; font-size: 18px;"> <!-- style makes it hidden by default -->
+       
+   <div id={{ paper.js_abbrev }} style="display: none; font-size: 18px;">
            {{ paper.abstract }}
            <br></br>
         </div> 
+   <div id={{ paper.bib_abbrev }} style="display: none; font-size: 12px;"> 
+           {{ paper.bib }}
+           <br></br>
+        </div>
+         
         <p></p>
         </div>
         </li>
