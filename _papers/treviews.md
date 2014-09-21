@@ -8,7 +8,7 @@ link: "/assets/abstract_WISE.pdf"
 js: "toggleMe('reviews'); return false;"
 js_abbrev: 'reviews'
 priority: 2
-other: To Be Presented At The Conference for Digital Experimentation at MIT 
+other: To Be Presented at <a href = 'http://codecon.net/'> The Conference for Digital Experimentation </a>
 coauthors: (with Elena Grewal, David Holtz, and Matthew Pearson)
 bib: <br> @article{reportingandreciprocity,
   title={Reporting Bias and Reciprocity in Online Reviews&#58; Evidence From Field Experiments on Airbnb},
