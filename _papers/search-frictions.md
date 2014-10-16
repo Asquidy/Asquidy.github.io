@@ -4,7 +4,7 @@ title: "Search Frictions and the Design of Online Marketplaces"
 category: research
 abstract: Search and matching markets are increasingly intermediated by online marketplaces. These marketplaces record novel data about search activity and influence search through policies, such as ranking algorithms, which can make matching outcomes more efficient. I use data from Airbnb, a prominent online marketplace for housing rentals, to show that potential guests engage in limited search, are frequently rejected by hosts, and inefficiently match as a result. I estimate a micro-founded model of search and matching and use it to show that if frictions were removed, there would be 84% more matches in the marketplace and host revenue would increase by $109 per searcher. I propose several improved ranking algorithms for the marketplace and show that they would increase the matching rate by up to 10% over the status quo. However, the A/B search experiments favored by internet companies can overstate the true treatment effect of a ranking algorithm by over 100% because of equilibrium effects.
 journal: 
-link: "/assets/Fradkin_JMP.pdf"
+link: "/assets/Fradkin_JMP_Sep2014.pdf"
 js: "toggleMe('jmp'); return false;"
 js_abbrev: 'jmp'
 priority: 1
