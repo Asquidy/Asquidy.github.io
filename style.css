@@ -1,0 +1,116 @@
+
+body {
+background-color: #CCCCCC;
+font-family: Arial, Verdana, sans-serif;
+font-size: 16px;
+margin:10px;
+color: #333333;
+}
+
+a{
+color: #993300;
+	
+}
+a:hover {
+color: #993300;
+}
+
+a:visited{
+color:#993300;
+}
+
+a.pic:link {
+color: #993300;
+}
+
+a.pic:hover {
+background-color:#FFFFE8;;
+}
+
+p {
+font-family: Arial, Verdana, sans-serif;
+font-size: 16px;
+color: 333333;
+}
+
+p.heading {
+color: #B41614;
+padding-left: 0.2em;
+}
+
+p.larger {
+color: #990000;
+font-size: 30px;
+}
+
+p.large {
+color: 333333;
+font-size: 18px;
+}
+
+p.small{
+color: 333333;
+font-size: 12px;
+}
+
+p.largeblue {
+color: #990000;
+font-size: 18px;
+}
+
+h1 {
+color: #990000;
+font-size: 30px;
+}
+
+table.main {
+	border-width: 1px;
+	border-style: solid;
+	border-collapse: collapse;
+	background-color: #F0F0F0;
+	border-color: #990000;
+	
+}
+
+table.main td {
+	border-width: 0px;
+	padding: 0px;
+	border-style: solid;
+	
+
+}
+
+table.plain {
+	border-width: 0px;
+	border-style: solid;
+	border-collapse: collapse;
+}
+
+
+table.button {
+	border-width: 1px;
+	border-style: solid;
+	border-collapse: collapse;
+	border-color: grey;
+	background-color: #E0E0E0;
+}
+table.button td {
+	border-width: 0px;
+	padding: 6px;
+	border-style: solid;
+}
+
+.paperblock{
+	font-size: 14px;
+	text-align: left;
+	padding-left: 16px;
+	padding-bottom: 30px;
+	padding-right: 30px;
+}
+
+.papertitle{
+	text-align: left;
+	font-size: 20px;
+	padding-bottom: 10px;
+	font-style:bold;
+}
