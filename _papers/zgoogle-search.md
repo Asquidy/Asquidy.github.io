@@ -9,7 +9,7 @@ bibtex: "http://andreyfradkin.com/assets/bibtex_papers/jobsearch.html"
 coauthors: (with <a href = "https://sites.google.com/site/srbaker/"> Scott Baker</a>)
 js: "toggleMe('google'); return false;"
 js_abbrev: 'google'
-other: Submitted
+other: Revise and Resubmit at the Journal of Labor Economics
 bib: <br> @article{bakerfradkin2014,
   title={The Impact of Unemployment Insurance on Job Search&#58; Evidence from Google Search Data},
   author={Baker, Scott and Fradkin, Andrey},
