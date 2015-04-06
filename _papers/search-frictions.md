@@ -8,7 +8,7 @@ link: "/assets/Fradkin_JMP_Sep2014.pdf"
 js: "toggleMe('jmp'); return false;"
 js_abbrev: 'jmp'
 priority: 1
-other: Job Market Paper (New Version)
+other: 
 bib: <br> @article{fradkin2014search,
   title={Search Frictions and the Design of Online Marketplaces},
   author={Fradkin, Andrey},
