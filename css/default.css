@@ -266,6 +266,15 @@ hr {
   text-decoration: none;
 }
 
+.center-image
+{
+    border:3px solid #000000;
+    height: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
 /** Samir's bibtex button */
 /*.button-bibtex
 {
