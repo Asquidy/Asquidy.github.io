@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "10 Days of Introspection: The Story of My Meditation Retreat "
+title: "10 Days of Introspection: The Story of a Meditation Retreat "
 category: posts
 tags: personal, meditation
 quality: good
