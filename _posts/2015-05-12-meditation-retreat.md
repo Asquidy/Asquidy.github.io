@@ -21,7 +21,7 @@ A naive solution to address these problems would be to simply "gain perspective"
 
 Meditation had been in my mind as a potential solution to these problems for a long time. I was swayed by both clinical evidence[^1] and sound logical reasoning that meditation is useful. In particular, Sam Harris's book, [Waking Up](http://www.amazon.com/gp/product/1451636016/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1451636016&linkCode=as2&tag=andrfrad-20&linkId=UHQQE3PIXRJZ77XH), has an especially lucid discussion of the benefits of meditation. However, other than sporadic and half-hearted meditation sessions, I had not really given it a try. A 10 day retreat seemed like the correct way to develop a consistent meditation practice. I was encouraged by two friends who had positive experience with Vipassana retreats and a thought provoking blog post by [Ben Casnocha](http://casnocha.com/2012/08/reflections-and-impressions-from-a-10-day-meditation-course.html). 
 
-![A Walking Trail at the Meditation Center]({{ site.url }}/assets/forest_meditation.jpg){: .center-image}
+![A Walking Trail at the Meditation Center](andreyfradkin.com/assets/forest_meditation.jpg){: .center-image}
 
 The fundamental philosophy behind the Vipassana school of meditation is that what makes us happy or miserable is a function of our internal mental state. By meditating, we can change the way in which we react to our sensations and therefore slowly learn to control our cravings and aversions. However, meditation is not easy. Like any other skill, it requires practice, commitment, and discipline.
 
