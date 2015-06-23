@@ -7,6 +7,7 @@ link: /assets/FullTexasJobSearch.pdf
 priority: '3'
 bibtex: "http://andreyfradkin.com/assets/bibtex_papers/jobsearch.html"
 coauthors: (with <a href = "https://sites.google.com/site/srbaker/"> Scott Baker</a>)
+data: "https://www.dropbox.com/s/ybarvkfld30mg5x/Google_Data.zip?dl=0"
 js: "toggleMe('google'); return false;"
 js_abbrev: 'google'
 other: Revise and Resubmit at the Journal of Labor Economics
@@ -16,4 +17,3 @@ bib: <br> @article{bakerfradkin2014,
   year={2014}}
 bibjs: "toggleMe('google_bib'); return false;"
 bib_abbrev: 'google_bib'
----
