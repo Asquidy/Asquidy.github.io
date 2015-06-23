@@ -20,7 +20,7 @@ Papers:
         <div style = "font-size: 14px; font-style:italic">  
             {{ paper.journal}} 
         </div>
-        {% endif %}`
+        {% endif %}
 
         <div style = "font-size: 14px; font-style:italic"> 
             {{ paper.other}} 
@@ -32,6 +32,9 @@ Papers:
             <a href= {{ paper.appendix }}> Appendix </a> |
         {% endif %} 
         <a href="#" onclick={{ paper.bibjs }}> Bibtex </a> 
+        {% if paper.data %}  |
+        <a href= {{ paper.data }}> Data </a>
+        {% endif %} 
         </div>
 
        

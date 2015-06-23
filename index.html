@@ -41,7 +41,10 @@ Papers:
         {% if paper.appendix %} 
             <a href= {{ paper.appendix }}> Appendix </a> |
         {% endif %} 
-        <a href="#" onclick={{ paper.bibjs }}> Bibtex </a> 
+        <a href="#" onclick={{ paper.bibjs }}> Bibtex </a>
+        {% if paper.data %}  |
+        <a href= {{ paper.data }}> Data </a>
+        {% endif %} 
         </div>
 
        

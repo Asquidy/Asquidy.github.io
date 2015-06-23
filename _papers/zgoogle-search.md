@@ -17,3 +17,4 @@ bib: <br> @article{bakerfradkin2014,
   year={2014}}
 bibjs: "toggleMe('google_bib'); return false;"
 bib_abbrev: 'google_bib'
+---
