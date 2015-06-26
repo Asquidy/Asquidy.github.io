@@ -10,9 +10,9 @@ priority: 2
 other: Accepted at <a href = 'http://www.sigecom.org/ec15/index.html'> The Sixteenth ACM Conference on Economics and Computation </a> (EC'15). <br> Presented at <a href = 'http://codecon.net/'> The Conference for Digital Experimentation </a>
 coauthors: (with Elena Grewal, David Holtz, and Matthew Pearson)
 bib: <br> @article{reportingandreciprocity,
-  title={Reporting Bias and Reciprocity in Online Reviews&#58; Evidence From Field Experiments on Airbnb},
+  title={Bias and Reciprocity in Online Reviews&#58; Evidence From Field Experiments on Airbnb},
   author={Fradkin, Andrey and Grewal, Elena and Holtz, David and Pearson, Matthew},
-  year={2014}}
+  year={2015}}
 bibjs: "toggleMe('reviews_bib'); return false;"
 bib_abbrev: 'reviews_bib'
 ---

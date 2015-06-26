@@ -17,8 +17,8 @@ js_abbrev: 'welfare'
 bib: <br> @article{bernheimfradkinpopov,
   title={The Welfare Economics of Default Options in 401 (k) Plans},
   author={Bernheim, B Douglas and Fradkin, Andrey and Popov, Igor},
-  year={2013},
-  institution={National Bureau of Economic Research}}
+  year={2015},
+  journal={American Economic Review}}
 bibjs: "toggleMe('welfare_bib'); return false;"
 bib_abbrev: 'welfare_bib'
 ---

@@ -2,7 +2,7 @@
 layout: none
 title: "The Impact of Unemployment Insurance on Job Search: Evidence from Google Search Data"
 category: research
-abstract: We develop and validate a measure of job search based on Google search data and use it to study the effects of unemployment insurance (UI). We show that individuals on UI search 30% less than the unemployed not on UI and that claimants close to UI exhaustion search twice as much as claimants with over 30 weeks left. We use our estimates to calibrate a model of job finding and find that the decrease in job search due to UI expansions was responsible for an increase in the unemployment rate of less than 0.1% in Texas between 2008 and 2009.
+abstract: Job search is a key choice variable in theories of labor markets but has proven difficult to measure directly. We develop and validate the Google Job Search Index (GJSI), a measure of job search based on Google search data. The GJSI is publicly available, high-frequency, and location specific. We use the GJSI to study the effects of the unprecedented unemployment insurance (UI) expansions which occurred between 2008 and 2011. We show that states with higher potential durations of UI experience decreased search during the expansions, even after controlling for local labor market conditions. We use our estimates to calibrate a model of job finding. Our model suggests that the decrease in job search due to UI expansions had minor effects on unemployment rates during the recession.
 link: /assets/FullTexasJobSearch.pdf
 priority: '3'
 bibtex: "http://andreyfradkin.com/assets/bibtex_papers/jobsearch.html"
@@ -11,10 +11,10 @@ data: "https://www.dropbox.com/s/ybarvkfld30mg5x/Google_Data.zip?dl=0"
 js: "toggleMe('google'); return false;"
 js_abbrev: 'google'
 other: Revise and Resubmit at the Journal of Labor Economics
-bib: <br> @article{bakerfradkin2014,
+bib: <br> @article{bakerfradkin2015,
   title={The Impact of Unemployment Insurance on Job Search&#58; Evidence from Google Search Data},
   author={Baker, Scott and Fradkin, Andrey},
-  year={2014}}
+  year={2015}}
 bibjs: "toggleMe('google_bib'); return false;"
 bib_abbrev: 'google_bib'
 ---
