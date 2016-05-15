@@ -7,7 +7,7 @@ link: /assets/reviews_paper.pdf
 js: "toggleMe('reviews'); return false;"
 js_abbrev: 'reviews'
 priority: 2
-other: Accepted at <a href = 'http://www.sigecom.org/ec15/index.html'> The Sixteenth ACM Conference on Economics and Computation </a> (EC'15). <br> Presented at <a href = 'http://codecon.net/'> The Conference for Digital Experimentation </a>
+other: Accepted at <a href = 'http://www.sigecom.org/ec15/index.html'> The Sixteenth ACM Conference on Economics and Computation </a>
 coauthors: (with Elena Grewal, David Holtz, and Matthew Pearson)
 bib: <br> @article{reportingandreciprocity,
   title={Bias and Reciprocity in Online Reviews&#58; Evidence From Field Experiments on Airbnb},
