@@ -8,8 +8,8 @@ url: http://www.andreyfradkin.com/posts/
 
 source:      .
 destination: ./_site
-plugins:     ./_plugins
-layouts:     ./_layouts
+plugins_dir:     ./_plugins
+layouts_dir:     ./_layouts
 include:     ['.htaccess']
 exclude:     []
 timezone:    nil
@@ -35,7 +35,7 @@ excerpt_separator: "\n\n"
 
 safe:        false
 host:        0.0.0.0
-port:        4000
+port:        4444
 baseurl:     /
 url:         http://localhost:4000
 lsi:         false
@@ -54,7 +54,7 @@ kramdown:
   entity_output: as_char
   toc_levels: 1..6
   smart_quotes: lsquo,rsquo,ldquo,rdquo
-  use_coderay: false
+  enable_coderay: false
 
   coderay:
     coderay_wrap: div
