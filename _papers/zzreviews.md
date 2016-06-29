@@ -7,7 +7,7 @@ journal: ACM Conference on Economics and Computation (EC '15)
 link: 'http://www.sigecom.org/ec15/index.html'
 js: "toggleMe('reviews'); return false;"
 js_abbrev: 'reviews'
-priority: 2
+priority: 10
 coauthors: (with Elena Grewal, David Holtz, and Matthew Pearson)
 bib: <br> @article{reportingandreciprocity,
   title={The Determinants of Online Review Informativeness&#58; Evidence from Field Experiments on Airbnb},
