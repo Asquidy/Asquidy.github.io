@@ -2,7 +2,7 @@
 layout: none
 title: "The Impact of Unemployment Insurance on Job Search: Evidence from Google Search Data"
 category: research
-abstract: Job search is a key choice variable in theories of labor markets but has proven difficult to measure directly. We develop a new measure of job search activity based on Google search data, the Google Job Search Index (GJSI). We validate the GJSI by showing that it displays similar behavior to both survey and web browsing based measures of job search. Unlike those measures of job search, the GJSI is high-frequency, geographically precise, and available in real time.We demonstrate the utility of the GJSI by using it to study the effects of the unemployment insurance (UI) expansions between 2008 and 2011 on job search. We find no evidence of economically meaningful decreases in aggregate search activity due to these UI expansions.
+abstract: Job search is a key choice variable in theories of labor markets but is difficult to measure directly. We develop a job search activity index based on Google search data, the Google Job Search Index (GJSI). We validate the GJSI with both survey- and web-based measures of job search. Unlike those measures, the GJSI is high-frequency, geographically precise, and available in real time.We demonstrate the GJSI’s utility by using it to study the effects of changes in the unemployment insurance (UI) system between 2008 and 2014 on job search, finding no evidence of economically meaningful decreases in aggregate search activity.
 link: /assets/FullTexasJobSearch.pdf
 journal: Revise and Resubmit, Review of Economics and Statistics
 priority: '3'
