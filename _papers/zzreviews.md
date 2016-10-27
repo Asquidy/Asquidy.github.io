@@ -1,5 +1,5 @@
 ---
-layout: none
+layout:
 title: "The Determinants of Online Review Informativeness: Evidence from Field Experiments on Airbnb"
 category: research
 abstract: Reputation systems are used by virtually all digital marketplaces but their design varies greatly across websites, even within the same industry. Furthermore, because reviews are a public good, reputation systems are imperfectly informative. We use the setting of Airbnb to study how design choices affect the ability of ratings and reviews to aggregate information. We first show that online reviews are highly correlated with anonymous and private ratings as well as other signals of transaction quality. We then study two experimental changes to the reputation system of Airbnb. The first change offered guests a $25 coupon to submit a review. The second change implemented a simultaneous-review system, which prevented strategic reciprocity in reviews, making those reviews more informative. We propose a methodology for measuring reputation system informativeness and use the experimental results to show that the aggregate effect of sorting on average ratings is substantially larger than the effect of strategic reciprocity.

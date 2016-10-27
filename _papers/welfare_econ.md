@@ -1,5 +1,5 @@
 ---
-layout: none
+layout:
 title: "The Welfare Economics of Default Options in 401(k) Plans"
 description: ""
 category: research
