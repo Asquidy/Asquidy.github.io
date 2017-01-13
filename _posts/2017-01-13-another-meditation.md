@@ -8,9 +8,6 @@ post_type: essay
 modified: 2017-01
 status: final
 ---
-
-Thoughts On A Three Day Silent Meditation Retreat
-
 Meditation begins, as it always does, with eyes closed and a swirl of thoughts. They come rushing in, no matter how hard I try to focus on my breath or my bodily sensations. I give up multiple times. My body slouches. Frequently. Sometimes I even take a peek at the meditators sitting around me. This is just hour one. How can I tolerate another 30 hours?
 
 On the other side, things seem great. My spirits are lifted. The world is both calmer and more vibrant. I am not in a rush, although the same things need to be done as before. The mind is pliable in this weird way. How could three days of meditating produce such changes? How long will this feeling last? I do want it to last.
