@@ -82,7 +82,7 @@ Selected Content:
 </div>
 
 <ul>
-{% assign sorted_posts = site.categories.posts  | sort:"name" %}
+{% assign sorted_posts = site.categories.posts %}
 {% for post in sorted_posts %}
   {% if post.quality == "good" %}
   <div class='list_title'>

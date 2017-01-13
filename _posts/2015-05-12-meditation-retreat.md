@@ -5,7 +5,7 @@ category: posts
 tags: personal, meditation
 quality: good
 post_type: essay
-modified: 6/2014
+modified: 2014-06
 status: final
 ---
 
