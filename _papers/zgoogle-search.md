@@ -8,7 +8,8 @@ journal: Accepted, Review of Economics and Statistics
 priority: '3'
 bibtex: "http://andreyfradkin.com/assets/bibtex_papers/jobsearch.html"
 coauthors: (with <a href = "https://sites.google.com/site/srbaker/"> Scott Baker</a>)
-data: "https://www.dropbox.com/s/ybarvkfld30mg5x/Google_Data.zip?dl=0"
+data: "https://www.dropbox.com/sh/grjnpslb0zhdp75/AAD8NES9UEafi9l_zTrBR6ASa?dl=0"
+code: "https://github.com/Asquidy/google_job_search_restat"
 js: "toggleMe('google'); return false;"
 js_abbrev: 'google'
 bib: <br> @article{bakerfradkin2015,
