@@ -12,12 +12,12 @@ Please visit my job market site at:
 </div>
  -->
 <div class="content-header">
-Papers:
+Publications:
 </div>
 
 <ul style="list-style: none;">
-{% assign papers = site.papers %}
-{% for paper in papers %}
+{% assign sorted_papers = {{site.papers | sort: 'order' | where:"published", "1" }}} %}
+{% for paper in sorted_papers %}
         <li style="list-style: none;padding-bottom: 2px;">
         <div  style="padding-bottom: 1px;">
         {{ paper.title }}
@@ -36,12 +36,12 @@ Papers:
             {{ paper.other}} 
         </div>
         <div style = "font-size: 14px"> 
-        <a href="#" onclick={{ paper.js }}>Abstract</a> |
+        <a href="javascript:void(0)" onclick={{ paper.js }}>Abstract</a> |
         <a href={{ paper.link }}> PDF </a> |
         {% if paper.appendix %} 
             <a href= {{ paper.appendix }}> Appendix </a> |
         {% endif %} 
-        <a href="#" onclick={{ paper.bibjs }}> Bibtex </a>
+        <a href="javascript:void(0)" onclick={{ paper.bibjs }}> Bibtex </a>
         {% if paper.data %}  |
         <a href= {{ paper.data }}> Data </a>
         {% endif %} 
@@ -55,7 +55,62 @@ Papers:
            {{ paper.abstract }}
            <br></br>
         </div> 
-   <div id={{ paper.bib_abbrev }} style="display: none; font-size: 12px;"> 
+   <div id={{ paper.bib_abbrev }} style="display: none; font-size: 18px;"> 
+           {{ paper.bib }}
+           <br></br>
+        </div>
+         
+        <p></p>
+        </div>
+        </li>
+{% endfor %}
+</ul>
+
+<div class="content-header">
+Working Papers:
+</div>
+
+<ul style="list-style: none;">
+{% assign sorted_papers = {{site.papers | sort: 'order' | where:"published", "0"}} %}
+{% for paper in sorted_papers %}
+        <li style="list-style: none;padding-bottom: 2px;">
+        <div  style="padding-bottom: 1px;">
+        {{ paper.title }}
+        </div>
+        
+        <div>
+        <div style = "font-size: 14px;"> {{paper.coauthors}} </div>
+
+        {% if paper.journal %} 
+        <div style = "font-size: 14px; font-style:italic">  
+            {{ paper.journal}} 
+        </div>
+        {% endif %}
+
+        <div style = "font-size: 14px; font-style:italic"> 
+            {{ paper.other}} 
+        </div>
+        <div style = "font-size: 14px"> 
+        <a href="javascript:void(0)" onclick={{ paper.js }}>Abstract</a> |
+        <a href={{ paper.link }}> PDF </a> |
+        {% if paper.appendix %} 
+            <a href= {{ paper.appendix }}> Appendix </a> |
+        {% endif %} 
+        <a href="javascript:void(0)" onclick={{ paper.bibjs }}> Bibtex </a>
+        {% if paper.data %}  |
+        <a href= {{ paper.data }}> Data </a>
+        {% endif %} 
+        {% if paper.code %}  |
+        <a href= {{ paper.code }}> Code </a>
+        {% endif %} 
+        </div>
+
+       
+   <div id={{ paper.js_abbrev }} style="display: none; font-size: 18px;">
+           {{ paper.abstract }}
+           <br></br>
+        </div> 
+   <div id={{ paper.bib_abbrev }} style="display: none; font-size: 18px;"> 
            {{ paper.bib }}
            <br></br>
         </div>
@@ -95,10 +150,9 @@ Selected Content:
 {% endfor %}
 </ul>
 
-<div class="content-header">
+<!--  <div class="content-header">
 Recent Posts:
 </div> 
-
 <ul>
 {% assign sorted_posts = site.categories.posts %}
 {% for post in sorted_posts %}
@@ -116,6 +170,6 @@ Recent Posts:
 {% endif %}  
 {% endfor %}
 </ul> 
-
+-->
 
 
