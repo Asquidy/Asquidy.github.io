@@ -2,6 +2,7 @@ body {
     font-family: Baskerville, serif;
     font-size: 18px;
     line-height: 20px;
+    -webkit-text-size-adjust: auto; /* Stops Mobile Safari from auto-adjusting font-sizes */
     padding-left: 30px;
     margin-bottom:2px;
     background-color: #F9F9F9
