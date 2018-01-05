@@ -15,7 +15,7 @@ Please visit my job market site at:
 Publications:
 </div>
 
-<ul style="list-style: none;">
+<ul style="list-style: none;" class="research_list">
 {% assign sorted_papers = {{site.papers | sort: 'order' | where:"published", "1" }}} %}
 {% for paper in sorted_papers %}
         <li style="list-style: none;padding-bottom: 2px;">
@@ -70,7 +70,7 @@ Publications:
 Working Papers:
 </div>
 
-<ul style="list-style: none;">
+<ul style="list-style: none;" class="research_list">
 {% assign sorted_papers = {{site.papers | sort: 'order' | where:"published", "0"}} %}
 {% for paper in sorted_papers %}
         <li style="list-style: none;padding-bottom: 2px;">
@@ -139,7 +139,7 @@ Working Papers:
 Selected Content:
 </div>
 
-<ul>
+<ul class="research_list">
 {% assign sorted_posts = site.categories.posts %}
 {% for post in sorted_posts %}
   {% if post.quality == "good" %}

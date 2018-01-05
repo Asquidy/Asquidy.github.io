@@ -5,7 +5,7 @@ layout: splash
 Publications:
 </div>
 
-<ul style="list-style: none;">
+<ul style="list-style: none;" class="research_list">
 {% assign sorted_papers = {{site.papers | sort: 'order' | where:"published", "1" }}} %}
 {% for paper in sorted_papers %}
         <li style="list-style: none;padding-bottom: 2px;">
@@ -60,7 +60,7 @@ Publications:
 Working Papers:
 </div>
 
-<ul style="list-style: none;">
+<ul style="list-style: none;" class="research_list">
 {% assign sorted_papers = {{site.papers | sort: 'order' | where:"published", "0"}} %}
 {% for paper in sorted_papers %}
         <li style="list-style: none;padding-bottom: 2px;">
@@ -115,7 +115,7 @@ Working Papers:
 In Progress:
 </div>
 
-<ul style="list-style: none;">
+<ul style="list-style: none;" class="research_list">
 
 <li style="list-style: none;"> <p> Licenses vs. Reviews: Evidence from an Online Services Marketplace (with Erik Brynjolfsson, Chiara Farronato, and Brad Larsen) <p>
 <div style="font-size: 14px;">
