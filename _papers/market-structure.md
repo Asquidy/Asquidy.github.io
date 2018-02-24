@@ -2,8 +2,8 @@
 layout:
 title: "The Welfare Effects of Peer Entry in the Accommodations Market: The Case of Airbnb"
 category: research
-abstract: Online marketplaces have reduced entry costs across a variety of industries. These marketplaces allow small and part-time service providers (peers) to participate in economic exchange, often in competition with more traditional suppliers. For example, Airbnb and Uber allow almost anyone to become a hotelier or a cab driver. We first characterize market conditions favoring the entry of peer producers. In the context of the accommodation industry, we verify that across US major cities, a larger Airbnb presence is associated with low opportunity costs of renting out spare rooms, high investment costs of building hotels, and high demand volatility. We then provide reduced form evidence on the effect of Airbnb entry on hotels revenue, and highlight important city heterogeneity. We then estinate a model of competition between peers and hotels. This model allows us to determine the efficient market structure conditional on the level and variability of demand, and to quantify the welfare gains from peer-to-peer entry in the accommodation industry. We find that the consumer surplus benefits of Airbnb are relatively large in hotel constrained cities, especially during high-demand travel periods when those constraints bind. 
-link:
+abstract: We study the effects of enabling peer supply through Airbnb in the accommodation industry. We present a model of competition between flexible and dedicated sellers - peer hosts and hotels - who provide differentiated products. We estimate this model using data from major US cities and quantify the welfare effects of Airbnb on travelers, hosts, and hotels. The welfare gains are concentrated in locations (New York) and times (New Years Eve) when hotels are capacity constrained. This occurs because peer hosts are responsive to market conditions, expand supply as hotels fill up, and keep hotel prices down as a result.
+link: "/assets/market-structure-dec.pdf"
 order: 3
 published: 0
 journal: Draft Available Upon Request
