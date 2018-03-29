@@ -4,7 +4,7 @@ title: "The Determinants of Online Review Informativeness: Evidence from Field E
 category: research
 abstract: Reputation systems are used by most digital marketplaces, but their design varies greatly. We use two experimental changes to reviews on Airbnb to study how design choices affect the extent to which ratings and reviews aggregate information. The first change offered guests a $25 coupon in exchange for submitting a review. The second change implemented a simultaneous reveal review system, which eliminated strategic considerations from reviews. We show how both experiments made the reputation system more informative and use our findings to quantify the relative importance of mechanisms that cause inefficiency in reputation systems.
 journal: An earlier version of this paper was presented at EC'15 as&#58; "Bias and Reciprocity in Online Reviews&#58; Evidence from Field Experiments on Airbnb".
-link:
+link: "/assets/reviews_paper.pdf"
 js: "toggleMe('reviews'); return false;"
 js_abbrev: 'reviews'
 order: 2
