@@ -6,7 +6,7 @@ abstract: We study the effects of enabling peer supply through Airbnb in the acc
 link: "/assets/market-structure-dec.pdf"
 order: 3
 published: 0
-journal:
+journal: Revise and Resubmit at the American Economic Review
 coauthors: (with <a href = "https://sites.google.com/site/chiarafarronato/"> Chiara Farronato</a>)
 js: "toggleMe('market'); return false;"
 js_abbrev: 'market'
