@@ -8,7 +8,7 @@ link:
 js: "toggleMe('jmp'); return false;"
 js_abbrev: 'jmp'
 order: 5
-published: 0
+published: 3
 resting: 1
 other: 
 bib: <br> @article{fradkin2014search,
