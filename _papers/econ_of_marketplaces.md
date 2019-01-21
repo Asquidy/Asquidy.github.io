@@ -2,10 +2,11 @@
 layout:
 title: "Digital Marketplaces"
 category: research
-published: 0
+published: 1
 abstract: This article provides an overview of the economics of digital marketplaces. 
-journal: Invited Submission to the New Palgrave Dictionary of Economics.
+journal: New Palgrave Dictionary of Economics.
 order: 6
+peer: 0
 link: "/assets/econ_of_digital.pdf"
 bib: <br> @article{fradkin2017dig_markets,
   title={Digital Marketplaces},
