@@ -170,43 +170,6 @@ Publications (Non Peer-Reviewed):
 {% endfor %}
 </ul>
 
-
-<div class="content-header">
-Resting Papers
-</div>
-<ul style="list-style: none;" class="research_list">
-{% assign sorted_papers = {{site.papers | sort: 'order' | where:"resting", "1"}} %}
-{% for paper in sorted_papers %}
-        <li style="list-style: none;padding-bottom: 2px;">
-        <div  style="padding-bottom: 1px;">
-        {{ paper.title }}
-        </div>
-        
-        <div>
-        <div style = "font-size: 14px;"> {{paper.coauthors}} </div>
-
-        {% if paper.journal %} 
-        <div style = "font-size: 14px; font-style:italic">  
-            {{ paper.journal}} 
-        </div>
-        {% endif %}
-
-       
-   <div id={{ paper.js_abbrev }} style="display: none; font-size: 18px;">
-           {{ paper.abstract }}
-           <br></br>
-        </div> 
-   <div id={{ paper.bib_abbrev }} style="display: none; font-size: 18px;"> 
-           {{ paper.bib }}
-           <br></br>
-        </div>
-         
-        <p></p>
-        </div>
-        </li>
-{% endfor %}
-</ul>
-
 <div class="content-header">
 Selected Content:
 </div>
@@ -222,6 +185,12 @@ Selected Content:
 {% endfor %}
 </ul>
 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <!--  <div class="content-header">
 Recent Posts:
 </div> 
