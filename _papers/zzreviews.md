@@ -11,8 +11,8 @@ order: 2
 published: 0
 coauthors: (with Elena Grewal and David Holtz)
 bib: <br> @article{reportingandreciprocity,
-  title={Reciprocity in Two-sided Reputation Systems: Evidence from an Experiment on Airbnb},
-  author={Fradkin, Andrey and Grewal, Elena and Holtz, David}, 
+  title={Reciprocity in Two-sided Reputation Systems&#58; Evidence from an Experiment on Airbnb},
+  author={Fradkin, Andrey and Grewal, Elena and Holtz, David},
   year={2019}}
 bibjs: "toggleMe('reviews_bib'); return false;"
 bib_abbrev: 'reviews_bib'
