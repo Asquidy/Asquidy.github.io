@@ -7,7 +7,8 @@ Working Papers:
 </div>
 
 <ul style="list-style: none;margin-bottom: -30px;" class="research_list">
-{% assign sorted_papers = {{site.papers | sort: 'order' | where: "published", "0" }} %}
+{% assign sorted_papers = site.papers  | where: "published", "0" | sort: 'order' %}
+
 {% for paper in sorted_papers %}
         <li style="list-style: none;padding-bottom: 2px;">
         <div  style="padding-bottom: 1px;">
@@ -61,7 +62,7 @@ Publications (Peer-Reviewed):
 </div>
 
 <ul style="list-style: none;" class="research_list">
-{% assign sorted_papers = {{site.papers | sort: 'order' | where: "published", "1" | where: "peer", "1" }}} %}
+{% assign sorted_papers = site.papers  | where: "published", "1" | where: "peer", "1" | sort: 'order' %}
 {% for paper in sorted_papers %}
         <li style="list-style: none;padding-bottom: 2px;">
         <div  style="padding-bottom: 1px;">
@@ -116,7 +117,7 @@ Publications (Non Peer-Reviewed):
 </div>
 
 <ul style="list-style: none;" class="research_list">
-{% assign sorted_papers = {{site.papers | sort: 'order' | where: "published", "1" | where: "peer", "0" }}} %}
+{% assign sorted_papers = site.papers  | where: "published", "1" | where: "peer", "0" | sort: 'order' %}
 {% for paper in sorted_papers %}
         <li style="list-style: none;padding-bottom: 2px;">
         <div  style="padding-bottom: 1px;">
@@ -170,7 +171,7 @@ Publications (Non Peer-Reviewed):
 Resting Papers
 </div>
 <ul style="list-style: none;" class="research_list">
-{% assign sorted_papers = {{site.papers | sort: 'order' | where:"resting", "1"}} %}
+{% assign sorted_papers = site.papers | sort: 'order' | where:"resting", "1" %}
 {% for paper in sorted_papers %}
         <li style="list-style: none;padding-bottom: 2px;">
         <div  style="padding-bottom: 1px;">
