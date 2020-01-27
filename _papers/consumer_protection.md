@@ -1,10 +1,10 @@
 ---
 layout: 
-title: "Consumer Protection in an Online World: When Does Occupational Licensing Matter?"
-abstract: This paper studies the effects of occupational licensing on outcomes in a large on-line platform for home services, where professional service providers bid on consumers projects. We exploit exogenous variation in the time at which licenses are displayed on the platform to identify the causal effects of licensing information and reviews on consumer choices. We find that platform verified licensing status is not valued by consumers but digital reputation is. Next, we use zip-code by job category variation in licensing stringency to measure the effects of licensing on aggregate market outcomes. Our results show that more stringent licensing leads to less competition and higher prices, but does not improve customer satisfaction.
+title: "Consumer Protection in an Online World: An Analysis of Occupational Licensing"
+abstract: We study the effects of occupational licensing on consumer choices and market outcomes in a large online platform for residential home services. We exploit exogenous variation in the time at which licenses are displayed on the platform to identify the causal effects of licensing information on consumer choices. We find that the platform-verified licensing status of a professional is unimportant for consumer decisions relative to review ratings and prices. We confirm this result in an independent consumer survey. We also use variation in regulation stringency across states and occupations to measure the effects of licensing on aggregate market outcomes on the platform. Our results show that more stringent licensing regulations are associated with less competition and higher prices but not with any improvement in customer satisfaction as measured by review ratings or the propensity to use the platform again.
 category: research
-journal: Inquire for a preliminary draft.
-link: 
+journal: Submitted
+link: "/assets/occupational_licensing.pdf"
 coauthors: with <a href = "https://sites.google.com/site/chiarafarronato/"> Chiara Farronato</a>, <a href="https://web.stanford.edu/~bjlarsen/"> Brad Larsen</a> and <a href="http://ebusiness.mit.edu/erik/">Erik Brynjolfsson</a>
 js: "toggleMe('conpro'); return false;"
 js_abbrev: 'conpro'
