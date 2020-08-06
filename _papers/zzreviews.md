@@ -2,7 +2,15 @@
 layout:
 title: "Reciprocity in Two-sided Reputation Systems: Evidence from an Experiment on Airbnb"
 category: research
-abstract: Reciprocity in feedback may distort information and lead to inefficient outcomes in digital marketplaces. We analyze a large-scale field experiment on Airbnb in which the treatment was a simultaneous reveal review system that eliminated the ability of second reviewers to condition feedback on the content of the first review. The treatment had small negative effects on ratings and content, which points to a limited role of strategic reciprocity in shaping review content prior to the introduction of simultaneous reveal. The treatment also induced 9.7&#37; more host reviews and 1.8&#37; more guest reviews, consistent with a desire to reveal information about a counterparty’s review by submitting a review. We fail to reject the null of no treatment effect on subsequent transactions by guests and hosts. Even in the absence of strategic reciprocity, there is evidence that some feedback may be distorted. For instance, when a guest does not recommend a host in a private and anonymous response, 19% of public reviews contain a high rating. Using plausibly exogenous variation in observational data, we show that this mismatch is partially explained by market participants interacting in a social manner and consequently omitting negative information in reviews.
+abstract: Reputation systems are used by nearly every digital marketplace but designs vary. One
+design choice is when to reveal post-transaction feedback to users, which may affect the content of reviews and the speed with which information is distributed in the marketplace. We
+study the effects of changing feedback revelation timing in a large-scale field experiment on
+Airbnb. Feedback in the treatment group was hidden until both parties submitted a review and
+was revealed immediately after submission in the control group. We show that the treatment
+reduced retaliation and reciprocation in feedback giving. The treatment also stimulated more
+reviewing in total, due to users’ curiosity about what the counterparty wrote and/or the desire
+to have feedback visible to other users. The effects on feedback giving did not translate into a
+reduction of adverse selection as measured by subsequent transactions and prices.
 journal: Revise and Resubmit at Marketing Science <br> This is a substantially revised version of a paper presented at EC'15 as&#58; "Bias and Reciprocity in Online Reviews&#58; Evidence from Field Experiments on Airbnb".
 link: "/assets/reviews_paper.pdf"
 js: "toggleMe('reviews'); return false;"
