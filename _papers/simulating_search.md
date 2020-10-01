@@ -7,9 +7,8 @@ journal: This paper supercedes the second half of "Search Frictions and the Desi
 link: "/assets/simulating_airbnb.pdf"
 js: "toggleMe('sim_md'); return false;"
 js_abbrev: 'sim_md'
-order: 3
+order: 6
 published: 0
-other: 
 bib: <br> @article{fradkin2019sim,
   title={A Simulation Approach to Designing Digital Matching Platforms},
   author={Fradkin, Andrey},

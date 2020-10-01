@@ -8,12 +8,11 @@ link: "/assets/occupational_licensing.pdf"
 coauthors: with <a href = "https://sites.google.com/site/chiarafarronato/"> Chiara Farronato</a>, <a href="https://web.stanford.edu/~bjlarsen/"> Brad Larsen</a> and <a href="http://ebusiness.mit.edu/erik/">Erik Brynjolfsson</a>
 js: "toggleMe('conpro'); return false;"
 js_abbrev: 'conpro'
-order: 10
+order: 4
 published: 0
-other: 
-bib: 
-bibjs: 
-bib_abbrev:
+bib: <br> @techreport{NBERw26601, title = {Consumer Protection in an Online World&#58; An Analysis of Occupational Licensing}, author = {Farronato, Chiara and Fradkin, Andrey and Larsen, Bradley and Brynjolfsson, Erik}, institution = {National Bureau of Economic Research}, number = {26601}, year = {2020}, month = {January}}
+bibjs: "toggleMe('conpro_bib'); return false;"
+bib_abbrev: 'conpro_bib'
 ---
 
 
