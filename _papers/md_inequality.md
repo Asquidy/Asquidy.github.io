@@ -8,10 +8,7 @@ journal: Oxford University Press Volume IV&#58; "More Equal by Design&#58; Econo
 order: 207
 peer: 0
 link: "/assets/digital_md_inequality.pdf"
-bib: <br> @article{fradkin2017md_inequality,
-  title={Digital Market Design and Inequality},
-  author={Fradkin, Andrey},
-  year={2017}}
+bib: <br> @article{fradkin2017md_inequality, title={Digital Market Design and Inequality}, author={Fradkin, Andrey},year={2017}}
 bibjs: "toggleMe('md_inequality_bib'); return false;"
 bib_abbrev: 'md_inequality_bib'
 js: "toggleMe('md_inequality'); return false;"
