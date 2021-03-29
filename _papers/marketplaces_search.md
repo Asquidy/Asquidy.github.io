@@ -7,7 +7,7 @@ journal: This paper supercedes the first half of "Search Frictions and the Desig
 link: "/assets/SearchMatchingEfficiency.pdf"
 js: "toggleMe('search_md'); return false;"
 js_abbrev: 'search_md'
-order: 5
+order: 6
 published: 0
 other: 
 bib: <br> @article{fradkin2017search,
