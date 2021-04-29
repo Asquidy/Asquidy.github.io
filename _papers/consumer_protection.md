@@ -1,7 +1,7 @@
 ---
 layout: 
 title: "Consumer Protection in an Online World: An Analysis of Occupational Licensing"
-abstract: We study the effects of occupational licensing on consumer choices and market outcomes in a large online platform for residential home services. We exploit exogenous variation in the time at which licenses are displayed on the platform to identify the causal effects of licensing information on consumer choices. We find that the platform-verified licensing status of a professional is unimportant for consumer decisions relative to review ratings and prices. We confirm this result in an independent consumer survey. We also use variation in regulation stringency across states and occupations to measure the effects of licensing on aggregate market outcomes on the platform. Our results show that more stringent licensing regulations are associated with less competition and higher prices but not with any improvement in customer satisfaction as measured by review ratings or the propensity to use the platform again.
+abstract: We study the demand and supply implications of occupational licensing using transaction-level data from a large online platform for home improvement services. We find that demand is more responsive to a professional's reviews than to the professional's platform-verified licensing status. We confirm the generality of these results off the platform in an independent consumer survey. We then show that more stringent licensing regulations are associated with less competition, higher prices, and no improvement in consumer satisfaction or demand expansion. These restrictions particularly serve as a barrier to small and new businesses.
 category: research
 journal: 
 link: "/assets/occupational_licensing.pdf"
