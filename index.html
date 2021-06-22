@@ -170,6 +170,63 @@ Publications (Non Peer-Reviewed):
 {% endfor %}
 </ul>
 
+
+<div class="content-header">
+Resting Papers:
+</div>
+
+<ul style="list-style: none;margin-bottom: -30px;" class="research_list">
+{% assign sorted_papers = site.papers  | where: "published", "-1" | sort: 'order' %}
+
+{% for paper in sorted_papers %}
+        <li style="list-style: none;padding-bottom: 2px;">
+        <div  style="padding-bottom: 1px;">
+        {{ paper.title }}
+        </div>
+
+        <div>
+        <div style = "font-size: 14px;"> {{paper.coauthors}} </div>
+
+        {% if paper.journal %}
+        <div style = "font-size: 14px; font-style:italic">
+            {{ paper.journal}}
+        </div>
+        {% endif %}
+
+        <div style = "font-size: 14px; font-style:italic">
+            {{ paper.other}}
+        </div>
+        <div style = "font-size: 14px">
+        <a href="javascript:void(0)" onclick={{ paper.js }}>Abstract</a> |
+        <a href={{ paper.link }}> PDF </a> |
+        {% if paper.appendix %}
+            <a href= {{ paper.appendix }}> Appendix </a> |
+        {% endif %}
+        <a href="javascript:void(0)" onclick={{ paper.bibjs }}> Bibtex </a>
+        {% if paper.data %}  |
+        <a href= {{ paper.data }}> Data </a>
+        {% endif %}
+        {% if paper.code %}  |
+        <a href= {{ paper.code }}> Code </a>
+        {% endif %}
+        </div>
+
+   <div id={{ paper.js_abbrev }} style="display: none; font-size: 18px;">
+           {{ paper.abstract }}
+           <br></br>
+        </div>
+   <div id={{ paper.bib_abbrev }} style="display: none; font-size: 18px;">
+           {{ paper.bib }}
+           <br></br>
+        </div>
+
+        <p></p>
+        </div>
+        </li>
+{% endfor %}
+</ul>
+<br><br>
+
 <div class="content-header">
 Selected Content:
 </div>

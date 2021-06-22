@@ -9,7 +9,7 @@ coauthors: with Chiara Longoni, Luca Cian, and Gordon Pennycook
 js: "toggleMe('ainews'); return false;"
 js_abbrev: 'ainews'
 order: 11
-published: 0
+published: -1
 bib: <br> @misc{longoni_fradkin_cian_pennycook_2021,
  title={News from Artificial Intelligence is Believed Less},
  url={psyarxiv.com/wgy9e},
