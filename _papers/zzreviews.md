@@ -9,7 +9,7 @@ js: "toggleMe('reviews'); return false;"
 js_abbrev: 'reviews'
 order: 2
 published: 0
-coauthors: (with Elena Grewal and David Holtz)
+coauthors: (with Elena Grewal and <a href = 'https://www.daveholtz.net/'> David Holtz </a>)
 bib: <br> @article{reportingandreciprocity,
   title={Reciprocity in Two-sided Reputation Systems&#58; Evidence from an Experiment on Airbnb},
   author={Fradkin, Andrey and Grewal, Elena and Holtz, David},

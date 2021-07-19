@@ -4,15 +4,23 @@ layout: splash
 
 <div class="headline", style = "font-style: italic;">  Assistant Professor, Boston University Questrom School of Business </div>
 
+<div style = "font-size:small">
+    <a href = '#workingpapers'> Working Papers </a> -
+    <a href = '#publications'> Published Papers </a> -
+    <a href = '#other'> Non-Refereed Papers</a> - 
+    <a href = '#resting'> Resting Papers </a> -
+    <a href = '#content'> Selected Content </a>
 
+</div>
 <div class="content-header">
-Working Papers:
+<a name = 'workingpapers', style='color:inherit;text-decoration: none;'>Working Papers:</a>
 </div>
 
 <ul style="list-style: none;margin-bottom: -30px;" class="research_list">
 {% assign sorted_papers = site.papers  | where: "published", "0" | sort: 'order' %}
 
 {% for paper in sorted_papers %}
+
         <li style="list-style: none;padding-bottom: 2px;">
         <div  style="padding-bottom: 1px;">
         {{ paper.title }}
@@ -60,8 +68,8 @@ Working Papers:
 {% endfor %}
 </ul>
 <br><br>
-<div class="content-header">
-Publications (Peer-Reviewed):
+<div class="content-header"}">
+<a name = 'publications', style='color:inherit;text-decoration: none;'>Publications (Peer-Reviewed):</a>
 </div>
 
 <ul style="list-style: none;" class="research_list">
@@ -115,8 +123,8 @@ Publications (Peer-Reviewed):
 {% endfor %}
 </ul>
 
-<div class="content-header">
-Publications (Non Peer-Reviewed):
+<div class="content-header", name = 'other'>
+<a name = 'other', style='color:inherit;text-decoration: none;'>Publications (Non Peer-Reviewed):</a>
 </div>
 
 <ul style="list-style: none;" class="research_list">
@@ -172,7 +180,7 @@ Publications (Non Peer-Reviewed):
 
 
 <div class="content-header">
-Resting Papers:
+<a name = 'resting', style='color:inherit;text-decoration: none;'>Resting Papers:</a>
 </div>
 
 <ul style="list-style: none;margin-bottom: -30px;" class="research_list">
@@ -228,7 +236,7 @@ Resting Papers:
 <br><br>
 
 <div class="content-header">
-Selected Content:
+<a name = 'content', style='color:inherit;text-decoration: none;'>Selected Content:</a>
 </div>
 
 <ul class="research_list">
