@@ -6,7 +6,7 @@ abstract: We study the effects of enabling peer supply through Airbnb in the acc
 link: "/assets/airbnb_welfare_paper.pdf"
 order: 1
 published: 0
-journal: Conditionally Accepted at the American Economic Review
+journal: Conditionally Accepted at the American Economic Review (2021)
 coauthors: (with <a href = "https://sites.google.com/site/chiarafarronato/"> Chiara Farronato</a>)
 js: "toggleMe('market'); return false;"
 js_abbrev: 'market'
