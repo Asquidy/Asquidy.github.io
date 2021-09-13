@@ -1,9 +1,9 @@
 ---
 layout: 
-title: "Dog Eat Dog: Measuring Network Effects Using a Digital Platform Merger"
-abstract: A monopolistic platform may increase consumer welfare if network effects are large enough to offset pricing power and reduction in platform variety. We use a difference-in-differences approach to study the net effect of this trade-off in the context of a merger between the two largest pet-sitting platforms. We find that platform prices did not change, users of the acquiring platform benefited from the merger because of network effects, and users of the acquired platform were harmed because their platform was shut down. These effects offset each other so that user outcomes are similar, on average, before and after the merger.
+title: "Dog Eat Dog: Balancing Network Effects and Differentiation in a Digital Platform Merger"
+abstract: Mergers among digital platforms are increasingly receiving public and regulatory attention. These mergers may benefit users if network effects from a combined platform are large enough or may hurt users if the two platforms are differentiated and one of the platforms is shut down. We study the net effect of this trade-off in the context of the merger between the two largest platforms for pet-sitting services. We exploit geographic variation in pre-merger market shares and a difference-in-differences approach to causally estimate network effects. We find that users of the acquiring platform benefited from the merger because of network effects. However, users of the acquired platform were more likely to exit the market, for reasons including switching costs, coordination failures, and disintermediation. Network effects and attrition offset each other such that at the market level consumers are, on average, not substantially better off with a single combined platform than with two separate and competing platforms. Our results highlight the importance of platform differentiation even when platforms enjoy network effects, which has important implications for antitrust authorities and platform owners.
 category: research
-journal: Most Recent Version 2021
+journal: Most Recent Version Sep. 2021
 link: "/assets/rover_draft.pdf"
 coauthors: with <a href = "https://sites.google.com/site/chiarafarronato/"> Chiara Farronato</a> and <a href="https://www.jessica-fong.com/"> Jessica Fong</a>
 js: "toggleMe('dogeatdog'); return false;"
