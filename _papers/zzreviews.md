@@ -7,8 +7,9 @@ journal: Marketing Science (2021) <br> This is a substantially revised version o
 link: "/assets/reviews_paper.pdf"
 js: "toggleMe('reviews'); return false;"
 js_abbrev: 'reviews'
-order: 2
 published: 1
+peer: 1
+order: -2021
 coauthors: (with Elena Grewal and <a href = 'https://www.daveholtz.net/'> David Holtz </a>)
 bib: <br> @article{reportingandreciprocity,
   title={Reciprocity in Two-sided Reputation Systems&#58; Evidence from an Experiment on Airbnb},
