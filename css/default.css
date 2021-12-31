@@ -61,6 +61,13 @@ hr {
     text-indent:0px;
 }
 
+.desc{    
+  font-size: 16px;
+  line-height: 1.6; 
+  padding-bottom: 16px;
+  width: 70%;
+}
+
 @media only screen and (max-width : 1000px) {
   body {
     padding-top: 12px;
@@ -73,6 +80,13 @@ hr {
     font-style:oblique;
     line-height: 16px;
     margin-bottom: 10px;
+  }
+  .desc{
+    line-height: 1.6; 
+    font-size: 16px;
+    width: 50%;
+    overflow:auto;
+    word-wrap: normal;
   }
   #post {
     font-size: 16px;
@@ -91,7 +105,7 @@ hr {
     width: auto;
   }
   .research_list{
-    width: 60%;
+    width: 40%;
     overflow:auto;
     word-wrap: normal;
   }
@@ -103,7 +117,7 @@ hr {
     font-style: bold;
   }
   #footer{
-    width: 60%;
+    width: 40%;
     font-size: 10px;
   }
   #about{
