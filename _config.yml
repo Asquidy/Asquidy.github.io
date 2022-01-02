@@ -18,10 +18,12 @@ future:      true
 show_drafts: nil
 limit_posts: 0
 relative_permalinks: false
-
 permalink:     date
 paginate_path: 'page:num'
 
+plugins:
+  - jekyll-spaceship
+  
 collections:
   papers:
     output: true
