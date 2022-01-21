@@ -4,7 +4,7 @@ title: "Digital Market Design and Inequality"
 category: research
 published: 1
 abstract: This article discusess how privacy and the design of digital marketplaces may affect inequality.
-journal: Oxford University Press Volume IV&#58; "More Equal by Design&#58; Economic Design Responses to Inequality". Eds. Scott Duke Kominers and Alex Teytelboym.
+journal: Oxford University Press Volume IV&#58; "More Equal by Design&#58; Economic Design Responses to Inequality". Eds. Scott Duke Kominers and Alex Teytelboym. (2017)
 order: 207
 peer: 0
 link: "/assets/digital_md_inequality.pdf"

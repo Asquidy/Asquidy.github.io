@@ -4,7 +4,7 @@ title: "Tit for Tat&#63; The Difficulty of Designing Two-Sided Reputation System
 category: research
 published: 1
 abstract: This article provided a practitioner overview of recent work on reputation system design.
-journal: NIM Marketing Intelligence Review
+journal: NIM Marketing Intelligence Review (2020)
 order: 208
 peer: 0
 link: "/assets/mir_titfortat.pdf"
