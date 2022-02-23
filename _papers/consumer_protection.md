@@ -3,7 +3,7 @@ layout:
 title: "Consumer Protection in an Online World: An Analysis of Occupational Licensing"
 abstract: We study the demand and supply implications of occupational licensing using transaction-level data from a large online platform for home improvement services. We find that demand is more responsive to a professional's reviews than to the professional's platform-verified licensing status. We confirm the generality of these results off the platform in an independent consumer survey. Combining state-level licensing regulation data with platform micro-data, we find that more stringent requirements are associated with less competition, higher prices, and no improvement in consumer satisfaction or demand expansion. 
 category: research
-journal: Most Recent Version 2021
+journal: Revise and Resubmit at AEJ:Applied Economics
 link: "/assets/occupational_licensing.pdf"
 coauthors: with <a href = "https://sites.google.com/site/chiarafarronato/"> Chiara Farronato</a>, <a href="https://web.stanford.edu/~bjlarsen/"> Brad Larsen</a> and <a href="http://ebusiness.mit.edu/erik/">Erik Brynjolfsson</a>
 js: "toggleMe('conpro'); return false;"
