@@ -7,7 +7,7 @@ link: "/assets/airbnb_welfare_paper.pdf"
 order: 1
 published: 0
 appendix: "/assets/airbnb_welfare_paper_appendix.pdf"
-journal: Forthcoming at the American Economic Review (2021)
+journal: Forthcoming at the American Economic Review (2022)
 coauthors: (with <a href = "https://sites.google.com/site/chiarafarronato/"> Chiara Farronato</a>)
 js: "toggleMe('market'); return false;"
 js_abbrev: 'market'
