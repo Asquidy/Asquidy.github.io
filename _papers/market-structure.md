@@ -9,7 +9,7 @@ published: 1
 peer: 1
 code: "https://www.openicpsr.org/openicpsr/project/154841/version/V1/view"
 appendix: "/assets/airbnb_welfare_paper_appendix.pdf"
-journal: American Economic Review (2022)
+journal: American Economic Review (June 2022)
 coauthors: (with <a href = "https://sites.google.com/site/chiarafarronato/"> Chiara Farronato</a>)
 js: "toggleMe('market'); return false;"
 js_abbrev: 'market'
