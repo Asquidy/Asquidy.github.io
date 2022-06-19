@@ -1,6 +1,6 @@
 body {
-    font-family: 'Gill Sans', sans-serif;
-    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
     line-height: 36px;
     -webkit-text-size-adjust: auto; /* Stops Mobile Safari from auto-adjusting font-sizes */
     padding-left: 20px;
@@ -62,7 +62,7 @@ hr {
 }
 
 .desc{    
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.6; 
   padding-bottom: 16px;
   width: 70%;
@@ -87,11 +87,6 @@ hr {
     width: 50%;
     overflow:auto;
     word-wrap: normal;
-  }
-  #post {
-    font-size: 16px;
-    line-height: 36px;
-    text-align: left;
   }
   .headline {
     font-size: 18px;
@@ -164,11 +159,16 @@ hr {
 }
 
 #post{
-    font-size: 18px;
-    line-height: 30px;
-    width: 600px;
+    font-size: 20px;
+    line-height: 1.6;
     text-align: left;
+    width: 85%;
+    padding-left: 10px;
 } 
+li{
+  line-height: 1.6;
+  margin: 20px 0;
+}
 
 .top_title{
     display: inline;
