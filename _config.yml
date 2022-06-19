@@ -42,6 +42,8 @@ baseurl:     /
 url:         http://localhost:4000
 lsi:         false
 
+sass:
+  sass_dir: assets/css
 ### rdiscount:
 ###   extensions:
 ###     - autolink      # greedily urlify links

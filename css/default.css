@@ -100,9 +100,10 @@ hr {
     width: auto;
   }
   .research_list{
-    width: 40%;
+    width: 50%;
     overflow:auto;
     word-wrap: normal;
+    font-size: 18px;
   }
   .content-header{
     font-size: 18px;
@@ -162,7 +163,7 @@ hr {
     font-size: 20px;
     line-height: 1.6;
     text-align: left;
-    width: 85%;
+    width: 80%;
     padding-left: 10px;
 } 
 li{
