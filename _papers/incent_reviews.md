@@ -8,7 +8,7 @@ link: "/assets/reviews_ir_paper.pdf"
 coauthors: with  <a href = 'https://www.daveholtz.net/'> David Holtz </a>
 js: "toggleMe('ireviews'); return false;"
 js_abbrev: 'ireviews'
-order: 3
+order: 2
 published: 0
 bib: <br> @techreport{ireviews, title = {ore Reviews May Not Help&#58 Evidence from Incentivized First Reviews on Airbnb}, author = {Andrey Fradkin and David Holtz}, year = {2021}}
 bibjs: "toggleMe('ireviews_bib'); return false;"
