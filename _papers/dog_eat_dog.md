@@ -9,7 +9,7 @@ coauthors: with <a href = "https://sites.google.com/site/chiarafarronato/"> Chia
 js: "toggleMe('dogeatdog'); return false;"
 js_abbrev: 'dogeatdog'
 order: 3
-published: 0
+published: 1
 bib: <br> @techreport{dogeatdog, title = {Dog Eat Dog&#58; Measuring Network Effects Using a Digital Platform Merger}, author = {Chiara Farronato and FongFradkin, Jessica and Fradkin, Andrey}, year = {2021}}
 bibjs: "toggleMe('dogeatdog_bib'); return false;"
 bib_abbrev: 'dogeatdog_bib'
