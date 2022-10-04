@@ -3,7 +3,7 @@ layout:
 title: "Search, Matching, and the Role of Digital Marketplace Design in Enabling Trade: Evidence from Airbnb"
 category: research
 abstract: Two-sided marketplaces are distinguished by the fact that both sides have preferences regarding each others' non-price characteristics. This paper studies how digital platform design affects transaction costs and volume in these markets by analyzing the decisions of guests and hosts to search and match with each other on Airbnb. I show that the two-sided nature of the market is important. Through 2014, rejections of guests by hosts occur for 42% of inquiries regarding booking and these rejections causally decrease the rate at which guests eventually book on the platform by 43% to 70%. Rejections are primarily caused by stale vacancies and the screening of guests by hosts. I use data on search and communication to estimate a model of guest and host choices. I apply this model to study the effects of search engine design and find that, by tracking listing availability, Airbnb reduces rejections by 59%. I then show that incorporating host preferences into rankings can further increase match rates and discuss how Airbnb's subsequent innovations reflect these findings.
-journal: This paper supercedes the first half of "Search Frictions and the Design of Online Marketplaces". ( Most Recent Version 2018)
+journal: This paper supercedes the first half of "Search Frictions and the Design of Online Marketplaces". (Most Recent Version 2018)
 link: "/assets/SearchMatchingEfficiency.pdf"
 js: "toggleMe('search_md'); return false;"
 js_abbrev: 'search_md'
