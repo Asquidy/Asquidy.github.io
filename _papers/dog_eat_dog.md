@@ -11,7 +11,7 @@ js_abbrev: 'dogeatdog'
 order: -2023
 published: 1
 peer: 1
-bib: <br> @techreport{dogeatdog, title = {Dog Eat Dog&#58; Measuring Network Effects Using a Digital Platform Merger}, author = {Chiara Farronato and FongFradkin, Jessica and Fradkin, Andrey}, year = {2021}}
+bib: <br> @techreport{dogeatdog, title = {Dog Eat Dog&#58; Measuring Network Effects Using a Digital Platform Merger}, author = {Chiara Farronato and Fong Fradkin, Jessica and Fradkin, Andrey}, year = {2021}}
 bibjs: "toggleMe('dogeatdog_bib'); return false;"
 bib_abbrev: 'dogeatdog_bib'
 ---

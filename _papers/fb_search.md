@@ -1,9 +1,9 @@
 ---
 layout: 
-title: "Information About Vacancy Competition Redirects Job Search"
-abstract: Job seekers typically do not know the degree of competition they face for a particular vacancy. As a result, they may unwittingly send applications to vacancies with a lot of competition and may overlook vacancies with little competition. We study how providing information about competition for a vacancy redirects applications. To do so, we conduct three field experiments on a large online job platform in which treated job searchers are shown information about the number of prior applicants to a vacancy. This information increases overall applications and redirects applications to vacancies with few prior applications. Applications are sent to vacancies that receive fewer cumulative applications but result in similar outcomes to control applications. We use a complementary treatment to show that job seekers also use the age of the vacancy to direct search towards newer vacancies with relatively little competition. Our results are consistent with a model in which searchers have imperfect information about competition for a vacancy and redirect their search towards less competitive vacancies when they receive an improved signal.
+title: "Competition Avoidance vs Herding in Job Search: Evidence from Large-scale Field Experiments on an Online Job Board"
+abstract: We study how information that may simultaneously signal the degree of competition and vacancy quality affects job search. To do so, we conduct three experiments on a large online job platform in which the treatment varies what information is shown to job seekers. Information about the number of prior applicants  to a vacancy increases the number of applications and redirects them to vacancies with few prior applications. Information about vacancy age increases application rates, especially to new vacancies. To further investigate the causal mechanisms, we conduct and analyze a survey choice experiment. We conclude that job seekers prefer to avoid competition rather than using the popularity of a vacancy as a signal of quality.
 category: research
-journal: Most Recent Version 2021
+journal: Most Recent Version 2021 (New Version Pending Approval by Meta)
 link: "assets/fb_congestion.pdf"
 coauthors: with Monica Bhole and <a href = 'https://john-joseph-horton.com/'> John Horton </a>
 js: "toggleMe('fbsearch'); return false;"
