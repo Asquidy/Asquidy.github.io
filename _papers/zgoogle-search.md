@@ -6,7 +6,7 @@ published: 1
 peer: 1
 abstract: Job search is a key choice variable in theories of labor markets but is difficult to measure directly. We develop a job search activity index based on Google search data, the Google Job Search Index (GJSI). We validate the GJSI with both survey- and web-based measures of job search. Unlike those measures, the GJSI is high-frequency, geographically precise, and available in real time.We demonstrate the GJSI’s utility by using it to study the effects of changes in the unemployment insurance (UI) system between 2008 and 2014 on job search, finding no evidence of economically meaningful decreases in aggregate search activity.
 link: /assets/FullTexasJobSearch.pdf
-journal: Review of Economics and Statistics (December 2017)
+journal: Review of Economics and Statistics (December 2017) <br>  Also see <a href = 'https://doi.org/10.1002/jae.2971'> "On Event Study Designs and Distributed-Lag Models in Two-Way Fixed Effect Models&#58; Identification, Equivalence, and Generalization"</a> for an extension of our event study results. This paper applies an improved methodology to our results and shows that our estimates about potential benefit duration are consistent with an improved estimation procedure for the event study.  
 order: -2017
 bibtex: "http://andreyfradkin.com/assets/bibtex_papers/jobsearch.html"
 coauthors: (with <a href = "https://sites.google.com/site/srbaker/"> Scott R. Baker</a>)
