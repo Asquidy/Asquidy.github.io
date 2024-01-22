@@ -8,7 +8,8 @@ link: "/assets/SearchMatchingEfficiency.pdf"
 js: "toggleMe('search_md'); return false;"
 js_abbrev: 'search_md'
 order: 6
-published: 0
+published: -1
+resting: 1
 other: 
 bib: <br> @article{fradkin2017search,
   title={Search, Matching, and the Role of Digital Marketplace Design in Enabling Trade&#58; Evidence from Airbnb},

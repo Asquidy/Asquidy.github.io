@@ -5,7 +5,7 @@ category: research
 published: 1
 abstract: This article provides an overview of the economics of digital marketplaces. 
 journal: New Palgrave Dictionary of Economics (2017).
-order: 206
+order: 300
 peer: 0
 link: "/assets/econ_of_digital.pdf"
 bib: <br> @article{fradkin2017dig_markets,
