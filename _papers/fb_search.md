@@ -10,10 +10,6 @@ js: "toggleMe('fbsearch'); return false;"
 js_abbrev: 'fbsearch'
 order: 3
 published: 0
-bib: <br> @article{fbsearch,
-  title={Information About Vacancy Competition Redirects Job Search},
-  author={Bhole, Monica and Fradkin, Andrey and Horton, John},
-  year={2022}}
 bibjs: "toggleMe('fbsearch_bib'); return false;"
 bib_abbrev: 'fbsearch_bib'
 ---
