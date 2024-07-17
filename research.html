@@ -37,7 +37,10 @@ Working Papers:
         {{ paper.other}}
     </div>
     <div style = "font-size: 14px">
-    <a href="javascript:void(0)" onclick={{ paper.js }}>Abstract</a> |
+    <a href="javascript:void(0)" onclick={{ paper.js }}>Abstract</a> 
+    {% if paper.link %} |
+        <a href={{ paper.link }}> PDF </a> 
+    {% endif %}
     <a href={{ paper.link }}> PDF </a> 
     {% if paper.appendix %}
     |    <a href= {{ paper.appendix }}> Appendix </a> 
