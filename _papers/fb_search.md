@@ -8,8 +8,9 @@ link: "assets/jobs_authors.pdf"
 coauthors: with Monica Bhole and <a href = 'https://john-joseph-horton.com/'> John Horton </a>
 js: "toggleMe('fbsearch'); return false;"
 js_abbrev: 'fbsearch'
-order: 3
-published: 0
+order: -2024.1
+published: 1
+peer: 1
 bibjs: "toggleMe('fbsearch_bib'); return false;"
 bib_abbrev: 'fbsearch_bib'
 ---
