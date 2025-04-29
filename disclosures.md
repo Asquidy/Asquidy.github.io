@@ -1,12 +1,14 @@
 ---
 layout: post
-title: "Disclosure of potentially competing interests"
-modified: 2022-01
+title: "Potentially competing interests"
+modified: April 29, 2025
 ---
 
 - Andrey Fradkin is currently an employee of Boston University.
 - A.F. is affiliated with the MIT Initiative on the Digital Economy
-- A.F. has previously been an independent contractor for Pro Unlimited at Facebook and is involved in a research project with Facebook.
-- A.F. has previously been an employee of Airbnb, has had a significant financial interest (SFI), and is currently an unpaid independent contractor. He is involved in several research projects with Airbnb.
+- A.F. has previously been an independent contractor for Pro Unlimited at Facebook/Meta for a research collaboration. He holds no material financial interest in the company.
+- A.F. has previously been an employee of Airbnb. He is involved in research projects with Airbnb without compensation. He holds no material financial interest in the company.
+- A.F. is an employee of Velocity Global for the purposes of a consulting arrangement with Indeed Inc. He holds no material financial interest in the company.
+- A.F. has conducted independent consulting work for Lineage Logistics. He holds no material financial interest in the company.
 - A.F.'s travel has been funded by universities and companies.
 - A.F. conducts some of his research via data use agreements with unnamed firms.
