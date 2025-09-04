@@ -15,13 +15,13 @@ I am now <a href="https://empiricrafting.substack.com/">blogging</a> and co-host
 
 </div>
 
-<div style = "font-size:medium", class = "research_list">
-    <a href = '#workingpapers'> Working Papers </a> -
-    <a href = '#publications'> Selected Publications </a> -
-    <a href = '#conf'> Refereed Conferences </a> -
-    <a href = '#other'> Other Papers / Writing</a> - 
-    <a href = '#resting'> Resting Papers </a> -
-    <a href = '#content'> Posts </a>
+<div class="research-nav">
+    <a href='#workingpapers'>Working Papers</a>
+    <a href='#publications'>Selected Publications</a>
+    <a href='#conf'>Refereed Conferences</a>
+    <a href='#other'>Other Papers / Writing</a>
+    <a href='#resting'>Resting Papers</a>
+    <a href='#content'>Posts</a>
 </div>
 <div class="content-header">
 <a name = 'workingpapers', style='color:inherit;text-decoration: none;'>Working Papers:</a>
@@ -32,46 +32,45 @@ I am now <a href="https://empiricrafting.substack.com/">blogging</a> and co-host
 
 {% for paper in sorted_papers %}
 
-        <li style="list-style: none;padding-bottom: 2px;">
-        <div  style="padding-bottom: 1px;">
+        <li class="paper-item" style="list-style: none;">
+        <div class="paper-title">
         {{ paper.title }}
         </div>
 
-        <div>
-        <div style = "font-size: 16px;"> {{paper.coauthors}} </div>
+        <div class="paper-authors">{{paper.coauthors}}</div>
 
         {% if paper.journal %}
-        <div style = "font-size: 16px;">
+        <div class="paper-venue">
             {{ paper.journal}}
         </div>
         {% endif %}
 
-        <div style = "font-size: 16px; font-style:italic">
+        {% if paper.other %}
+        <div class="paper-venue">
             {{ paper.other}}
         </div>
-        <div style = "font-size: 14px">
-        <a href="javascript:void(0)" onclick={{ paper.js }}>Abstract</a>
-        {% if paper.link %} |
-        <a href={{ paper.link }}> PDF </a> 
+        {% endif %}
+        
+        <div class="paper-links">
+        <a href="javascript:void(0)" onclick={{ paper.js }} class="abstract-link">Abstract</a>
+        {% if paper.link %}
+        <a href={{ paper.link }}>PDF</a> 
         {% endif %}
         {% if paper.appendix %}
-        |    <a href= {{ paper.appendix }}> Appendix </a> 
+        <a href={{ paper.appendix }}>Appendix</a> 
         {% endif %}
         {% if paper.data %}  
-        | <a href= {{ paper.data }}> Data </a>
+        <a href={{ paper.data }}>Data</a>
         {% endif %}
         {% if paper.code %}  
-        | <a href= {{ paper.code }}>  Code </a>
+        <a href={{ paper.code }}>Code</a>
         {% endif %}
         </div>
 
-   <div id={{ paper.js_abbrev }} style="display: none; padding-top: 10px; font-size: 16px; width: 70%; line-height: 28px; font-weight: 400;">
+   <div id={{ paper.js_abbrev }} class="paper-abstract" style="display: none;">
            {{ paper.abstract }}
-           <br></br>
         </div>
 
-        <p></p>
-        </div>
         </li>
 {% endfor %}
 </ul>
@@ -83,146 +82,140 @@ I am now <a href="https://empiricrafting.substack.com/">blogging</a> and co-host
 <ul style="list-style: none;" class="research_list">
 {% assign sorted_papers = site.papers  | where: "published", "1" | where: "peer", "1" | sort: 'order' %}
 {% for paper in sorted_papers %}
-<li style="list-style: none;padding-bottom: 2px;">
-    <div  style="padding-bottom: 1px;">
+<li class="paper-item" style="list-style: none;">
+    <div class="paper-title">
     {{ paper.title }}
     </div>
 
-    <div>
-    <div style = "font-size: 16px;"> {{paper.coauthors}} </div>
+    <div class="paper-authors">{{paper.coauthors}}</div>
 
     {% if paper.journal %}
-    <div style = "font-size: 16px;">
+    <div class="paper-venue">
         {{ paper.journal}}
     </div>
     {% endif %}
 
-    <div style = "font-size: 16px; font-style:italic">
+    {% if paper.other %}
+    <div class="paper-venue">
         {{ paper.other}}
     </div>
-    <div style = "font-size: 14px">
-    <a href="javascript:void(0)" onclick={{ paper.js }}>Abstract</a> |
-    <a href={{ paper.link }}> PDF </a> 
+    {% endif %}
+    
+    <div class="paper-links">
+    <a href="javascript:void(0)" onclick={{ paper.js }} class="abstract-link">Abstract</a>
+    <a href={{ paper.link }}>PDF</a> 
     {% if paper.appendix %}
-    |    <a href= {{ paper.appendix }}> Appendix </a> 
+    <a href={{ paper.appendix }}>Appendix</a> 
     {% endif %}
     {% if paper.data %}  
-    | <a href= {{ paper.data }}> Data </a>
+    <a href={{ paper.data }}>Data</a>
     {% endif %}
     {% if paper.code %}  
-    | <a href= {{ paper.code }}>  Code </a>
+    <a href={{ paper.code }}>Code</a>
     {% endif %}
     </div>
 
-
-    <div id={{ paper.js_abbrev }} style="display: none; padding-top: 10px; font-size: 16px; width: 70%; line-height: 28px; font-weight: 400;">
+    <div id={{ paper.js_abbrev }} class="paper-abstract" style="display: none;">
         {{ paper.abstract }}
-        <br></br>
      </div>
 
-        <p></p>
-        </div>
         </li>
 {% endfor %}
 </ul>
 
 
-<div class="content-header"}">
+<div class="content-header">
     <a name = 'conf', style='color:inherit;text-decoration: none;'>Refereed Conference Proceedings:</a>
     </div>
     
     <ul style="list-style: none;" class="research_list">
     {% assign sorted_papers = site.papers  | where: "published", "2" | sort: 'order' %}
     {% for paper in sorted_papers %}
-    <li style="list-style: none;padding-bottom: 2px;">
-        <div  style="padding-bottom: 1px;">
+    <li class="paper-item" style="list-style: none;">
+        <div class="paper-title">
         {{ paper.title }}
         </div>
     
-        <div>
-        <div style = "font-size: 16px;"> {{paper.coauthors}} </div>
+        <div class="paper-authors">{{paper.coauthors}}</div>
     
         {% if paper.journal %}
-        <div style = "font-size: 16px;">
+        <div class="paper-venue">
             {{ paper.journal}}
         </div>
         {% endif %}
     
-        <div style = "font-size: 16px; font-style:italic">
+        {% if paper.other %}
+        <div class="paper-venue">
             {{ paper.other}}
         </div>
-        <div style = "font-size: 14px">
-        <a href="javascript:void(0)" onclick={{ paper.js }}>Abstract</a> |
-        <a href={{ paper.link }}> PDF </a> 
+        {% endif %}
+        
+        <div class="paper-links">
+        <a href="javascript:void(0)" onclick={{ paper.js }} class="abstract-link">Abstract</a>
+        <a href={{ paper.link }}>PDF</a> 
         {% if paper.appendix %}
-        |    <a href= {{ paper.appendix }}> Appendix </a> 
+        <a href={{ paper.appendix }}>Appendix</a> 
         {% endif %}
         {% if paper.data %}  
-        | <a href= {{ paper.data }}> Data </a>
+        <a href={{ paper.data }}>Data</a>
         {% endif %}
         {% if paper.code %}  
-        | <a href= {{ paper.code }}>  Code </a>
+        <a href={{ paper.code }}>Code</a>
         {% endif %}
         </div>
     
-    
-        <div id={{ paper.js_abbrev }} style="display: none; padding-top: 10px; font-size: 16px; width: 70%; line-height: 28px; font-weight: 400;">
+        <div id={{ paper.js_abbrev }} class="paper-abstract" style="display: none;">
             {{ paper.abstract }}
-            <br></br>
          </div>
     
-            <p></p>
-            </div>
             </li>
     {% endfor %}
     </ul>
     
-<div class="content-header", name = 'other'>
+<div class="content-header">
 <a name = 'other', style='color:inherit;text-decoration: none;'>Other Papers / Writing:</a>
 </div>
 
 <ul style="list-style: none;" class="research_list">
 {% assign sorted_papers = site.papers  | where: "published", "1" | where: "peer", "0" | sort: 'order' %}
 {% for paper in sorted_papers %}
-<li style="list-style: none;padding-bottom: 2px;">
-    <div  style="padding-bottom: 1px;">
+<li class="paper-item" style="list-style: none;">
+    <div class="paper-title">
     {{ paper.title }}
     </div>
 
-    <div>
-    <div style = "font-size: 16px;"> {{paper.coauthors}} </div>
+    <div class="paper-authors">{{paper.coauthors}}</div>
 
     {% if paper.journal %}
-    <div style = "font-size: 16px;">
+    <div class="paper-venue">
         {{ paper.journal}}
     </div>
     {% endif %}
 
-    <div style = "font-size: 16px; font-style:italic">
+    {% if paper.other %}
+    <div class="paper-venue">
         {{ paper.other}}
     </div>
-    <div style = "font-size: 14px">
-    <a href="javascript:void(0)" onclick={{ paper.js }}>Abstract</a> |
-    <a href={{ paper.link }}> Link </a> 
+    {% endif %}
+    
+    <div class="paper-links">
+    <a href="javascript:void(0)" onclick={{ paper.js }} class="abstract-link">Abstract</a>
+    <a href={{ paper.link }}>Link</a> 
     {% if paper.appendix %}
-    |    <a href= {{ paper.appendix }}> Appendix </a> 
+    <a href={{ paper.appendix }}>Appendix</a> 
     {% endif %}
     {% if paper.data %}  
-    | <a href= {{ paper.data }}> Data </a>
+    <a href={{ paper.data }}>Data</a>
     {% endif %}
     {% if paper.code %}  
-    | <a href= {{ paper.code }}>  Code </a>
+    <a href={{ paper.code }}>Code</a>
     {% endif %}
     </div>
 
-
-    <div id={{ paper.js_abbrev }} style="display: none; padding-top: 10px; font-size: 16px; width: 70%; line-height: 28px; font-weight: 400;">
+    <div id={{ paper.js_abbrev }} class="paper-abstract" style="display: none;">
         {{ paper.abstract }}
-        <br></br>
      </div>
 
-        <p></p>
-        </div>
         </li>
 {% endfor %}
 </ul>
@@ -236,42 +229,42 @@ I am now <a href="https://empiricrafting.substack.com/">blogging</a> and co-host
 {% assign sorted_papers = site.papers  | where: "published", "-1" | sort: 'order' %}
 
 {% for paper in sorted_papers %}
-        <li style="list-style: none;padding-bottom: 2px;">
-        <div  style="padding-bottom: 1px;">
+        <li class="paper-item" style="list-style: none;">
+        <div class="paper-title" style="font-size: 17px;">
         {{ paper.title }}
         </div>
 
-        <div>
-        <div style = "font-size: 14px;"> {{paper.coauthors}} </div>
+        <div class="paper-authors" style="font-size: 15px;">{{paper.coauthors}}</div>
 
         {% if paper.journal %}
-        <div style = "font-size: 14px; font-style:italic">
+        <div class="paper-venue" style="font-size: 15px;">
             {{ paper.journal}}
         </div>
         {% endif %}
 
-        <div style = "font-size: 14px; font-style:italic">
+        {% if paper.other %}
+        <div class="paper-venue" style="font-size: 15px;">
             {{ paper.other}}
         </div>
-        <div style = "font-size: 14px">
-        <a href="javascript:void(0)" onclick={{ paper.js }}>Abstract</a> |
-        <a href={{ paper.link }}> PDF </a> 
+        {% endif %}
+        
+        <div class="paper-links" style="font-size: 13px;">
+        <a href="javascript:void(0)" onclick={{ paper.js }} class="abstract-link">Abstract</a>
+        <a href={{ paper.link }}>PDF</a> 
         {% if paper.appendix %}
-            <a href= {{ paper.appendix }}> | Appendix </a> 
+        <a href={{ paper.appendix }}>Appendix</a> 
         {% endif %}
-        {% if paper.data %}  |
-        <a href= {{ paper.data }}> Data </a>
+        {% if paper.data %}
+        <a href={{ paper.data }}>Data</a>
         {% endif %}
-        {% if paper.code %}  |
-        <a href= {{ paper.code }}> Code </a>
+        {% if paper.code %}
+        <a href={{ paper.code }}>Code</a>
         {% endif %}
         </div>
-        <div id={{ paper.js_abbrev }} style="display: none; padding-top: 10px; font-size: 16px; width: 70%; line-height: 28px; font-weight: 400;">
+        
+        <div id={{ paper.js_abbrev }} class="paper-abstract" style="display: none;">
             {{ paper.abstract }}
-            <br></br>
          </div>
-        <p></p>
-        </div>
         </li>
 {% endfor %}
 </ul>
@@ -292,6 +285,7 @@ I am now <a href="https://empiricrafting.substack.com/">blogging</a> and co-host
 {% endfor %}
 </ul>
 
+<br>
 <br>
 <br>
 <br>
