@@ -10,6 +10,7 @@ js_abbrev: 'reviews'
 published: 1
 peer: 1
 order: -2021
+trueyear: 2021
 coauthors: (with Elena Grewal and <a href = 'https://www.daveholtz.net/'> David Holtz </a>)
 bib: <br> @article{reportingandreciprocity,
   title={Reciprocity in Two-sided Reputation Systems&#58; Evidence from an Experiment on Airbnb},

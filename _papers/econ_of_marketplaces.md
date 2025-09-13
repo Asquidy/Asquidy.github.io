@@ -7,6 +7,7 @@ abstract: This article provides an overview of the economics of digital marketpl
 journal: New Palgrave Dictionary of Economics (2017).
 order: 300
 peer: 0
+trueyear: 2017
 link: "/assets/econ_of_digital.pdf"
 bib: <br> @article{fradkin2017dig_markets,
   title={Digital Marketplaces},

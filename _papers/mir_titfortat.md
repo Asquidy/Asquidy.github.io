@@ -6,6 +6,7 @@ published: 1
 abstract: This article provided a practitioner overview of recent work on reputation system design.
 journal: NIM Marketing Intelligence Review (2020)
 order: 208
+trueyear: 2020
 peer: 0
 link: "/assets/mir_titfortat.pdf"
 coauthors: (with <a href = "https://www.daveholtz.net/"> David Holtz</a>)

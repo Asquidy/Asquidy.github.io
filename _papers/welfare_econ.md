@@ -12,6 +12,7 @@ data_note: Proprietary data for this paper was generously provided by Brigitte M
 link: /assets/Defaults-and-Welfare-Complete.pdf
 bibtex: "http://andreyfradkin.com/assets/bibtex_papers/welfare_bib.html"
 order: -2015
+trueyear: 2015
 coauthors: (with <a href = "http://www.stanford.edu/~bernheim/">Douglas Bernheim</a> and Igor Popov)
 appendix: "/assets/Defaults-and-Welfare-Appendix.pdf"
 js: "toggleMe('welfare'); return false;"

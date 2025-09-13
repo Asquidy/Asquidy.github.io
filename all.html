@@ -1,0 +1,59 @@
+---
+layout: splash
+---
+
+<div class="content-header">
+All Work (Reverse Chronological)
+</div>
+
+<ul style="list-style: none;" class="research_list">
+{% assign with_year = site.papers | where_exp: "p", "p.trueyear" | sort: "trueyear" | reverse %}
+{% assign without_year = site.papers | where_exp: "p", "p.trueyear == nil" %}
+{% assign all_sorted = with_year | concat: without_year %}
+{% for paper in all_sorted %}
+<li class="paper-item" style="list-style: none;">
+  <div class="paper-title">
+    {{ paper.title }}
+  </div>
+
+  <div class="paper-authors">{{ paper.coauthors }}</div>
+
+  {% if paper.journal %}
+  <div class="paper-venue">
+    {{ paper.journal }}
+  </div>
+  {% endif %}
+
+  {% if paper.other %}
+  <div class="paper-venue">
+    {{ paper.other }}
+  </div>
+  {% endif %}
+  
+  <div class="paper-links">
+    <a href="javascript:void(0)" onclick="{{ paper.js }}" class="abstract-link">Abstract</a>
+    {% if paper.link %}
+      {% if paper.link contains '.pdf' %}
+        <a href="{{ paper.link }}">PDF</a>
+      {% else %}
+        <a href="{{ paper.link }}">Link</a>
+      {% endif %}
+    {% endif %}
+    {% if paper.appendix %}
+      <a href="{{ paper.appendix }}">Appendix</a>
+    {% endif %}
+    {% if paper.data %}
+      <a href="{{ paper.data }}">Data</a>
+    {% endif %}
+    {% if paper.code %}
+      <a href="{{ paper.code }}">Code</a>
+    {% endif %}
+  </div>
+
+  <div id="{{ paper.js_abbrev }}" class="paper-abstract" style="display: none;">
+    {{ paper.abstract }}
+  </div>
+</li>
+{% endfor %}
+</ul>
+

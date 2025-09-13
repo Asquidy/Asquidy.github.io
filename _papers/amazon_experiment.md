@@ -23,7 +23,8 @@ link: "assets/amazon_exp_welfare.pdf"
 coauthors: with <a href = "https://sites.google.com/site/chiarafarronato/"> Chiara Farronato</a> and <a href = "http://alexandermackay.org/">Alexander MacKay</a>
 js: "toggleMe('amexp'); return false;"
 js_abbrev: 'amexp'
-order: -2024.1
+order: -2025.1
+trueyear: 2025
 peer: 1
 published: 0
 ---

@@ -9,6 +9,7 @@ coauthors: with <a href = "https://sites.google.com/site/chiarafarronato/"> Chia
 js: "toggleMe('dogeatdog'); return false;"
 js_abbrev: 'dogeatdog'
 order: -2024
+trueyear: 2024
 published: 1
 peer: 1
 bibjs: "toggleMe('dogeatdog_bib'); return false;"

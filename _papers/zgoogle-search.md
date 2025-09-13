@@ -8,6 +8,7 @@ abstract: Job search is a key choice variable in theories of labor markets but i
 link: /assets/FullTexasJobSearch.pdf
 journal: Review of Economics and Statistics (December 2017) <br>  Also see <a href = 'https://doi.org/10.1002/jae.2971'> "On Event Study Designs and Distributed-Lag Models in Two-Way Fixed Effect Models&#58; Identification, Equivalence, and Generalization"</a> for an extension of our event study results. This paper applies an improved methodology to our results and shows that our estimates about potential benefit duration are consistent with an improved estimation procedure for the event study.  
 order: -2017
+trueyear: 2017
 bibtex: "http://andreyfradkin.com/assets/bibtex_papers/jobsearch.html"
 coauthors: (with <a href = "https://sites.google.com/site/srbaker/"> Scott R. Baker</a>)
 data: "https://dataverse.harvard.edu/file.xhtml?fileId=2972317&version=1.0"

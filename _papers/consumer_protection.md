@@ -11,6 +11,7 @@ js_abbrev: 'conpro'
 data: https://github.com/Asquidy/licensing_survey_data
 order: -2024
 published: 1
+trueyear: 2024
 peer: 1
 bibjs: "toggleMe('conpro_bib'); return false;"
 bib_abbrev: 'conpro_bib'

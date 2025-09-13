@@ -8,6 +8,7 @@ link: "/assets/simulating_airbnb.pdf"
 js: "toggleMe('sim_md'); return false;"
 js_abbrev: 'sim_md'
 order: 10
+trueyear: 2019
 published: -1
 bib: <br> @article{fradkin2019sim,
   title={A Simulation Approach to Designing Digital Matching Platforms},

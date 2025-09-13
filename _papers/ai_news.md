@@ -10,6 +10,7 @@ js: "toggleMe('ainews'); return false;"
 js_abbrev: 'ainews'
 order: 11
 published: 2
+trueyear: 2022
 bibjs: "toggleMe('ainews_bib'); return false;"
 bib_abbrev: 'ainews_bib'
 ---

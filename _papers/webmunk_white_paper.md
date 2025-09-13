@@ -10,6 +10,7 @@ coauthors: with <a href = "https://sites.google.com/site/chiarafarronato/"> Chia
 js: "toggleMe('whitepaper'); return false;"
 js_abbrev: 'whitepaper'
 order: -2024
+trueyear: 2024
 published: 0
 peer: 1
 ---
