@@ -22,10 +22,8 @@
     <link rel="alternate" type="application/atom+xml" title="Feed" href="/posts/atom.xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bitter&family=Montserrat:wght@300;500&family=Spectral&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bitter&family=Montserrat:wght@300;500&family=Spectral&display=swap" rel="stylesheet">
   </head>
   <body>
     <div class="container">
@@ -40,18 +38,18 @@
           </h4>
         </div>
         <div class="span9">
-          <div class="linksbox">
-            <a href="../../../../../index.html">Research</a> -
-            <a href="../../../../../posts.html">Posts</a> -
-            <a href="../../../../../about.html">About</a> -
-            <a href="/assets/fradkin_cv.pdf">CV</a> -
-            <a href="../../../../podcast.html">Podcast</a> -
-            <a href="../../../../../teaching.html">Teaching</a> -
-            <a href="../../../../../disclosures.html">Disclosures</a>
-          </div>
+          <nav class="linksbox" role="navigation" aria-label="Main navigation">
+            <a href="../../../../../all.html" aria-label="Research page">Research</a>
+            <a href="../../../../../posts.html" aria-label="Blog posts">Posts</a>
+            <a href="../../../../../about.html" aria-label="About page">About</a>
+            <a href="/assets/fradkin_cv.pdf" aria-label="Download CV (PDF)" target="_blank" rel="noopener">CV</a>
+            <a href="../../../../../teaching.html" aria-label="Teaching page">Teaching</a>
+            <a href="../../../../../disclosures.html" aria-label="Disclosures page">Disclosures</a>
+          </nav>
         </div>
       </div>
 
+      <main id="main-content">
       <div id="post">
         {% if page.category != "research" %}
             <div class="content-header"> {{ page.title }} </div>
@@ -71,6 +69,7 @@
         {% endif %}
             {{ content }}
       </div>
+      </main>
 
       <div id="footer">
         <a href="http://scholar.google.com/citations?user=5qkgRKsAAAAJ&hl=en">Google Scholar</a> /

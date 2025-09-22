@@ -12,7 +12,7 @@
   gtag('config', 'G-604EL1T42T');
 </script>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=.8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
     <title>Andrey Fradkin {{ page.title }}</title>
     
@@ -52,20 +52,19 @@
           </h4>
         </div>
         <div class="span9">
-          <div class="linksbox">
-            <a href="index.html">Research</a> -
-            <a href="posts.html">Posts</a> -
-            <a href="about.html">About</a> -
-            <a href="/assets/fradkin_cv.pdf">CV</a> -
-            <a href="../../../../podcast.html">Podcast</a> -
-            <a href="teaching.html">Teaching</a> -
-            <a href="disclosures.html">Disclosures</a>
-          </div>
+          <nav class="linksbox" role="navigation" aria-label="Main navigation">
+            <a href="all.html" aria-label="Research page">Research</a>
+            <a href="posts.html" aria-label="Blog posts">Posts</a>
+            <a href="about.html" aria-label="About page">About</a>
+            <a href="/assets/fradkin_cv.pdf" aria-label="Download CV (PDF)" target="_blank" rel="noopener">CV</a>
+            <a href="teaching.html" aria-label="Teaching page">Teaching</a>
+            <a href="disclosures.html" aria-label="Disclosures page">Disclosures</a>
+          </nav>
         </div>
       </div>
-      <div class="splash_content">
+      <main id="main-content" class="splash_content">
         {{ content }}
-      </div>
+      </main>
       
       <div id="footer">
         <a href="http://scholar.google.com/citations?user=5qkgRKsAAAAJ&hl=en">Google Scholar</a> /
