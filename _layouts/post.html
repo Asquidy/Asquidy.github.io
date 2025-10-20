@@ -2,6 +2,20 @@
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
+    <!-- Theme initialization script (must run before body renders to prevent FOUC) -->
+    <script>
+      (function() {
+        function getStoredTheme() {
+          try {
+            return localStorage.getItem('theme');
+          } catch (e) {
+            return null;
+          }
+        }
+        var theme = getStoredTheme() || 'light';
+        document.documentElement.setAttribute('data-theme', theme);
+      })();
+    </script>
     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-604EL1T42T"></script>
 <script>
@@ -45,6 +59,14 @@
             <a href="/assets/fradkin_cv.pdf" aria-label="Download CV (PDF)" target="_blank" rel="noopener">CV</a>
             <a href="../../../../../teaching.html" aria-label="Teaching page">Teaching</a>
             <a href="../../../../../disclosures.html" aria-label="Disclosures page">Disclosures</a>
+            <div class="theme-toggle-wrapper">
+              <span class="theme-icon theme-icon-sun">☀️</span>
+              <label class="theme-toggle" aria-label="Toggle dark mode">
+                <input type="checkbox" id="theme-toggle-checkbox">
+                <span class="theme-slider"></span>
+              </label>
+              <span class="theme-icon theme-icon-moon">🌙</span>
+            </div>
           </nav>
         </div>
       </div>
@@ -78,6 +100,7 @@
       </div>
     </div>
 
+    <script src="/js/samir.js"></script>
     <script type="text/javascript">
       var _gaq = _gaq || [];
       

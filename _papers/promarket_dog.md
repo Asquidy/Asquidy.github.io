@@ -1,6 +1,6 @@
 ---
 layout:
-title: "The balance between platform variety and network effects"
+title: "The Balance Between Platform Variety and Network Effects"
 category: research
 published: 1
 abstract: Summary of our Dog Eat Dog paper.
