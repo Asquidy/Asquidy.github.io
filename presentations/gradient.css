@@ -1,0 +1,60 @@
+/* gradient.css — aligned to tufte-base contract */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+:root {
+  --main-text-color: #ffffff;
+  --bg-color: #121212;
+  --accent-color: #00f5d4;
+  --accent-light-color: #adb5bd;
+  --h1-border-color: #495057;
+  --slide-content-bg-if-image: rgba(18, 18, 18, 0.85);
+
+  --serif-font: "Poppins", sans-serif;
+  --sans-font: "Poppins", sans-serif;
+  --mono-font: "Courier New", monospace;
+}
+
+body {
+  font-family: var(--sans-font);
+  background: linear-gradient(45deg, #22223b, #4a4e69);
+  color: var(--main-text-color);
+}
+#slideshow { background: linear-gradient(45deg, #22223b, #4a4e69); }
+
+.slide-header {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent-light-color);
+}
+
+.slide-content h1 {
+  font-weight: 700;
+  color: var(--main-text-color);
+  text-shadow: 0 0 15px rgba(0, 245, 212, 0.3);
+  text-align: center;
+  border-bottom: 2px solid var(--accent-color);
+  padding-bottom: 1rem;
+}
+
+.slide-content .notes {
+  background: var(--accent-color);
+  color: #000;
+  text-align: center;
+  font-weight: 700;
+}
+
+.slide-content table {
+  border-collapse: collapse;
+  border-top: 1px solid var(--h1-border-color);
+  border-bottom: 1px solid var(--h1-border-color);
+}
+.slide-content th, .slide-content td {
+  border: 1px solid var(--h1-border-color);
+  background: rgba(0,0,0,0.2);
+}
+.slide-content th { color: var(--accent-color); }
+
+.slide-content .caption {
+  color: var(--accent-light-color);
+  text-align: center;
+}

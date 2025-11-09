@@ -1,0 +1,61 @@
+/* swiss-modern.css — aligned to tufte-base contract */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+
+:root {
+  --main-text-color: #111;
+  --bg-color: #fff;
+  --accent-color: #d90429;
+  --accent-light-color: #8d99ae;
+  --h1-border-color: #edf2f4;
+  --slide-content-bg-if-image: rgba(255, 255, 255, 0.9);
+
+  --serif-font: "Inter", "Helvetica Neue", sans-serif;
+  --sans-font: "Inter", "Helvetica Neue", sans-serif;
+  --mono-font: "Courier New", monospace;
+}
+
+body {
+  font-family: var(--sans-font);
+  background: var(--bg-color);
+  color: var(--main-text-color);
+}
+
+.slide-header {
+  font-family: var(--sans-font);
+  color: var(--accent-light-color);
+  text-transform: uppercase;
+}
+
+.slide-content h1 {
+  font-family: var(--sans-font);
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--main-text-color);
+  border: none;
+  text-align: left;
+}
+
+.slide-content .notes {
+  background: var(--accent-color);
+  color: var(--bg-color);
+  font-family: var(--sans-font);
+  font-weight: 700;
+  text-align: center;
+}
+
+.slide-content table {
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+}
+.slide-content th {
+  font-weight: 700;
+  text-transform: uppercase;
+  background: transparent;
+  border-bottom: 1px solid var(--h1-border-color);
+}
+
+.slide-content .caption {
+  font-style: normal;
+  color: var(--accent-light-color);
+  text-align: left;
+}

@@ -1,0 +1,93 @@
+/* david-carson-top-title.css — based on david-carson theme with TopTitle feature */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Courier+Prime:wght@400;700&display=swap');
+
+:root {
+  --main-text-color: #000;
+  --bg-color: #f5f5f0;
+  --accent-color: #ff0066;
+  --accent-light-color: #666;
+  --h1-border-color: #000;
+  --slide-content-bg-if-image: rgba(245, 245, 240, 0.85);
+
+  --serif-font: 'Courier Prime', 'Courier New', monospace;
+  --sans-font: 'Bebas Neue', Impact, sans-serif;
+  --mono-font: 'Courier Prime', monospace;
+}
+
+body {
+  font-family: var(--serif-font);
+  background: var(--bg-color);
+  color: var(--main-text-color);
+}
+
+.slide-header {
+  font-family: var(--sans-font);
+  color: var(--accent-light-color);
+  text-transform: uppercase;
+}
+
+.slide-top-title {
+  position: absolute;
+  top: calc(var(--base-font-size) * 1);
+  left: calc(var(--base-font-size) * 2);
+  width: auto;
+  min-width: 90%;
+  max-width: 90%;
+  padding: calc(var(--base-font-size) * 0.3);
+  padding-bottom: calc(var(--base-font-size) * 0.5);
+  font-family: var(--sans-font);
+  font-size: calc(var(--base-font-size) * 1.5);
+  text-transform: uppercase;
+  color: var(--accent-color);
+  letter-spacing: -0.05em;
+  text-shadow: 3px 3px 0 #000;
+  transform: rotate(-1deg);
+  z-index: 10;
+  font-weight: 700;
+  line-height: 1.4;
+  border-bottom: 2px solid var(--h1-border-color);
+}
+
+.slide-content h1 {
+  font-family: var(--sans-font);
+  text-transform: uppercase;
+  color: var(--accent-color);
+  border: none;
+  letter-spacing: -0.05em;
+  text-shadow: 3px 3px 0 #000;
+  transform: rotate(-2deg);
+  margin-left: -2rem;
+}
+
+.slide-content .notes {
+  font-family: var(--sans-font);
+  color: var(--accent-color);
+  text-transform: uppercase;
+}
+
+.slide-content table {
+  border: none;
+  border-collapse: separate;
+  border-spacing: 4px;
+}
+.slide-content th {
+  background: var(--accent-color);
+  color: #fff;
+  font-family: var(--sans-font);
+  text-transform: uppercase;
+  transform: skewX(-10deg);
+}
+.slide-content td {
+  background: #fff;
+  border: 2px solid #000;
+  font-weight: 700;
+}
+.slide-content tbody tr:nth-child(even) td {
+  background: #000; color: #fff;
+}
+
+.slide-content .caption {
+  font-style: normal;
+  color: var(--accent-light-color);
+  text-align: left;
+}

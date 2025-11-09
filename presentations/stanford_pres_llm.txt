@@ -1,0 +1,412 @@
+# METADATA:
+Title: myslides
+Theme: tufte-base
+ShowSlideCount: true
+LogoUrl: 
+
+# Slide(1):
+
+TopTitle: The Emerging Market for Intelligence: The Supply,
+Demand and Usage of LLMs
+
+SmallText: Mert Demirer (MIT Sloan), Andrey Fradkin (Boston University / Amazon), Nadav Tadelis (Microsoft), Sida Peng (Microsoft)
+
+Footer.4:
+The views presented are solely the authors' and do not necessarily reflect the views of Microsoft or Amazon.
+
+# Slide(2):
+
+TopTitle: Motivation
+TopText: <<<
+- AI is a general purpose technology with profound economic and societal implications.
+- Existing AI economics research focuses on:
+  - Productivity
+  - Employment
+  - Macroeconomic implications
+- This paper: **industrial organization** of the AI industry
+<<<
+
+# Slide(3):
+
+TopTitle: Why focus on the industrial organization of AI?
+
+TopText.8: 
+<<<
+- Demand Side: 
+  - How much more utility does a 'better' model generate? 
+  - What characteristics of models do end-users care about? How correlated are these with public benchmarks?
+  - How quickly do better models diffuse?
+- Supply Side: 
+   - How do firms compete with each other? 
+   - Is there substantial market power? 
+   - What is the role of open source? 
+- Combined: What are the private and/or social returns? Anti-trust / regulation? 
+<<<
+
+# Slide(4):
+
+TopTitle: This is a descriptive analysis of the industry
+
+TopText.8: 
+<<<
+Use two data sources: OpenRouter and Microsoft Azure Foundry, with coverage between 2022 and 2025.
+Break: 3
+Text.8:
+**Document:**
+- Models, creators, and providers.
+- Pricing trends, and prices per unit of intelligence.
+- Diffusion, market shares, and concentration. Also, by use case and industry.
+- Event studies of market entry.
+<<<
+
+# Slide(5):
+
+TopTitle: Main findings
+
+TopText.8: 
+<<<
+- For similar levels of *measured* intelligence, closed-source models are 7 times more expensive, but are dominant.
+- Intelligence-adjusted prices have fallen by approximately 100-fold since the launch of GPT-4.
+- New models reach peak market share quickly, within a few weeks on OpenRouter and within 3 - 6 months on Azure. 
+- Demand for models is differentiated by brand and use case.
+- Adoption of reasoning models is very limited.
+- The market for open-source model inference is competitive with free entry.
+<<<
+
+# Slide(6):
+
+BackgroundColor:rgb(1, 111, 147)
+TextColor:rgb(250, 250, 250)
+TopTitle: Presentation Roadmap
+Text.8: 
+1. Introduction and Motivation
+2. **Data Sources and Institutional Background**
+3. Supply and Pricing
+5. Demand
+6. Substitution and Market Expansion
+7. Usage and Heterogeneity
+8. Conclusion
+
+# Slide(7):
+TopTitle: Types of LLM Markets
+
+Columns:
+[[Text0.8]]
+||| **Consumer LLMs** |||
+- Individual use
+- Freemium
+- ChatGPT
+[[Break:3]]
+---
+[[Text0.8]]
+||| **LLM API Market** |||
+- This paper.
+- API calls and usage based pricing.
+- AWS, Azure, OpenAI, etc.
+---
+[[Text0.8]]
+||| **Custom Enterprise LLMs** |||
+- Finetuning
+- Vertical specific models
+- Customized Pricing
+[[Break:3]]
+
+# Slide(8):
+
+TopTitle: LLM Creators 
+
+TopText:
+
+Creators are entities (e.g., OpenAI, Google, Anthropic, Meta) who develop and train LLMs. 
+<<< 
+- Develop model architecture.
+- Assemble data.
+- Conduct training runs.
+<<<
+
+# Slide(8):
+
+TopTitle: LLM Inference Providers 
+
+TopText.8:
+
+Inference providers are entities who use computing resources to return tokens from a model.
+<<< 
+- AWS, Azure, and Google Cloud Platform offer inference for closed and open source models.
+- OpenAI and Anthropic run their own endpoints.
+- Together AI, Cerebras, Groq, and others specialize in inference services, focusing on open-source models.
+<<<
+
+# Slide(9):
+
+TopTitle: LLM API Pricing
+
+TopText.8:
+Priced in millions of tokens (MTok)
+<<< 
+- Cache tokens 
+- Input tokens
+- Output tokens
+- Reasoning tokens
+<<<
+
+# Slide(10):
+
+TopTitle: LLM Aggregators and OpenRouter
+
+Text.8:
+LLM aggregators are platforms that sit between developers and model providers. 
+
+They lower switching costs and offer other conveniences.
+
+OpenRouter is the biggest one, serving over 5 trillion tokens per week. 
+
+Image: images/local-img-1762402044329-ipldq7c.png, , .5
+
+# Slide(11):
+
+TopTitle: OpenRouter Data
+
+TopText.8: 
+- Model-level data, includes every provider, usage, prices, and other characteristics.
+- Category-level data.
+- App level data (e.g, Cline, Roo Code, LiteLLM).
+
+Some data available in July 2023, comprehensive data after April 2025.
+
+# Slide(12):
+
+TopTitle: Azure Foundry Data
+
+TopText.8: 
+- Foundry allows customers to access models hosted by Microsoft through an API.
+- Serves OpenAI and xAI models, but not Anthropic or Google models. Also serves open-source models.
+- Customer-day level usage + customer characteristics.
+
+# Slide(13):
+
+BackgroundColor:rgb(1, 111, 147)
+TextColor:rgb(250, 250, 250)
+TopTitle: Presentation Roadmap
+Text.8: 
+1. Introduction and Motivation
+2. Data Sources and Institutional Background
+3. **Supply and Pricing**
+5. Demand
+6. Substitution and Market Expansion
+7. Usage and Heterogeneity
+8. Conclusion
+
+# Slide(14):
+
+Image: images/local-img-1762403113349-hxt9aub.png,
+
+# Slide(15):
+
+Image: images/local-img-1762403143104-pbew3kp.png,
+
+# Slide(16):
+
+Columns:
+Image: images/local-img-1762480411753-fdjqh19.png
+  ---
+
+Image: images/local-img-1762480419818-uxcjkbh.png
+
+# Slide(17):
+
+Image: images/local-img-1762480554976-adk6udw.png, , .5
+
+# Slide(18):
+
+Image: images/local-img-1762480607540-cyp8y9a.png
+
+# Slide(19):
+
+Image: images/local-img-1762480628796-ngeyn9l.png
+
+# Slide(20):
+
+Image: images/local-img-1762481023985-gfkzblz.png,
+
+# Slide(21):
+
+Image: images/local-img-1762481151707-r63hlxq.png,
+
+# Slide(22):
+
+BackgroundColor:rgb(1, 111, 147)
+TextColor:rgb(250, 250, 250)
+TopTitle: Presentation Roadmap
+Text.8: 
+1. Introduction and Motivation
+2. Data Sources and Institutional Background
+3. Supply
+5. **Demand**
+6. Substitution and Market Expansion
+7. Usage and Heterogeneity
+8. Conclusion
+
+# Slide(23):
+
+Image: images/local-img-1762480649379-4i2thha.png, OpenRouter, .9
+
+# Slide(24):
+
+Image: images/local-img-1762482410988-q88jp9k.png, Duplicate?
+
+# Slide(25):
+
+Image: images/local-img-1762482514846-ipm1ihe.png, OpenRouter?
+
+# Slide(26):
+
+Image: images/local-img-1762482863784-3apfjqy.png, Azure Data
+
+# Slide(27):
+
+Image: images/local-img-1762482897465-s2t16wa.png, Azure Data
+
+# Slide(28):
+
+Image: images/local-img-1762482937085-bldhksp.png, Azure Data
+
+# Slide(29):
+
+Image: images/local-img-1762481096186-wzaau6t.png, Hedonic Price Regression
+
+# Slide(30):
+
+Image: images/local-img-1762481126823-c935b2f.png, Usage by model intelligence and price
+
+# Slide(31):
+
+Image: images/local-img-1762481171065-1azvf52.png, "Residualized Quantity"
+
+# Slide(32):
+
+Image: images/local-img-1762481732601-nyvnrsi.png, 
+To update
+
+# Slide(33):
+
+Image: images/local-img-1762481752602-1ne0qqt.png, 
+To update
+
+# Slide(34):
+
+Image: images/local-img-1762481772839-bwpmuom.png, 
+To update
+
+# Slide(35):
+
+Image: images/local-img-1762481933455-d6ftuxy.png, 
+To update
+
+# Slide(36):
+
+Image: images/local-img-1762481969799-ve9igla.png,
+To update
+
+# Slide(37):
+
+BackgroundColor:rgb(1, 111, 147)
+TextColor:rgb(250, 250, 250)
+TopTitle: Presentation Roadmap
+Text.8: 
+1. Introduction and Motivation
+2. Data Sources and Institutional Background
+3. Supply
+5. Demand
+6. **Substitution and Market Expansion**
+7. Usage and Heterogeneity
+8. Conclusion
+
+# Slide(38):
+
+Image: images/local-img-1762482042419-94woq4i.png, OpenRouter Data
+
+# Slide(39):
+
+Image: images/local-img-1762482099540-ku5gbri.png, Sonnet 3.7
+
+# Slide(40):
+
+Image: images/local-img-1762482158467-9g8enbd.png, Sonnet 4
+
+# Slide(41):
+
+Image: images/local-img-1762482180428-k4ztm4q.png, Gemini
+
+# Slide(42):
+
+Image: images/local-img-1762482219034-dguatlp.png, Azure Data
+
+# Slide(43):
+
+BackgroundColor:rgb(1, 111, 147)
+TextColor:rgb(250, 250, 250)
+TopTitle: Presentation Roadmap
+Text.8: 
+1. Introduction and Motivation
+2. Data Sources and Institutional Background
+3. Supply
+5. Demand
+6. Substitution and Market Expansion
+7. **Usage and Heterogeneity**
+8. Conclusion
+
+# Slide(44):
+
+TopTitle: Heterogeneity in diffusion
+
+TopText.8: 
+<<<
+- Diffusion is critical for understanding and predicting the impacts of AI.
+- Diffusion happens on extensive and intensive margins. 
+  - Do firms adopt a new model?
+  - How much do they adopt?
+- Azure has many customers, representing a variety of industries.
+- OpenRouter serves many use cases.
+<<<
+
+#←
+
+# Slide(45):
+
+Image: images/local-img-1762483451628-hznqnrf.png, Industry Variation (Azure)
+
+# Slide(46):
+
+Image: images/local-img-1762483510847-e3s4w9q.png, Azure
+
+# Slide(47):
+
+TopTitle: OpenRouter, heterogeneity by use case
+Columns:
+Image: images/local-img-1762483709536-dmwcz5d.png,
+---
+Image: images/local-img-1762483668544-o7ovsl3.png,
+
+# Slide(48):
+
+Image: images/local-img-1762481903438-3kyq280.png, 
+To update
+
+# Slide(49):
+
+TopTitle: Conclusion
+
+TopText.8: 
+<<<
+- Models are getting better and cheaper.
+- Closed-source models still dominate..
+- Substitution between models is quick, but patterns of substitution suggest model differentiation.
+- Concentration indices and switching behavior suggest a competitive industry.
+<<<
+
+# Slide(50):
+
+BigText: Thank You!
+afradkin@gmail.com
+@AndreyFradkin

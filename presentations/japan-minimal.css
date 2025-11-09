@@ -1,0 +1,83 @@
+/* japan-minimal.css — aligned to tufte-base contract */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@400;500;700&display=swap');
+
+:root {
+  --main-text-color: #2b2b2b;
+  --bg-color: #fafaf8;
+  --accent-color: #c41230;
+  --accent-light-color: #6b6b6b;
+  --h1-border-color: #e5e5e5;
+  --slide-content-bg-if-image: rgba(250, 250, 248, 0.88);
+
+  --serif-font: "Noto Serif", "Minion Pro", serif;
+  --sans-font: "DM Sans", "Helvetica Neue", sans-serif;
+  --mono-font: "SF Mono", "Monaco", monospace;
+}
+
+body {
+  font-family: var(--serif-font);
+  background: var(--bg-color);
+  color: var(--main-text-color);
+}
+
+.slide-header {
+  font-family: var(--sans-font);
+  color: var(--accent-light-color);
+  letter-spacing: 0.2em;
+}
+
+.slide-content h1 {
+  font-family: var(--serif-font);
+  font-weight: 400;
+  text-align: center;
+  color: var(--main-text-color);
+  border: none;
+  padding-bottom: 2rem;
+  margin-bottom: 3rem;
+  position: relative;
+}
+.slide-content h1:after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 50%;
+  transform: translateX(-50%);
+  width: 4rem; height: 2px;
+  background: var(--accent-color);
+}
+
+.slide-content .notes {
+  font-family: var(--serif-font);
+  color: var(--accent-color);
+  /* vertical note style, with fallback handled by core layout */
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+@supports not (writing-mode: vertical-rl) {
+  .slide-content .notes {
+    writing-mode: initial;
+    text-orientation: initial;
+    color: var(--accent-light-color);
+    border-top: 1px solid var(--h1-border-color);
+    padding-top: 1rem;
+  }
+}
+
+.slide-content table {
+  border-top: 2px solid var(--accent-color);
+  border-bottom: 2px solid var(--accent-color);
+}
+.slide-content th {
+  font-family: var(--sans-font);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border-bottom: 2px solid var(--accent-color);
+  background: transparent;
+}
+
+.slide-content .caption {
+  font-style: normal;
+  color: var(--accent-light-color);
+  text-align: center;
+  font-family: var(--sans-font);
+}

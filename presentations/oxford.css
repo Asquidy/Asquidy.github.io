@@ -1,0 +1,72 @@
+/* oxford.css — aligned to tufte-base contract */
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@400;700&display=swap');
+
+:root {
+  --main-text-color: #1a1a1a;
+  --bg-color: #fcfcfa;
+  --accent-color: #002147; /* Oxford Blue */
+  --accent-light-color: #708090;
+  --h1-border-color: #d4d4d4;
+  --slide-content-bg-if-image: rgba(252, 252, 250, 0.94);
+
+  --serif-font: "EB Garamond", "Times New Roman", serif;
+  --sans-font: "Montserrat", "Arial", sans-serif;
+  --mono-font: "Monaco", "Consolas", monospace;
+}
+
+body {
+  font-family: var(--serif-font);
+  background: var(--bg-color);
+  color: var(--main-text-color);
+}
+
+.slide-header {
+  font-family: var(--serif-font);
+  font-style: italic;
+  color: var(--accent-light-color);
+}
+
+.slide-content h1 {
+  font-family: var(--serif-font);
+  font-weight: 600;
+  text-align: center;
+  color: var(--accent-color);
+  border-bottom: 2px double var(--accent-color);
+  padding-bottom: 1.2rem;
+}
+
+.slide-content .notes {
+  font-family: var(--serif-font);
+  font-style: italic;
+  color: var(--accent-light-color);
+  border-top: 1px solid var(--h1-border-color);
+  padding-top: 1rem;
+}
+
+.slide-content table {
+  border-top: 2px solid var(--accent-color);
+  border-bottom: 2px solid var(--accent-color);
+}
+.slide-content th {
+  font-family: var(--sans-font);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: var(--accent-color);
+  color: #fff;
+}
+
+.slide-content .caption {
+  font-style: italic;
+  color: var(--accent-light-color);
+  text-align: center;
+}
+
+/* keep Oxford’s scholarly quote look without redefining base text */
+.slide-content blockquote {
+  margin: 2rem 3rem;
+  font-style: italic;
+  color: var(--accent-color);
+  border-left: 3px solid var(--accent-color);
+  padding-left: 2rem;
+}

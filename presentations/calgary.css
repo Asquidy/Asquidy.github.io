@@ -1,0 +1,68 @@
+/* calgary.css — aligned to tufte-base contract */
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;600;800&family=IBM+Plex+Sans+Condensed:wght@400;600&display=swap');
+
+:root {
+  --main-text-color: #242424;
+  --bg-color: #ffffff;
+  --accent-color: #7A309E;
+  --accent-light-color: #B685C9;
+  --h1-border-color: #E1E1E1;
+  --slide-content-bg-if-image: rgba(255,255,255,0.88);
+
+  --serif-font: 'IBM Plex Sans Condensed', sans-serif;
+  --sans-font: 'Barlow', system-ui, sans-serif;
+  --mono-font: 'Courier New', monospace;
+}
+
+body {
+  font-family: var(--serif-font);
+  background: var(--bg-color);
+  color: var(--main-text-color);
+}
+
+.slide-header {
+  font-family: var(--sans-font);
+  color: var(--accent-light-color);
+  text-transform: uppercase;
+  letter-spacing: .05em;
+}
+
+.slide-content h1 {
+  font-family: var(--sans-font);
+  font-weight: 800;
+  color: var(--accent-color);
+  text-transform: uppercase;
+  letter-spacing: -.03em;
+  border-bottom: 4px solid var(--h1-border-color);
+}
+
+.slide-content .notes {
+  background: #FFF4F4;
+  border-left: 4px solid #CC0000;
+  color: inherit;
+}
+
+.slide-content table {
+  border-collapse: collapse;
+  border-top: 2px solid var(--h1-border-color);
+  border-bottom: 2px solid var(--h1-border-color);
+}
+.slide-content th {
+  background: var(--accent-color);
+  color: #fff;
+  font-family: var(--sans-font);
+  text-transform: uppercase;
+  letter-spacing: .05em;
+}
+.slide-content th, .slide-content td {
+  border: 1px solid var(--h1-border-color);
+}
+
+.slide-content .caption {
+  font-style: italic;
+  color: var(--accent-light-color);
+  text-align: center;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg-color: #151515; --main-text-color: #e6e6e6; --slide-content-bg-if-image: rgba(21,21,21,0.88); }
+}

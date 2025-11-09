@@ -1,0 +1,63 @@
+/* modern-dark.css — aligned to tufte-base contract */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Lexend:wght@700&display=swap');
+
+:root {
+  --main-text-color: #e0e0e0;
+  --bg-color: #121212;
+  --accent-color: #007bff;
+  --accent-light-color: #888;
+  --h1-border-color: #333;
+  --slide-content-bg-if-image: rgba(18, 18, 18, 0.88);
+
+  --serif-font: "Inter", sans-serif;
+  --sans-font: "Lexend", sans-serif;
+  --mono-font: "Fira Code", monospace;
+}
+
+body {
+  font-family: var(--serif-font);
+  background: var(--bg-color);
+  color: var(--main-text-color);
+}
+
+.slide-header {
+  font-family: var(--serif-font);
+  color: var(--accent-light-color);
+}
+
+.slide-content h1 {
+  font-family: var(--sans-font);
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  border-bottom: 2px solid var(--accent-color);
+  padding-bottom: 1rem;
+}
+
+.slide-content .notes {
+  color: var(--accent-light-color);
+  text-align: center;
+  border-top: 1px solid var(--h1-border-color);
+  padding-top: 1rem;
+}
+
+.slide-content table {
+  border-collapse: collapse;
+  border-top: 1px solid var(--h1-border-color);
+  border-bottom: 1px solid var(--h1-border-color);
+}
+.slide-content th, .slide-content td {
+  border: 1px solid var(--h1-border-color);
+}
+.slide-content th {
+  background-color: var(--accent-color);
+  color: #fff;
+  font-family: var(--sans-font);
+  font-weight: 700;
+}
+
+.slide-content .caption {
+  color: var(--accent-light-color);
+  text-align: center;
+  font-style: normal;
+}
