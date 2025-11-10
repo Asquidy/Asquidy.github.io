@@ -6,8 +6,7 @@ LogoUrl:
 
 # Slide(1):
 
-TopTitle: The Emerging Market for Intelligence: The Supply,
-Demand and Usage of LLMs
+TopTitle: The Emerging Market for Intelligence: The Supply, Demand, and Usage of LLMs
 
 SmallText: Mert Demirer (MIT Sloan), Andrey Fradkin (Boston University / Amazon), Nadav Tadelis (Microsoft), Sida Peng (Microsoft)
 
@@ -249,7 +248,7 @@ Title: Pricing
 
 # Slide(26):
 
-Image: images/price_prompt_distribution.png, Price distribution of recently release models
+Image: images/price_prompt_distribution.png, Price distribution of recently released models
 
 # Slide(27):
 
@@ -257,7 +256,7 @@ Image: images/weekly_price_change_probability_bars.png, Weekly probability of pr
 
 # Slide(28):
 
-Image: images/token_weighted_avg_prompt_completion_prices_2025.png
+Image: images/price_no_y.png
 
 # Slide(29):
 TopTitle: Variation in prices within model
