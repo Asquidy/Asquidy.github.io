@@ -2,7 +2,7 @@
 <!--
 Modern Slideshow Application
 ============================
-Details at https://github.com/kevincure/ModernSlides/
+Andrey Fradkin's modifications of Kevin Bryan's modern slides. Details at https://github.com/kevincure/ModernSlides/
 
 This is a single-file HTML application that creates an interactive slideshow system.
 The application allows users to create, edit, and present slides using a simple 
@@ -449,7 +449,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   flex-shrink: 1;
   min-height: 0;
   overflow: visible;
@@ -1710,6 +1710,7 @@ Title: New slide
   const PREVIOUS_SESSION_KEY = 'modernSlides_previousSession';
   const LAST_SESSION_META_KEY = 'modernSlides_lastSessionMeta';
   const PREVIOUS_SESSION_META_KEY = 'modernSlides_previousSessionMeta';
+  const LAST_SLIDE_INDEX_KEY = 'modernSlides_lastSlideIndex';
   const DEFAULT_NEW_SLIDE_CONTENT = "Title: New Slide\n\nText: Edit this content.";
 
   function clampTextScale(value) {
@@ -2583,7 +2584,9 @@ $("download-txt-btn").onclick = async () => {
       if (!proceed) return;
 
       try {
-        init(previousSession, { slideIndex: 0, reason: 'restore' });
+        const savedSlideIndex = localStorage.getItem(LAST_SLIDE_INDEX_KEY);
+        const slideIndex = savedSlideIndex ? parseInt(savedSlideIndex, 10) : 0;
+        init(previousSession, { slideIndex: slideIndex, reason: 'restore' });
       } catch (err) {
         console.error('Failed to restore previous session', err);
       }
@@ -4672,6 +4675,13 @@ ${(s.querySelector('raw')?.textContent || '').trim()}`;
 
     updateOverflowWarningForEditor();
     scheduleOverflowChecks();
+    
+    // Save current slide index to localStorage (skip during initialization)
+    if (!skipEditorSave && state.slideEls.length > 0) {
+      // Always save absolute index since that's what init() expects
+      localStorage.setItem(LAST_SLIDE_INDEX_KEY, state.currentAbsoluteSlideIndex.toString());
+      console.log(`[Slide Position] Saved slide index: ${state.currentAbsoluteSlideIndex}`);
+    }
   }
 
   function resolveVisibleIndexForAbsolute(absIndex) {
@@ -5342,7 +5352,8 @@ async function getThumbnailHTML(rawText, theme) {
       // Split into paragraphs, but preserve lists
       // If the text contains lists, return it as-is (lists are already formatted)
       if (safeText.includes('<ul') || safeText.includes('<ol') || safeText.includes('<li')) {
-        return safeText; // Lists are already complete HTML, don't wrap in paragraphs
+        // Convert double newlines to paragraph breaks to preserve spacing
+        return safeText.replace(/\n{2,}/g, '<br /><br />');
       }
       
       return safeText
@@ -6430,12 +6441,15 @@ async function applyTheme(themeId) {
     // Check for a saved session in local storage first, but only if no URL is specified.
     if (!inputUrl) {
         const savedSession = localStorage.getItem(LAST_SESSION_KEY);
+        const savedSlideIndex = localStorage.getItem(LAST_SLIDE_INDEX_KEY);
+        const slideIndex = savedSlideIndex ? parseInt(savedSlideIndex, 10) : 0;
+        console.log(`[Slide Position] Restoring slide index: ${slideIndex} (from localStorage: ${savedSlideIndex})`);
         if (savedSession) {
-            init(savedSession, { slideIndex: 0, reason: 'restored-last' });
+            init(savedSession, { slideIndex: slideIndex, reason: 'restored-last' });
             return; // Stop here to prevent loading the default.
         }
         // If no saved session, proceed to load the default.
-        init(undefined, { fileName: 'New Presentation', slideIndex: 0, reason: 'default' });
+        init(undefined, { fileName: 'New Presentation', slideIndex: slideIndex, reason: 'default' });
         return;
     }
 
@@ -6480,7 +6494,10 @@ async function applyTheme(themeId) {
         const newXml = convertTxtToXML(txt, fileLeaf);
         state.currentFilename = cleanName;
         sessionStorage.setItem(`Slides_${cleanName}`, newXml);
-        init(newXml, { fileName: cleanName, slideIndex: 0, reason: 'url' });
+        const savedSlideIndex = localStorage.getItem(LAST_SLIDE_INDEX_KEY);
+        const slideIndex = savedSlideIndex ? parseInt(savedSlideIndex, 10) : 0;
+        console.log(`[Slide Position] Loading from URL, restoring slide index: ${slideIndex} (from localStorage: ${savedSlideIndex})`);
+        init(newXml, { fileName: cleanName, slideIndex: slideIndex, reason: 'url' });
       })
       .catch(err => {
         console.error(err);
