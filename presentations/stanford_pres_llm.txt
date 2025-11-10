@@ -314,6 +314,10 @@ TopText:
 
 Image: images/local-img-1762481171065-1azvf52.png, Residualized Quantity
 
+# Slide(37):
+TopTitle: Demand regressions: A first try
+Image: images/price_time_regression.png
+
 # Slide(38):
 
 Image: images/agg_creator_categories_share.png, 
