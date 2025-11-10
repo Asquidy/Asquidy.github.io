@@ -1,6 +1,6 @@
 # METADATA:
 Title: myslides
-Theme: tufte-base
+Theme: japan-minimal
 ShowSlideCount: true
 LogoUrl: 
 
@@ -34,7 +34,8 @@ TopText.8:
 <<<
 - Demand Side: 
   - How much more utility does a 'better' model generate? 
-  - What characteristics of models do end-users care about? How correlated are these with public benchmarks?
+  - What characteristics of models do enterprises demand? 
+  - How correlated are these with public benchmarks?
   - How quickly do better models diffuse?
 - Supply Side: 
    - How do firms compete with each other? 
@@ -65,12 +66,12 @@ TopTitle: Main findings
 
 TopText.8: 
 <<<
-- For similar levels of *measured* intelligence, closed-source models are 7 times more expensive, but are dominant.
+- For similar levels of *measured* intelligence, closed-source models are 8 times more expensive, but are dominant.
 - Intelligence-adjusted prices have fallen by approximately 100-fold since the launch of GPT-4.
 - New models reach peak market share quickly, within a few weeks on OpenRouter and within 3 - 6 months on Azure. 
 - Demand for models is differentiated by brand and use case.
-- Adoption of reasoning models is very limited.
-- The market for open-source model inference is competitive with free entry.
+- Adoption of frontier reasoning models is very limited.
+- The market for open-source model inference is competitive with free entry of providers.
 <<<
 
 # Slide(6):
@@ -88,28 +89,19 @@ Text.8:
 8. Conclusion
 
 # Slide(7):
+
 TopTitle: Types of LLM Markets
 
-Columns:
-[[Text0.8]]
-||| **Consumer LLMs** |||
-- Individual use
-- Freemium
-- ChatGPT
-[[Break:3]]
----
-[[Text0.8]]
-||| **LLM API Market** |||
-- This paper.
-- API calls and usage based pricing.
-- AWS, Azure, OpenAI, etc.
----
-[[Text0.8]]
-||| **Custom Enterprise LLMs** |||
-- Finetuning
-- Vertical specific models
-- Customized Pricing
-[[Break:3]]
+TopText.8:
+**Consumer LLMs**:  
+  - Individual use, freemium
+  - ChatGPT, Gemini
+**LLM API Market** (This Paper):
+  - API calls and usage based pricing.
+  - AWS, Azure, OpenAI, Together AI, etc.
+**Custom Enterprise LLMs** 
+  - Vertical specific models, Customized Pricing
+  - Consulting Firms, OpenAI, Sierra, Harvey, etc...
 
 # Slide(8):
 
@@ -124,7 +116,7 @@ Creators are entities (e.g., OpenAI, Google, Anthropic, Meta) who develop and tr
 - Conduct training runs.
 <<<
 
-# Slide(8):
+# Slide(9):
 
 TopTitle: LLM Inference Providers 
 
@@ -137,7 +129,7 @@ Inference providers are entities who use computing resources to return tokens fr
 - Together AI, Cerebras, Groq, and others specialize in inference services, focusing on open-source models.
 <<<
 
-# Slide(9):
+# Slide(10):
 
 TopTitle: LLM API Pricing
 
@@ -150,20 +142,25 @@ Priced in millions of tokens (MTok)
 - Reasoning tokens
 <<<
 
-# Slide(10):
+# Slide(11):
 
 TopTitle: LLM Aggregators and OpenRouter
 
-Text.8:
+TopText.8:
 LLM aggregators are platforms that sit between developers and model providers. 
+- They lower switching costs and offer other conveniences.
+- OpenRouter is the biggest one, serving over 5 trillion tokens per week. 
+- Pricing: 5% to 5.5%
 
-They lower switching costs and offer other conveniences.
+Image: images/local-img-1762402044329-ipldq7c.png, , .6, 25, 110
+    
+Image: images/local-img-1762708251574-gmn1pyp.png, , .75, 65, 110
 
-OpenRouter is the biggest one, serving over 5 trillion tokens per week. 
+# Slide(12):
 
-Image: images/local-img-1762402044329-ipldq7c.png, , .5
+Image: images/local-img-1762708073165-mcrd868.png,
 
-# Slide(11):
+# Slide(13):
 
 TopTitle: OpenRouter Data
 
@@ -174,16 +171,18 @@ TopText.8:
 
 Some data available in July 2023, comprehensive data after April 2025.
 
-# Slide(12):
+# Slide(14):
 
 TopTitle: Azure Foundry Data
 
 TopText.8: 
-- Foundry allows customers to access models hosted by Microsoft through an API.
+- Foundry allows enterprises to access models hosted by Microsoft through an API.
 - Serves OpenAI and xAI models, but not Anthropic or Google models. Also serves open-source models.
-- Customer-day level usage + customer characteristics.
+- Enterprise-day level usage + enterprise industry.
 
-# Slide(13):
+We did lots of data cleaning to sync OpenRouter, Azure, and other data.
+
+# Slide(15):
 
 BackgroundColor:rgb(1, 111, 147)
 TextColor:rgb(250, 250, 250)
@@ -197,43 +196,81 @@ Text.8:
 7. Usage and Heterogeneity
 8. Conclusion
 
-# Slide(14):
-
-Image: images/local-img-1762403113349-hxt9aub.png,
-
-# Slide(15):
-
-Image: images/local-img-1762403143104-pbew3kp.png,
-
 # Slide(16):
-
+TopTitle: Model and Creator Growth
 Columns:
-Image: images/local-img-1762480411753-fdjqh19.png
-  ---
-
-Image: images/local-img-1762480419818-uxcjkbh.png
+Image: images/model_numbers_cumulative_open_vs_closed_source_models_over_time.png, Number of Models, .9
+---
+Image: images/model_numbers_cumulative_creators_created_by_created_at.png, Number of Creators , .9
 
 # Slide(17):
 
-Image: images/local-img-1762480554976-adk6udw.png, , .5
+Image: images/local-img-1762482042419-94woq4i.png, Cumulative Growth of OpenRouter
 
 # Slide(18):
-
-Image: images/local-img-1762480607540-cyp8y9a.png
+TopTitle: Providers
+Columns:
+Image: images/provider_numbers_cumulative_providers_over_time.png, Number of Providers, .9
+---
+Image: images/provider_numbers_histogram_combined_last30days.png, Providers per Model, .9
 
 # Slide(19):
 
-Image: images/local-img-1762480628796-ngeyn9l.png
+TopTitle: Measuring Model Intelligence 
+
+TopText: 
+- Lots of benchmarks: MMLU Pro, GPQA, HLE, LiveCodeBench, etc....
+- Model performance across these is very correlated.
+- We use an index from Artificial Analysis.
+- Open question: how much do these benchmarks actually correlate with utility?
 
 # Slide(20):
-
-Image: images/local-img-1762481023985-gfkzblz.png,
+Break:2
+Columns:
+Image: images/benchmark_daily_top_intelligence_index.png, Most Intelligent Models, .8
+     ---
+Image: images/benchmark_intelligence_new_models_distribution.png, Intelligence of Recent Models, .8
 
 # Slide(21):
 
-Image: images/local-img-1762481151707-r63hlxq.png,
+Image: images/benchmark_price_intelligence_ratio_distribution.png, Price to intelligence Index
 
-# Slide(22):
+# Slide(23):
+
+Image: images/bernchmark_weighted_intelligence_distribution_over_time.png, Distribution of token intelligence index (OpenRouter)
+
+# Slide(24):
+
+Image: images/MS5.png, Distribution of token intelligence index (Azure)
+
+# Slide(25):
+
+Title: Pricing
+
+# Slide(26):
+
+Image: images/price_prompt_distribution.png, Price distribution of recently release models
+
+# Slide(27):
+
+Image: images/weekly_price_change_probability_bars.png, Weekly probability of price-change
+
+# Slide(28):
+
+Image: images/token_weighted_avg_prompt_completion_prices_2025.png
+
+# Slide(29):
+TopTitle: Variation in prices within model
+Columns:
+Image: images/provider_cv_histogram_open_source.png, Open-source
+---
+Image: images/provider_cv_histogram_closed_source.png, Closed-source
+
+# Slide(30): 
+
+Image: images/price_intelligence_regression.png, Hedonic Price Regression
+
+# Slide(31):
 
 BackgroundColor:rgb(1, 111, 147)
 TextColor:rgb(250, 250, 250)
@@ -247,68 +284,78 @@ Text.8:
 7. Usage and Heterogeneity
 8. Conclusion
 
-# Slide(23):
-
-Image: images/local-img-1762480649379-4i2thha.png, OpenRouter, .9
-
-# Slide(24):
-
-Image: images/local-img-1762482410988-q88jp9k.png, Duplicate?
-
-# Slide(25):
-
-Image: images/local-img-1762482514846-ipm1ihe.png, OpenRouter?
-
-# Slide(26):
-
-Image: images/local-img-1762482863784-3apfjqy.png, Azure Data
-
-# Slide(27):
-
-Image: images/local-img-1762482897465-s2t16wa.png, Azure Data
-
-# Slide(28):
-
-Image: images/local-img-1762482937085-bldhksp.png, Azure Data
-
-# Slide(29):
-
-Image: images/local-img-1762481096186-wzaau6t.png, Hedonic Price Regression
-
-# Slide(30):
-
-Image: images/local-img-1762481126823-c935b2f.png, Usage by model intelligence and price
-
-# Slide(31):
-
-Image: images/local-img-1762481171065-1azvf52.png, "Residualized Quantity"
-
 # Slide(32):
 
-Image: images/local-img-1762481732601-nyvnrsi.png, 
-To update
+Image: images/benchmark_price_vs_intelligence_usage_weighted_scatter_2025-08-06.png, Usage by model intelligence and price
 
 # Slide(33):
 
-Image: images/local-img-1762481752602-1ne0qqt.png, 
-To update
+Image: images/model_age_distribution_over_time.png, Model age (OpenRouter)
 
 # Slide(34):
 
-Image: images/local-img-1762481772839-bwpmuom.png, 
-To update
+Image: images/MS6.png, Model age (Azure)
 
 # Slide(35):
 
-Image: images/local-img-1762481933455-d6ftuxy.png, 
-To update
+Image: images/MS7.png, Half life of model shares  (Azure)
 
 # Slide(36):
 
-Image: images/local-img-1762481969799-ve9igla.png,
-To update
+TopTitle: A first attempt at demand
+
+TopText:
+- Observation: model, provider, date
+- Outcome: Quantity demanded
+- Characteristics: Price, latency, throughput, context length.
+- Plot: Bin-scatter points and regression line, residualizing the other characteristics. 
+
 
 # Slide(37):
+
+Image: images/local-img-1762481171065-1azvf52.png, Residualized Quantity
+
+# Slide(38):
+
+Image: images/agg_creator_categories_share.png, 
+Creator market shares are dynamic (OpenRouter)
+
+# Slide(39):
+
+Image: images/agg_open_closed_share_area.png, 
+Open-source models are gaining (OpenRouter)
+
+
+# Slide(40):
+Hidden: true
+Image: images/agg_top10_model_share.png, 
+
+# Slide(25):
+
+Title: Multi-homing
+
+# Slide(41):
+
+Image: images/MS1.png, Most firms single-home (Azure)
+
+# Slide(42):
+
+Image: images/MS2.png,
+Multi-homers mostly use one model
+
+# Slide(43):
+
+TopTitle: Model Usage by App (Oct, 2025)
+
+Image: images/coding_apps_simple_2025-10-30.png, 
+
+# Slide(43):
+
+TopTitle: Model Usage by App (July, 2025)
+
+Image: images/coding_apps_simple_2025-07-30.png, 
+
+# Slide(44):
 
 BackgroundColor:rgb(1, 111, 147)
 TextColor:rgb(250, 250, 250)
@@ -322,27 +369,32 @@ Text.8:
 7. Usage and Heterogeneity
 8. Conclusion
 
-# Slide(38):
+# Slide(45):
 
-Image: images/local-img-1762482042419-94woq4i.png, OpenRouter Data
+Image: images/total_tokens_plot.png, No Evidence of Market Expansion on OpenRouter
 
-# Slide(39):
+# Slide(46):
 
-Image: images/local-img-1762482099540-ku5gbri.png, Sonnet 3.7
+Image: images/event_study_claude_3_7_sonnet.png, Sonnet 3.7
 
-# Slide(40):
+# Slide(47):
 
-Image: images/local-img-1762482158467-9g8enbd.png, Sonnet 4
+Image: images/event_study_claude_4_sonnet.png, Sonnet 4
 
-# Slide(41):
+# Slide(48):
 
-Image: images/local-img-1762482180428-k4ztm4q.png, Gemini
+Image: images/event_study_gemini_2_0_flash_001.png, Gemini
 
-# Slide(42):
+# Slide(49):
+TopTitle: Azure Model Release Event Studies
+Columns:
+Image: images/MS8.png, Gpt-4o Release
+---
 
-Image: images/local-img-1762482219034-dguatlp.png, Azure Data
+Image: images/MS9.png, DeepSeek R1 Release
 
-# Slide(43):
+
+# Slide(50):
 
 BackgroundColor:rgb(1, 111, 147)
 TextColor:rgb(250, 250, 250)
@@ -356,7 +408,7 @@ Text.8:
 7. **Usage and Heterogeneity**
 8. Conclusion
 
-# Slide(44):
+# Slide(51):
 
 TopTitle: Heterogeneity in diffusion
 
@@ -366,46 +418,54 @@ TopText.8:
 - Diffusion happens on extensive and intensive margins. 
   - Do firms adopt a new model?
   - How much do they adopt?
-- Azure has many customers, representing a variety of industries.
+- Azure has many enterprises, representing a variety of industries.
 - OpenRouter serves many use cases.
 <<<
 
 #←
 
-# Slide(45):
+# Slide(52):
+TopTitle: Heterogeneity across industries
 
-Image: images/local-img-1762483451628-hznqnrf.png, Industry Variation (Azure)
+Columns:
 
-# Slide(46):
+Image: images/MS10.png, Token Consumption
+---
 
-Image: images/local-img-1762483510847-e3s4w9q.png, Azure
+Image: images/MS11.png, Intelligence
 
-# Slide(47):
+
+# Slide(53):
+
+Image: images/MS12.png, Top Model by Industry
+
+# Slide(54):
 
 TopTitle: OpenRouter, heterogeneity by use case
 Columns:
-Image: images/local-img-1762483709536-dmwcz5d.png,
+Image: images/token_completion_per_request_by_category.png, Median Completion Tokens 
 ---
-Image: images/local-img-1762483668544-o7ovsl3.png,
+Image: images/token_ratio_by_category.png, Median Token Ratio
 
-# Slide(48):
+# Slide(55):
 
-Image: images/local-img-1762481903438-3kyq280.png, 
-To update
+Image: images/category_average_hhi_with_overall_market.png, 
+Concentration (HHI)
 
-# Slide(49):
+# Slide(56):
 
 TopTitle: Conclusion
 
 TopText.8: 
 <<<
 - Models are getting better and cheaper.
-- Closed-source models still dominate..
-- Substitution between models is quick, but patterns of substitution suggest model differentiation.
+- Closed-source models still dominate even though they are more expensive.
+- Substitution between models is fast, but patterns of substitution suggest model differentiation.
 - Concentration indices and switching behavior suggest a competitive industry.
+- Much more work to do!
 <<<
 
-# Slide(50):
+# Slide(57):
 
 BigText: Thank You!
 afradkin@gmail.com
