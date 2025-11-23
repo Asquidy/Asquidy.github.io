@@ -64,6 +64,9 @@ I am now <a href="https://empiricrafting.substack.com/">blogging</a> and co-host
         {% if paper.code %}  
         <a href={{ paper.code }}>Code</a>
         {% endif %}
+        {% if paper.viz_link %}
+        <a href={{ paper.viz_link }} target="_blank">Visualization</a>
+        {% endif %}
         </div>
 
    <div id={{ paper.js_abbrev }} class="paper-abstract" style="display: none;">
@@ -111,6 +114,9 @@ I am now <a href="https://empiricrafting.substack.com/">blogging</a> and co-host
     {% endif %}
     {% if paper.code %}  
     <a href={{ paper.code }}>Code</a>
+    {% endif %}
+    {% if paper.viz_link %}
+    <a href={{ paper.viz_link }} target="_blank">Visualization</a>
     {% endif %}
     </div>
 
@@ -161,6 +167,9 @@ I am now <a href="https://empiricrafting.substack.com/">blogging</a> and co-host
         {% if paper.code %}  
         <a href={{ paper.code }}>Code</a>
         {% endif %}
+        {% if paper.viz_link %}
+        <a href={{ paper.viz_link }} target="_blank">Visualization</a>
+        {% endif %}
         </div>
     
         <div id={{ paper.js_abbrev }} class="paper-abstract" style="display: none;">
@@ -208,6 +217,9 @@ I am now <a href="https://empiricrafting.substack.com/">blogging</a> and co-host
     {% endif %}
     {% if paper.code %}  
     <a href={{ paper.code }}>Code</a>
+    {% endif %}
+    {% if paper.viz_link %}
+    <a href={{ paper.viz_link }} target="_blank">Visualization</a>
     {% endif %}
     </div>
 

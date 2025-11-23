@@ -6,6 +6,7 @@ abstract: >-
 category: research
 journal: Extended abstract accepted at EC'25.
 link: "assets/Privacy_Preferences_and_Dark_Patterns.pdf"
+viz_link: "https://www.library.hbs.edu/working-knowledge/time-cost-of-customizing-website-cookies-visualized"
 coauthors: >-
   with <a href="https://sites.google.com/site/chiarafarronato/">Chiara Farronato</a> and <a href="https://tesarylin.github.io/">Tesary Lin</a>
 js: "toggleMe('dp'); return false;"

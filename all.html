@@ -48,6 +48,9 @@ All Work (Reverse Chronological)
     {% if paper.code %}
       <a href="{{ paper.code }}">Code</a>
     {% endif %}
+    {% if paper.viz_link %}
+      <a href="{{ paper.viz_link }}" target="_blank">Visualization</a>
+    {% endif %}
   </div>
 
   <div id="{{ paper.js_abbrev }}" class="paper-abstract" style="display: none;">

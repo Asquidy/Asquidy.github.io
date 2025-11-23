@@ -8,7 +8,7 @@ link: "https://www.nber.org/books-and-chapters/economics-transformative-ai/coase
 coauthors: with <a href="#">Peyman Shahidi</a>, <a href="#">Gili Rusak</a>, <a href="#">Benjamin S. Manning</a>, and <a href="https://www.john-joseph-horton.com/">John J. Horton</a>
 js: "toggleMe('coasean'); return false;"
 js_abbrev: 'coasean'
-order: -2025
+order: -2026
 published: "0"
 peer: 1
 trueyear: 2026
