@@ -33,8 +33,7 @@ TopText.8:
 <<<
 - Demand Side: 
   - How much more utility does a 'better' model generate? 
-  - What characteristics of models do enterprises demand? 
-  - How correlated are these with public benchmarks?
+  - What characteristics of models do enterprises demand and how correlated is demand with public benchmarks?
   - How quickly do better models diffuse?
 - Supply Side: 
    - How do firms compete with each other? 
@@ -61,16 +60,16 @@ Text.8:
 
 # Slide(5):
 
-TopTitle: Main findings
+TopTitle: Main Results of First Paper
 
 TopText.8: 
 <<<
 - For similar levels of *measured* intelligence, closed-source models are 8 times more expensive, but are dominant.
-- Intelligence-adjusted prices have fallen by approximately 100-fold since the launch of GPT-4.
-- New models reach peak market share quickly, within a few weeks on OpenRouter and within 3 - 6 months on Azure. 
+- Prices for similar levels of intelligence have fallen by approximately 100-fold since the launch of GPT-4.
+- New models reach peak market share quickly, within a few weeks on OpenRouter. 
 - Demand for models is differentiated by brand and use case.
-- Adoption of frontier reasoning models is very limited.
-- The market for open-source model inference is competitive with free entry of providers.
+- The market for open-source model inference is dynamic with free entry of providers.
+- Evidence of preference heterogeneity across providers.
 <<<
 
 # Slide(6):
@@ -173,7 +172,6 @@ Some data available in July 2023, comprehensive data after April 2025.
 # Slide(14):
 
 TopTitle: Azure Foundry Data
-
 TopText.8: 
 - Foundry allows enterprises to access models hosted by Microsoft through an API.
 - Serves OpenAI and xAI models, but not Anthropic or Google models. Also serves open-source models.
@@ -230,16 +228,22 @@ Image: images/benchmark_daily_top_intelligence_index.png, Most Intelligent Model
      ---
 Image: images/benchmark_intelligence_new_models_distribution.png, Intelligence of Recent Models, .8
 
+
+# Slide(21):
+
+Image: images/price_by_intelligence_bin.png, Minimum price per million tokens
+
+
 # Slide(21):
 
 Image: images/benchmark_price_intelligence_ratio_distribution.png, Price to intelligence Index
 
 # Slide(23):
-
+Hidden: true
 Image: images/bernchmark_weighted_intelligence_distribution_over_time.png, Distribution of token intelligence index (OpenRouter)
 
 # Slide(24):
-
+Hidden: true
 Image: images/MS5.png, Distribution of token intelligence index (Azure)
 
 # Slide(25):
@@ -288,16 +292,8 @@ Text.8:
 Image: images/benchmark_price_vs_intelligence_usage_weighted_scatter_2025-08-06.png, Usage by model intelligence and price
 
 # Slide(33):
-
+Hidden: true
 Image: images/model_age_distribution_over_time.png, Model age (OpenRouter)
-
-# Slide(34):
-
-Image: images/MS6.png, Model age (Azure)
-
-# Slide(35):
-
-Image: images/MS7.png, Half life of model shares  (Azure)
 
 # Slide(36):
 
@@ -386,7 +382,7 @@ Image: images/event_study_claude_4_sonnet.png, Sonnet 4
 
 # Slide(48):
 
-Image: images/event_study_gemini_2_0_flash_001.png, Gemini
+Image: images/event_study_gemini_2_0_flash_001.png, Gemini 2.0 Flash
 
 # Slide(49):
 TopTitle: Azure Model Release Event Studies

@@ -52,6 +52,7 @@ body {
   font-family: var(--sans-font);
   text-transform: uppercase;
   color: var(--accent-color);
+  text-align: left;
   border: none;
   letter-spacing: -0.05em;
   text-shadow: 3px 3px 0 #000;

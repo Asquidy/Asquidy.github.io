@@ -251,7 +251,6 @@ body {
 .slide-content h1 {
   font-size: calc(var(--base-font-size) * 2.33);
   line-height: 1.2;
-  text-align: left;
   padding-bottom: calc(var(--base-font-size) * 0.25);
   margin-bottom: calc(var(--base-font-size) * 0.25);
   width: 100%;
@@ -1842,7 +1841,12 @@ Title: New slide
 
     // Editor status messaging
     statusTimeout: null,
-    lastStatusMessage: ''
+    lastStatusMessage: '',
+
+    // File watching for live preview
+    watchInterval: null,
+    lastFileContent: null,
+    watchFileUrl: null
   };
 
   function sanitizeDeckName(input) {
@@ -6508,6 +6512,90 @@ async function applyTheme(themeId) {
         }
         init(undefined, { fileName: 'New Presentation', slideIndex: 0, reason: 'default' });
       });
+
+    // Check for watch parameter and start file watching
+    const watchParam = urlParams.get('watch');
+    if (watchParam) {
+      const watchInterval = parseInt(watchParam, 10) || 1000; // Default 1 second
+      startFileWatching(fetchUrl, baseFolderUrl, watchInterval);
+    }
+  }
+
+  /* ═══════════════════════════════════════════════════════════════════════
+                          LIVE FILE WATCHING
+     ═══════════════════════════════════════════════════════════════════════ */
+  
+  function startFileWatching(fileUrl, baseFolderUrl, intervalMs) {
+    // Clear any existing watch interval
+    if (state.watchInterval) {
+      clearInterval(state.watchInterval);
+    }
+
+    state.watchFileUrl = fileUrl;
+    console.log(`[Live Preview] Starting file watch with ${intervalMs}ms interval`);
+
+    state.watchInterval = setInterval(async () => {
+      try {
+        // Add cache-busting query parameter
+        const cacheBuster = `_t=${Date.now()}`;
+        const urlWithCacheBuster = fileUrl.includes('?') 
+          ? `${fileUrl}&${cacheBuster}` 
+          : `${fileUrl}?${cacheBuster}`;
+
+        const response = await fetch(urlWithCacheBuster);
+        if (!response.ok) return;
+
+        const newContent = await response.text();
+        
+        // Compare with last known content
+        if (state.lastFileContent !== null && state.lastFileContent !== newContent) {
+          console.log('[Live Preview] File changed, reloading slides...');
+          state.lastFileContent = newContent;
+          
+          // Get current slide index to preserve position
+          const currentSlideIndex = state.currentSlideIndex || 0;
+          
+          const fileLeaf = fileUrl.split('/').pop().split('?')[0] || 'Slides.txt';
+          const cleanName = fileLeaf.replace(/\.[^.]+$/, '');
+          const newXml = convertTxtToXML(newContent, fileLeaf);
+          state.currentFilename = cleanName;
+          
+          window.presentationBaseUrl = baseFolderUrl;
+          
+          // Re-init with the new content, preserving slide position
+          init(newXml, { fileName: cleanName, slideIndex: currentSlideIndex, reason: 'live-reload' });
+        } else if (state.lastFileContent === null) {
+          // First load - just store the content
+          state.lastFileContent = newContent;
+        }
+      } catch (err) {
+        console.warn('[Live Preview] Error checking for file changes:', err);
+      }
+    }, intervalMs);
+
+    // Show indicator that live preview is active
+    showLivePreviewIndicator();
+  }
+
+  function showLivePreviewIndicator() {
+    // Add a small indicator showing live preview is active
+    const indicator = document.createElement('div');
+    indicator.id = 'live-preview-indicator';
+    indicator.innerHTML = '🔄 Live Preview';
+    indicator.style.cssText = `
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      background: rgba(0, 128, 0, 0.8);
+      color: white;
+      padding: 5px 10px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-family: system-ui, sans-serif;
+      z-index: 10000;
+      pointer-events: none;
+    `;
+    document.body.appendChild(indicator);
   }
 
 window.resolveImagePath = function(imageSrc, baseUrl) {
