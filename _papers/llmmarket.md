@@ -5,7 +5,7 @@ abstract: We document six facts about the structure and dynamics of the LLM mark
 category: research
 journal: 'This paper supersedes "Demand for LLMs: Descriptive Evidence on Substitution, Market Expansion, and Multi-Homing"'
 link: "/assets/LLM_Demand_12_12_2025.pdf"
-coauthors: with Mert Demirer, Nadav Tadelis, and Sida Peng
+coauthors: with <a href="https://www.mertdemirer.com/"> Mert Demirer</a>, <a href="https://nadavtadelis.com/"> Nadav Tadelis </a>, and <a href="https://www.sidapeng.com/"> Sida Peng</a>
 js: "toggleMe('llmmarket'); return false;"
 js_abbrev: 'llmmarket'
 order: -2026.1
