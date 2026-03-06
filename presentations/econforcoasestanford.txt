@@ -438,19 +438,19 @@ Image: images/prompt.png, More like this!, .9, center
 
 # Slide(42):
 
-TopTitle: Key Subtopic: What OpenAI Shopping tries to do
+TopTitle: What OpenAI Shoppingdoes
 Break: 1
 Image: images/oai_shopping1.png, , .5, center
 
 # Slide(43):
 
-TopTitle: Key Subtopic: Looks like a marketing conjoint!
+TopTitle: Looks like a marketing conjoint!
 Break: 1
 Image: images/oai_shopping2.png, , .58, center
 
 # Slide(44):
 
-TopTitle: Key Subtopic: Still needs to convince the human to act
+TopTitle: Still needs to convince the human to act
 Break: 1
 Image: images/oai_shopping3.png, , .5, center
 
