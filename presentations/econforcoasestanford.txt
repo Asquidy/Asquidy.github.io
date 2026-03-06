@@ -1,0 +1,542 @@
+# METADATA:
+Title: Market Participation Requires Self-Knowledge
+Theme: economics-standard
+ShowSlideCount: true
+LogoUrl: 
+
+# Slide(1):
+
+Title: Economics for the Coasean Singularity
+
+Text: 
+Andrey Fradkin (Boston University and Amazon)
+SmallText:
+<<<
+This presentation includes joint work with **Rohit Krishnan**, Peyman Shahidi, Gili Rusak, Benjamin Manning, John Horton, Mert Demirer, and Nadav Tadelis.
+
+*The views expressed in this talk do not represent the views of Amazon.*
+<<<
+
+# Slide(2):
+
+Title: Let's seriously consider the idea that AI agents will participate in the economy like human agents.
+
+# Slide(3):
+
+TopTitle: The Coasean singularity (strawman)
+Text: AI agents cause transaction costs to go to zero, resulting in a capitalist utopia and the dissolution of firms (Arrow-Debreu markets).
+     
+Image: local-img-1772322581100-blzf8rl.png,
+
+# Slide(4):
+
+TopTitle: Statements about AI agents in the economy
+TopText.8:
+1. They will participate as laborers doing productive work. 
+2. They will act as personal agents engaging in the market on our behalf.
+3. They will collaborate, coordinate, and compete in a variety of ways, just like humans do. 
+4. Coase's insights hold; transaction costs will dictate the organizational structure for both humans and agents.
+5. We will need rules, tools, and market design innovations to make this new world work well.
+
+# Slide(5):
+
+BackgroundColor:rgb(1, 111, 147)
+TextColor:rgb(250, 250, 250)
+TopTitle: Roadmap
+Text.8: 
+1. **Comparative advantage among models.**
+2. How existing scaffolding for AI agents works.
+3. Why a market-based scaffolding is appealing.
+4. Experiments with market-based scaffolding.
+6. Market design and concluding thoughts.
+
+# Slide(6):
+
+TopTitle: One vision: best model does everything
+
+TopText: 
+<<<
+Let's say GPT7 or Claude Sonnet 9 is the smartest model in existence. 
+Break:.1
+This model may think and accomplish tasks so efficiently that it is cheaper than other alternatives.
+Break:.1
+<<<
+
+# Slide(7):
+
+TopTitle: Different models lead across categories
+
+Image: images/category_leaders_over_time.png
+
+# Slide(8):
+
+TopTitle: Not a winner-take-all market
+
+Image: images/local-img-1772322712273-w2z1q4o.png, OpenRouter Market Share by Model Creator, .9
+
+# Slide(9):
+
+TopTitle: Comparative advantage in cost and latency space
+
+
+Image: images/pareto_databricks.png, Databricks KARL benchmark, .95
+
+# Slide(10):
+
+TopTitle: New architectures for specific problems
+
+Image: images/arc_agi1.png, ARC-AGI-1 cost-performance example, .45
+
+# Slide(11):
+
+TopTitle: The jagged frontier
+
+TopText.8:
+<<<
+AI capability boundaries are **irregular and unpredictable** (Dell'Acqua et al., 2023)
+Break: 0.5
+Models excel at some tasks while failing at seemingly similar ones.
+Break: 0.5
+Even human users struggle to anticipate which tasks fall inside vs. outside the frontier.
+<<<
+
+# Slide(12):
+
+TopTitle: Why we want to use a diversity of models
+
+Columns:
+  [[Text.7]]
+  <<<
+  - Models differ in their comparative advantage.
+  - Diversity improves problem solving.
+  - Some models are cheaper or faster than others.
+  - We may care about robustness.
+  <<<
+  ---
+  Image: local-img-1772321344657-cin27sa.png
+
+# Slide(13):
+
+BackgroundColor:rgb(1, 111, 147)
+TextColor:rgb(250, 250, 250)
+TopTitle: Roadmap
+Text.8: 
+1. Comparative advantage among models.
+2. **How existing scaffolding for AI agents works.**
+3. Why a market-based scaffolding is appealing.
+4. Experiments with market-based scaffolding.
+6. Market design and concluding thoughts.
+
+# Slide(14):
+
+TopTitle: What is a scaffolding?
+
+
+Columns:
+ [[Text.8]]
+  <<<
+  - Software architecture around a language model.
+  - Determines what happens to the context, and the rules for using tools and calling sub-processes.
+  - You can think of it as an organizational structure.
+  <<<
+ ---
+Image: images/local-img-1772333204829-cdo76fi.png, Long-running Codex Agent
+
+# Slide(15):
+
+TopTitle: Big efficiency gains from agents being able to chain tasks
+Break: 1.5
+Image: images/chaining_tasks.png, , .9, center
+
+# Slide(16):
+
+TopTitle: Example: Claude code
+
+TopText:
+<<<
+- Markdown files specify persistent memory and usage patterns.
+- The main instance determines when to spawn sub-agents (for context window protection, parallelization, task isolation, and specialization).
+- Sub-agents have their own context and often use a cheaper model (Haiku).
+- The process is a while loop that calls sub-agents of depth one.
+<<<
+
+# Slide(17):
+
+TopTitle: Other patterns
+
+TopText:
+<<<
+- Hierarchical sets of instructions (Codex).
+- Explicit roles in team-based collaboration (Codex).
+- Multiple isolated and persistent agents run in parallel (OpenClaw).
+- Cost-aware model selection using deterministic rules (OpenClaw).
+- OpenClaw is the only one intended to be used with models from a variety of creators.
+<<<
+
+# Slide(18):
+
+TopTitle: Parallels to economic concepts
+
+TopText:
+<<<
+- The finite context window approximates limited attention. 
+  - Communication fills the context window and must be economized.
+  - Compaction of context is lossy.
+- Task decomposition represents the division of labor.
+- The question of optimal scaffolding has natural analogues in operations, mechanism design, and industrial organization.
+<<<
+
+# Slide(19):
+
+BackgroundColor:rgb(1, 111, 147)
+TextColor:rgb(250, 250, 250)
+TopTitle: Roadmap
+Text.8: 
+1. Comparative advantage among models.
+2. How existing scaffolding for AI agents works.
+3. **Why a market-based scaffolding is appealing.**
+4. Experiments with market-based scaffolding.
+6. Market design and concluding thoughts.
+
+# Slide(20):
+
+TopTitle: Hayekian reasons for markets
+
+Columns:
+  [[Text.7]]
+  <<<
+  - Distributed knowledge about:
+     - Capabilities.
+     - Preferences.
+     - Constraints.
+  - Leads to decentralized mechanisms.
+  - Prices arise as an efficient way of communicating this decentralized information.
+  <<<
+  ---
+  Image: images/local-img-1772335504259-2o9t0kt.png,
+
+# Slide(21):
+
+TopTitle: Market for contract labor
+
+Columns:
+  [[Text.7]]
+  <<<
+ - Workers bid on jobs.
+ - In order to bid, workers must have information about costs and ability to complete the task.
+ - Mistakes result in cost overruns, loss to reputation, or removal from the platform.
+  <<<
+  ---
+  Image: images/upwork.png
+
+# Slide(22):
+
+TopTitle: Analogy for AI agents
+
+TopText.8:
+<<<
+- What are agents' costs? The number of tokens used in completing the task.
+- What is success? Does the agent succeed in completing the task.
+- Do agents have private information? Perhaps, if they have context or if they can "introspect."
+- What is reputation? Doesn't exist for each unique instance.
+- What are preferences? Unclear.
+<<<
+
+# Slide(23):
+
+TopTitle: Production functions for AI agents
+
+TopText.8:
+<<<
+- An agent has many ways to do something. 
+- An agent may be able to choose among bundles of probability of success and tokens used.
+- Becomes more complex when tools are available (including calls to different instances of a model).
+- We don't have an understanding of which one is chosen.
+<<<
+
+# Slide(24):
+
+TopTitle: Using markets to coordinate agents?
+
+TopText.8:
+<<<
+- Need agents to know something about costs and probability to succeed.
+- Need agents to pick appropriate production plans.
+- Need agents to respond to price signals.
+<<<
+
+# Slide(25):
+
+BackgroundColor:rgb(1, 111, 147)
+TextColor:rgb(250, 250, 250)
+TopTitle: Roadmap
+Text.8: 
+1. Comparative advantage among models.
+2. How existing scaffolding for AI agents works.
+3. Why a market-based scaffolding is appealing.
+4. **Experiments with market-based scaffolding.**
+5. Market design and concluding thoughts.
+
+# Slide(26):
+
+TopTitle: Testing the calibration of models
+Columns:
+<<<
+[[Text.8]]
+We evaluated 6 frontier models on 93 SWE-bench Lite tasks.
+
+Tasks are GitHub issue and pull request pairs.
+
+The patch is evaluated by running a set of tests.
+<<<
+---
+Image: images/Screenshot_2026-03-01_at_5.34.38_PM.png
+
+# Slide(27):
+
+TopTitle: Prompt
+
+TopText.8:
+>
+Estimate the probability that you could complete this task correctly in one attempt.
+Return JSON only with fields: p_success (0..1), estimated_tokens_total (total model tokens for one full solve attempt), rationale (optional).
+>
+
+# Slide(28):
+
+TopTitle: Models are poorly calibrated
+
+Image: images/phase1_calibration_table.png
+
+# Slide(29):
+
+TopTitle: Single-model auction with reserve price
+
+TopText.8:
+<<<
+- Suppose there is an auction with a random reserve price that is not known to the agent.
+- The agent bids to complete the task (or can choose not to bid) using an expected value calculation based on the estimated token cost and probability of success.
+- If the agent wins the auction but fails to complete the task, it loses the auction and the dollar amount.
+- If the agent wins the auction and completes the task, it gets the dollar amount minus the token cost.
+- What happens?
+<<<
+
+# Slide(30):
+
+TopTitle: Models are far from oracle when bidding
+
+Image: images/reserve_auction_model_summary.png
+
+# Slide(31):
+
+TopTitle: Market based scaffolding for AI agents
+
+TopText.8:
+<<<
+- There is a queue of tasks to be completed.
+- Each workers submits a bid for a task.
+- A bid is an ask, self assessment of probability of success, and expected completion time (currently not used).
+- For each bid, the engine computes: P(Success) x Reward - Bid - E[Cost] - (1-P(Success)) x Penalty
+- All bids with Score >= 0 are considered, and the one with the highest score is awarded the task first unless otherwise occupied.
+- If failure, next highest score is considered.
+<<<
+
+# Slide(32):
+
+TopTitle: Some early results
+
+TopText.8:
+Image: images/phase2_market_vs_solo_overlap_table.png
+
+# Slide(33):
+
+TopTitle: So what?
+
+TopText.8:
+<<<
+- The design space is vast and interacts with model self-knowledge.
+- What sort of bidding language is needed?
+- Does it make sense to have a 'reputation' or alternatively an ML based router on top of this?
+- How much better can this do vs the best designed scaffolding? 
+<<<
+
+# Slide(34):
+
+BackgroundColor:rgb(1, 111, 147)
+TextColor:rgb(250, 250, 250)
+TopTitle: Roadmap
+Text.8: 
+1. Comparative advantage among models.
+2. How existing scaffolding for AI agents works.
+3. Why a market-based scaffolding is appealing.
+4. Experiments with market-based scaffolding.
+5. **Market design and concluding thoughts.**
+
+# Slide(35):
+
+TopTitle: Building good agents will become a key topic in econ/CS
+
+Text.8:
+<<<
+- Learning the principal's preferences efficiently
+- Learning what decisions they can make on their own and which they cannot
+- Making them rational (no money pumps)
+- Making them resistant to manipulation
+<<<
+
+# Slide(36):
+
+TopTitle: Bowling shoe vs bring your own agent
+Break: 2
+Image: images/bowlingshoe.png,,
+
+# Slide(37):
+
+TopTitle: Tradeoffs of "bowling shoe" agents
+
+TopText.8:
+<<<
+- They will presumably be better with their own data and apis.
+- Concern about agent bias or self-preferencing.
+- "You look thirsty? Can I add a 6-pack of Coke(TM) to your shopping cart?"
+- Computational costs shift to the platform, though it could charge for them.
+- "Do I really want Walmart to know my WTP?"
+- Liability shifts to the platform, and security may be easier to manage centrally.
+<<<
+
+# Slide(38):
+
+TopTitle: Tradeoffs of BYO-agents
+
+TopText.8:
+<<<
+- Could create arms-race dynamics, deterring users.
+- Liability and cost may shift to the consumer.
+- You do not know what you do not know.
+- Development costs shift to consumers, perhaps leading to more innovation.
+- Can be used across platforms, potentially making them more capable.
+<<<
+
+# Slide(39):
+
+TopTitle: Specialization is another dimension
+
+Break: 2
+Image: images/2by2_byo_horizontal.png,,
+
+# Slide(40):
+
+TopTitle: Key Subtopic: Learning human preferences
+Break: 1.5
+Image: images/bleepbloop.png, Not this!, .5, center
+
+# Slide(41):
+
+TopTitle: Key Subtopic: Learning human preferences
+Break: 1.5
+Image: images/prompt.png, More like this!, .9, center
+
+# Slide(42):
+
+TopTitle: Key Subtopic: What OpenAI Shopping tries to do
+Break: 1
+Image: images/oai_shopping1.png, , .5, center
+
+# Slide(43):
+
+TopTitle: Key Subtopic: Looks like a marketing conjoint!
+Break: 1
+Image: images/oai_shopping2.png, , .58, center
+
+# Slide(44):
+
+TopTitle: Key Subtopic: Still needs to convince the human to act
+Break: 1
+Image: images/oai_shopping3.png, , .5, center
+
+# Slide(45):
+
+TopTitle: But what if the model just knew...
+Break: 1
+TopText.8:
+<<<
+- Lots of efforts here: Expected Parrot, Simile, etc... 
+- What is the value of proprietary data? Basic idea, stuff context with user's prior behavior / purchases.
+- Open question whether this can work well without custom models.
+<<<
+
+# Slide(46):
+
+TopTitle: Equilibrium possibilities: the good place
+
+TopText.8:
+<<<
+- Improved preference elicitation and lower search costs improve taste matching.
+- Better matching strengthens incentives for firms to invest in quality.
+- Advertising may involve less puffery, especially with stronger reputation systems.
+- In bargaining, AI lowers the opportunity cost of negotiating; negotiations can start earlier and persist longer, leading to better outcomes.
+- Firms have less scope to extract rents from behavioral biases and bounded rationality.
+<<<
+
+# Slide(47):
+
+TopTitle: The bad place, robot ripoff hell
+TopText.8:
+<<<
+- Prices and dispersion may not necessarily go down:
+  - If products are (horizontally) differentiated, better matching can lead to higher prices and dispersion
+- Firms may use obfuscation techniques to preserve or increase rents (e.g., bundling unrelated products in the offer to confuse/overload user's AI agent).
+- Zero-sum games may lead to race to the bottom, or arms race to exploit rents from having a “better” agent.
+- Markets with externalities: e.g., congestion in AI-assisted job applications
+<<<
+
+# Slide(48):
+
+TopTitle: Getting to the good place
+TopText.8:
+<<<
+Matching:
+- Deferred Acceptance at scale (e.g., dating apps, online labor markets)
+- Multiple "rounds" can happen in milliseconds
+- Extensive (but lightening-fast) rounds of negotiation and information transmission
+Privacy-preserving queries:
+  - Agents ask questions from employers without signaling (e.g., asking about maternity leave)
+Negotiation protocols:
+  - Fixed windows, no exploding offers, programmable holds.
+<<<
+
+# Slide(49):
+
+TopTitle: Preventing the bad place
+TopText.8:
+<<<
+- Costly signaling:
+  - Journal submission, job applications, etc. need to be costly.
+- Proof of humanity and proof of agent ownership.
+  - Need to be able to prove that you are human and that you own the agent.
+- Congestion taxes and rationing mechanisms. 
+  - Cloudflare's pay per crawl.
+- Bring your own agent.
+  - Acts on your behalf and helps you not to be exploited.
+- Clear liability rules.
+<<<
+
+# Slide(50):
+
+TopTitle: Conclusion
+
+Break: 1
+TopText.8:
+<<<
+- Market mechanisms will be useful in coordinating AI agents.
+- Agents require self-knowledge to use markets effectively.
+- Simultaneously, we need to be thinking about how to develop market mechanisms to coordinate agents and prevent bad outcomes due to market failures.
+<<<
+
+# Slide(51):
+
+TopTitle: Thank you
+
+Break: 1
+Text: Andrey Fradkin
+SmallText: Comments welcome

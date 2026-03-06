@@ -1,0 +1,195 @@
+/* economics-standard.css
+   Conservative economics seminar style */
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Source+Sans+3:wght@400;600;700&display=swap');
+
+:root {
+  --main-text-color: #111111;
+  --bg-color: #ffffff;
+  --accent-color: #1e3a5f;
+  --accent-light-color: #6a7480;
+  --h1-border-color: #d7dde3;
+  --slide-content-bg-if-image: rgba(255, 255, 255, 0.9);
+
+  --serif-font: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans-font: "Source Sans 3", "Helvetica Neue", Arial, sans-serif;
+  --mono-font: "Courier New", Courier, monospace;
+}
+
+body {
+  font-family: var(--serif-font);
+  color: var(--main-text-color);
+  background: var(--bg-color);
+}
+
+.slide-content {
+  color: var(--main-text-color);
+}
+
+.slide-header {
+  font-family: var(--sans-font);
+  color: var(--accent-light-color);
+  font-size: 0.88rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.slide-content h1,
+.slide-content h2,
+.slide-content h3 {
+  font-family: var(--serif-font);
+  color: var(--title-color, var(--main-text-color));
+  line-height: 1.12;
+  letter-spacing: 0;
+}
+
+.slide-content h1 {
+  border-bottom: 2px solid var(--h1-border-color);
+  padding-bottom: 0.45rem;
+  margin-bottom: 0.95rem;
+  text-align: left;
+  font-weight: 600;
+}
+
+.slide-content h2 {
+  font-weight: 600;
+}
+
+.slide-content h3 {
+  font-family: var(--sans-font);
+  font-weight: 700;
+}
+
+.slide-content p {
+  font-family: var(--serif-font);
+  color: inherit;
+  line-height: 1.72;
+}
+
+/* Bigger, double-spaced bullets */
+.slide-content ul,
+.slide-content ol {
+  margin-top: 0.25rem;
+  padding-left: 1.1em;
+}
+
+.slide-content li {
+  font-size: 1.08em;
+  line-height: 1.58;
+  color: inherit;
+}
+
+.slide-content li + li {
+  margin-top: 0.16em;
+}
+
+.slide-content li::marker {
+  color: color-mix(in srgb, var(--accent-color) 75%, #000 25%);
+}
+
+/* Nested bullets read as mechanism/detail under a main claim */
+.slide-content li > ul,
+.slide-content li > ol {
+  margin-top: 0.2em;
+  padding-left: 1.05em;
+}
+
+.slide-content li li {
+  font-size: 0.93em;
+  line-height: 1.45;
+}
+
+.slide-content li li + li {
+  margin-top: 0.1em;
+}
+
+.slide-content strong {
+  color: inherit;
+  font-weight: 700;
+}
+
+/* Column slides need denser text to avoid awkward wraps */
+.slide-content .columns .column p,
+.slide-content .columns .column li {
+  font-size: 0.94em;
+  line-height: 1.42;
+}
+
+.slide-content .columns .column ul,
+.slide-content .columns .column ol {
+  padding-left: 1.02em;
+}
+
+.slide-content .columns .column li + li {
+  margin-top: 0.08em;
+}
+
+/* Rebalance two-column slides toward visuals */
+.slide-content .columns > .column:first-child {
+  flex: 0.9;
+}
+
+.slide-content .columns > .column:last-child {
+  flex: 1.1;
+}
+
+.slide-content .notes {
+  font-family: var(--sans-font);
+  color: var(--accent-color);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.slide-content table {
+  border-top: 2px solid var(--main-text-color);
+  border-bottom: 2px solid var(--main-text-color);
+  border-collapse: collapse;
+}
+
+.slide-content th,
+.slide-content td {
+  border: 1px solid var(--h1-border-color);
+  padding: 0.45em 0.65em;
+}
+
+.slide-content th {
+  font-family: var(--serif-font);
+  font-weight: 700;
+  background: color-mix(in srgb, var(--bg-color) 94%, var(--main-text-color) 6%);
+}
+
+.slide-content .caption {
+  color: var(--accent-light-color);
+  font-style: italic;
+}
+
+/* Roadmap slides: preserve contrast on dark/custom backgrounds */
+.roadmap-slide-content .roadmap-container {
+  background: color-mix(in srgb, #000 22%, transparent);
+  border: 1px solid color-mix(in srgb, #fff 18%, transparent);
+  border-radius: 0.45rem;
+  padding: 0.7em 0.9em;
+}
+
+.roadmap-slide-content .roadmap-list {
+  margin: 0.8em 0 0.4em 0;
+}
+
+.roadmap-slide-content .roadmap-item {
+  color: rgba(255, 255, 255, 0.88);
+  background: transparent;
+  border-left: 2px solid rgba(255, 255, 255, 0.28);
+  border-radius: 0.2rem;
+  line-height: 1.55;
+  font-size: 1.02em;
+  margin: 0.45em 0;
+  padding: 0.35em 0.65em;
+}
+
+.roadmap-slide-content .roadmap-item-current {
+  color: #ffffff;
+  background: color-mix(in srgb, var(--accent-color) 60%, #ffffff 40%);
+  border-left-color: #ffffff;
+  font-weight: 700;
+  box-shadow: none;
+  transform: none;
+}

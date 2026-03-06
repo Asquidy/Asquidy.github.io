@@ -1450,6 +1450,8 @@ body:not(.is-edit-mode) .overflow-indicator {
         <button id="load-btn"  title="Load Slideshow"> <i class="fa-solid fa-folder-open"></i></button>
         <button id="restore-btn" title="Restore most recently saved" aria-label="Restore most recently saved slideshow" disabled><i class="fa-solid fa-clock-rotate-left"></i></button>
         <button id="manage-images-btn" title="Manage Images"><i class="fa-solid fa-images"></i></button>
+        <button id="link-file-btn" title="Link to file for auto-save"><i class="fa-solid fa-link"></i></button>
+        <button id="link-images-dir-btn" title="Link to images folder for drag/drop save"><i class="fa-solid fa-folder-tree"></i></button>
         <button id="download-txt-btn" title="Download Raw Presentation"><i class="fa-solid fa-download"></i></button>
         <button id="print-notes-btn" title="Print with Notes"><i class="fa-solid fa-print"></i></button>
         <button id="save-pdf-btn" title="Save as PDF (16:9)"><i class="fa-solid fa-file-pdf"></i></button>
@@ -1560,7 +1562,7 @@ body:not(.is-edit-mode) .overflow-indicator {
 
       # --- NOTES & COMMENTS ---
       # Lines starting with # are comments and won't appear in slides
-      # (except for special markers like # METADATA: and # Slide())
+      # (except for special markers like # METADATA: and # Slide)
       # Use comments for notes, reminders, or temporarily hiding content
       
       # - Download Raw Deck and Load Deck give you your slides but you
@@ -1616,7 +1618,7 @@ const ModernSlideshow = (function() {
                               CONSTANTS
      ??????????????????????????????????????????????????????????????? */
   const DEFAULT_THEME = 'tufte-base';
-  const AVAILABLE_THEMES = ['tufte-base', 'oxford', 'bringhurst', 'calgary', 'swiss-modern', 'david-carson', 'david-carson-top-title', 'gradient', 'modern-dark','japan-minimal'];
+  const AVAILABLE_THEMES = ['tufte-base', 'oxford', 'bringhurst', 'calgary', 'swiss-modern', 'david-carson', 'david-carson-top-title', 'gradient', 'modern-dark', 'japan-minimal', 'economics-standard'];
   const DEFAULT_XML = `<presentation title="New Presentation" showSlideCount="true" theme="${DEFAULT_THEME}">
     <slide>
       <raw><![CDATA[
@@ -1846,7 +1848,14 @@ Title: New slide
     // File watching for live preview
     watchInterval: null,
     lastFileContent: null,
-    watchFileUrl: null
+    watchFileUrl: null,
+
+    // Linked file for auto-save back to disk
+    linkedFileHandle: null,
+
+    // Linked image folder for drag/drop and paste writes
+    linkedImagesDirHandle: null,
+    linkedImagesPathPrefix: 'images'
   };
 
   function sanitizeDeckName(input) {
@@ -2316,6 +2325,70 @@ const ImageStore = {
     };
 
     // Download as txt button incl images
+$("link-file-btn").onclick = async () => {
+  if (state.linkedFileHandle) {
+    state.linkedFileHandle = null;
+    updateLinkFileBtn();
+    setEditorStatus('File link removed. Auto-save disabled.');
+    return;
+  }
+  if (!window.showOpenFilePicker) {
+    alert('Your browser does not support the File System Access API. Try Chrome or Edge.');
+    return;
+  }
+  try {
+    const [handle] = await window.showOpenFilePicker({
+      types: [{ description: 'Slide Deck', accept: { 'text/plain': ['.txt'] } }],
+      multiple: false
+    });
+    const perm = await handle.requestPermission({ mode: 'readwrite' });
+    if (perm !== 'granted') {
+      setEditorStatus('Write permission denied — file not linked.');
+      return;
+    }
+    state.linkedFileHandle = handle;
+    updateLinkFileBtn();
+    setEditorStatus(`Linked to "${handle.name}" — auto-saving on every change.`, { persist: true });
+    await writeLinkedFile();
+  } catch (err) {
+    if (err?.name !== 'AbortError') {
+      console.error('[Link File]', err);
+      setEditorStatus('Failed to link file.');
+    }
+  }
+};
+
+$("link-images-dir-btn").onclick = async () => {
+  if (state.linkedImagesDirHandle) {
+    state.linkedImagesDirHandle = null;
+    state.linkedImagesPathPrefix = 'images';
+    updateLinkImagesDirBtn();
+    setEditorStatus('Images folder link removed. Drag/drop will use browser-local storage.');
+    return;
+  }
+  if (!window.showDirectoryPicker) {
+    alert('Your browser does not support folder linking. Try Chrome or Edge.');
+    return;
+  }
+  try {
+    const handle = await window.showDirectoryPicker({ mode: 'readwrite' });
+    const perm = await handle.requestPermission({ mode: 'readwrite' });
+    if (perm !== 'granted') {
+      setEditorStatus('Write permission denied — images folder not linked.');
+      return;
+    }
+    state.linkedImagesDirHandle = handle;
+    state.linkedImagesPathPrefix = (handle.name || 'images').replace(/^\/+|\/+$/g, '') || 'images';
+    updateLinkImagesDirBtn();
+    setEditorStatus(`Linked image folder "${handle.name}" — dropped/pasted images save to disk.`, { persist: true });
+  } catch (err) {
+    if (err?.name !== 'AbortError') {
+      console.error('[Link Images Folder]', err);
+      setEditorStatus('Failed to link images folder.');
+    }
+  }
+};
+
 $("download-txt-btn").onclick = async () => {
   updateGroundTruth('DOWNLOAD');
 
@@ -2672,6 +2745,11 @@ $("raw-text-editor").addEventListener('paste', async (e) => {
   for (const it of images) {
     const file = it.getAsFile();
     if (!file) continue;
+    const linkedPath = await writeImageToLinkedFolder(file);
+    if (linkedPath) {
+      insertLines.push(`Image: ${linkedPath}`);
+      continue;
+    }
     const id = await ImageStore.storeImage(file, 'clipboard');
     insertLines.push(`Image: ${id}, Pasted image`);
   }
@@ -2747,6 +2825,11 @@ $("raw-text-editor").addEventListener('paste', async (e) => {
 
     const insertLines = [];
     for (const file of imageFiles) {
+      const linkedPath = await writeImageToLinkedFolder(file);
+      if (linkedPath) {
+        insertLines.push(`Image: ${linkedPath}`);
+        continue;
+      }
       const id = await ImageStore.storeImage(file, file.name || 'dropped-image');
       insertLines.push(`Image: ${id}, ${file.name || 'Dropped image'}`);
     }
@@ -2897,9 +2980,11 @@ $("raw-text-editor").addEventListener('paste', async (e) => {
     let showSlideCount = "true";
     let logoUrl = "";
     
+    const slideHeaderRegex = /^#\s*Slide(?:\(\d+\))?:?\s*$/m;
     let contentToProcess = txtContent;
     if (txtContent.trim().startsWith('# METADATA:')) {
-      const metadataEndIndex = txtContent.indexOf('\n# Slide(');
+      const firstSlideHeader = txtContent.match(slideHeaderRegex);
+      const metadataEndIndex = firstSlideHeader?.index ?? -1;
       if (metadataEndIndex !== -1) {
         const metadataSection = txtContent.substring(0, metadataEndIndex);
         contentToProcess = txtContent.substring(metadataEndIndex);
@@ -2920,7 +3005,7 @@ $("raw-text-editor").addEventListener('paste', async (e) => {
       }
     }
     
-    const parts = contentToProcess.split(/^# Slide\(\d+\):\s*$/m);
+    const parts = contentToProcess.split(/^#\s*Slide(?:\(\d+\))?:?\s*$/m);
     const slideMatches = parts.filter(part => part.trim() !== '');
     
     let xml = `<presentation title="${escapeHtml(title)}" showSlideCount="${showSlideCount}" theme="${theme}"`;
@@ -3906,6 +3991,130 @@ ${(s.querySelector('raw')?.textContent || '').trim()}`;
     return txt.trim();
   }
 
+  async function writeLinkedFile() {
+    if (!state.linkedFileHandle) return;
+    try {
+      const perm = await state.linkedFileHandle.queryPermission({ mode: 'readwrite' });
+      if (perm !== 'granted') {
+        const reqPerm = await state.linkedFileHandle.requestPermission({ mode: 'readwrite' });
+        if (reqPerm !== 'granted') {
+          state.linkedFileHandle = null;
+          updateLinkFileBtn();
+          return;
+        }
+      }
+      const content = buildRawDeck();
+      const writable = await state.linkedFileHandle.createWritable();
+      await writable.write(new Blob([content], { type: 'text/plain' }));
+      await writable.close();
+      console.log('[Auto-save] Wrote to linked file:', state.linkedFileHandle.name);
+    } catch (err) {
+      console.error('[Auto-save] Failed to write linked file:', err);
+    }
+  }
+
+  function getImageExtensionFromMime(mimeType) {
+    const mime = (mimeType || '').toLowerCase();
+    if (mime.includes('png')) return 'png';
+    if (mime.includes('jpeg') || mime.includes('jpg')) return 'jpg';
+    if (mime.includes('gif')) return 'gif';
+    if (mime.includes('webp')) return 'webp';
+    if (mime.includes('svg')) return 'svg';
+    return 'png';
+  }
+
+  function normalizeImageFilename(file) {
+    const rawName = (file?.name || '').trim();
+    const safeFallbackBase = `pasted-image-${Date.now()}`;
+    const fallbackExt = getImageExtensionFromMime(file?.type);
+    const candidate = rawName || `${safeFallbackBase}.${fallbackExt}`;
+    const normalized = candidate
+      .replace(/[^\w.\-]+/g, '_')
+      .replace(/^_+|_+$/g, '');
+    const withExt = /\.[a-z0-9]+$/i.test(normalized)
+      ? normalized
+      : `${normalized || safeFallbackBase}.${fallbackExt}`;
+    return withExt;
+  }
+
+  async function getUniqueFilenameInDir(dirHandle, preferredName) {
+    const dot = preferredName.lastIndexOf('.');
+    const base = dot > 0 ? preferredName.slice(0, dot) : preferredName;
+    const ext = dot > 0 ? preferredName.slice(dot) : '';
+    let candidate = preferredName;
+    let attempt = 1;
+    while (attempt < 1000) {
+      try {
+        await dirHandle.getFileHandle(candidate);
+        candidate = `${base}-${attempt}${ext}`;
+        attempt += 1;
+      } catch (err) {
+        if (err?.name === 'NotFoundError') return candidate;
+        throw err;
+      }
+    }
+    return `${base}-${Date.now()}${ext}`;
+  }
+
+  async function writeImageToLinkedFolder(file) {
+    if (!state.linkedImagesDirHandle || !file) return null;
+    try {
+      const perm = await state.linkedImagesDirHandle.queryPermission({ mode: 'readwrite' });
+      if (perm !== 'granted') {
+        const reqPerm = await state.linkedImagesDirHandle.requestPermission({ mode: 'readwrite' });
+        if (reqPerm !== 'granted') {
+          state.linkedImagesDirHandle = null;
+          state.linkedImagesPathPrefix = 'images';
+          updateLinkImagesDirBtn();
+          setEditorStatus('Images folder permission lost — using browser-local images.', { persist: true });
+          return null;
+        }
+      }
+
+      const preferred = normalizeImageFilename(file);
+      const uniqueName = await getUniqueFilenameInDir(state.linkedImagesDirHandle, preferred);
+      const imageHandle = await state.linkedImagesDirHandle.getFileHandle(uniqueName, { create: true });
+      const writable = await imageHandle.createWritable();
+      await writable.write(file);
+      await writable.close();
+
+      const prefix = (state.linkedImagesPathPrefix || 'images').replace(/^\/+|\/+$/g, '') || 'images';
+      return `${prefix}/${uniqueName}`;
+    } catch (err) {
+      console.error('[Linked Images] Failed to write image:', err);
+      return null;
+    }
+  }
+
+  function updateLinkFileBtn() {
+    const btn = $("link-file-btn");
+    if (!btn) return;
+    if (state.linkedFileHandle) {
+      btn.title = `Auto-saving to ${state.linkedFileHandle.name} — click to unlink`;
+      btn.style.color = 'var(--editor-accent-color, green)';
+      btn.style.background = 'rgba(0,180,0,0.12)';
+    } else {
+      btn.title = 'Link to file for auto-save';
+      btn.style.color = '';
+      btn.style.background = '';
+    }
+  }
+
+  function updateLinkImagesDirBtn() {
+    const btn = $("link-images-dir-btn");
+    if (!btn) return;
+    if (state.linkedImagesDirHandle) {
+      const folderName = state.linkedImagesDirHandle.name || 'images';
+      btn.title = `Saving dropped/pasted images to "${folderName}" — click to unlink`;
+      btn.style.color = 'var(--editor-accent-color, green)';
+      btn.style.background = 'rgba(0,180,0,0.12)';
+    } else {
+      btn.title = 'Link to images folder for drag/drop save';
+      btn.style.color = '';
+      btn.style.background = '';
+    }
+  }
+
   function getRawTextForSlide(index) {
     const slideNode = state.xmlDoc.querySelectorAll("presentation > slide")[index];
     return slideNode?.querySelector("raw")?.textContent || "";
@@ -4605,6 +4814,11 @@ ${(s.querySelector('raw')?.textContent || '').trim()}`;
       console.error('[localStorage] Failed to save session:', e);
     }
 
+    // Auto-save to linked file whenever content is updated
+    if (state.linkedFileHandle) {
+      writeLinkedFile();
+    }
+
     updateRestoreButtonState();
     updateSaveButtonGlow();
   }
@@ -5163,6 +5377,48 @@ async function getThumbnailHTML(rawText, theme) {
   
   function plainTextToHtml(text) {
     if (!text || !text.trim()) return "";
+
+    const applyInlineMarkdownAndArrows = (input) => {
+      let out = input;
+      out = out.replace(/\*\*\*(.*?)\*\*\*/g, '<strong><em>$1</em></strong>');
+      out = out.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+      out = out.replace(/\*(.*?)\*/g, '<em>$1</em>');
+      // Convert text arrows to Unicode arrows
+      out = out.replace(/&lt;==&gt;/g, '⇔');  // <=>
+      out = out.replace(/==&gt;/g, '⇒');      // ==>
+      out = out.replace(/&lt;==/g, '⇐');      // <==
+      out = out.replace(/&lt;-&gt;/g, '↔');   // <->
+      out = out.replace(/--&gt;/g, '→');      // -->
+      out = out.replace(/&lt;--/g, '←');      // <--
+      return out;
+    };
+
+    const convertQuoteBlocks = (input) => {
+      const lines = input.replace(/\r\n/g, '\n').split('\n');
+      const output = [];
+      let quoteBuffer = [];
+
+      const flushQuote = () => {
+        if (!quoteBuffer.length) return;
+        output.push(
+          `<blockquote style="margin:0.6em 0;padding:0.2em 1em;border-left:0.2em solid currentColor;opacity:0.9;">${quoteBuffer.join('<br />')}</blockquote>`
+        );
+        quoteBuffer = [];
+      };
+
+      for (const line of lines) {
+        const trimmed = line.trim();
+        if (trimmed.startsWith('&gt;')) {
+          quoteBuffer.push(line.replace(/^(\s*)&gt;\s?/, '$1'));
+        } else {
+          flushQuote();
+          output.push(line);
+        }
+      }
+
+      flushQuote();
+      return output.join('\n');
+    };
     
     // First, convert bullet points and numbered lists to HTML lists BEFORE escaping HTML
     // This allows us to detect bullets and numbers properly
@@ -5287,16 +5543,7 @@ async function getThumbnailHTML(rawText, theme) {
           
           // Escape HTML in content and process markdown formatting
           let safeContent = escapeHtml(content);
-          safeContent = safeContent.replace(/\*\*\*(.*?)\*\*\*/g, '<strong><em>$1</em></strong>');
-          safeContent = safeContent.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-          safeContent = safeContent.replace(/\*(.*?)\*/g, '<em>$1</em>');
-          // Convert text arrows to Unicode arrows
-          safeContent = safeContent.replace(/&lt;==&gt;/g, '⇔');  // <=>
-          safeContent = safeContent.replace(/==&gt;/g, '⇒');      // ==>
-          safeContent = safeContent.replace(/&lt;==/g, '⇐');      // <==
-          safeContent = safeContent.replace(/&lt;-&gt;/g, '↔');   // <->
-          safeContent = safeContent.replace(/--&gt;/g, '→');      // -->
-          safeContent = safeContent.replace(/&lt;--/g, '←');      // <--
+          safeContent = applyInlineMarkdownAndArrows(safeContent);
           
           processedLines.push(`<li>${safeContent}</li>`);
         } else {
@@ -5339,19 +5586,10 @@ async function getThumbnailHTML(rawText, theme) {
           return line;
         }
         // Escape HTML and process markdown for other lines
-        let escaped = escapeHtml(line);
-        escaped = escaped.replace(/\*\*\*(.*?)\*\*\*/g, '<strong><em>$1</em></strong>');
-        escaped = escaped.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-        escaped = escaped.replace(/\*(.*?)\*/g, '<em>$1</em>');
-        // Convert text arrows to Unicode arrows
-        escaped = escaped.replace(/&lt;==&gt;/g, '⇔');  // <=>
-        escaped = escaped.replace(/==&gt;/g, '⇒');      // ==>
-        escaped = escaped.replace(/&lt;==/g, '⇐');      // <==
-        escaped = escaped.replace(/&lt;-&gt;/g, '↔');   // <->
-        escaped = escaped.replace(/--&gt;/g, '→');      // -->
-        escaped = escaped.replace(/&lt;--/g, '←');      // <--
-        return escaped;
+        return applyInlineMarkdownAndArrows(escapeHtml(line));
       }).join('\n');
+
+      safeText = convertQuoteBlocks(safeText);
       
       // Split into paragraphs, but preserve lists
       // If the text contains lists, return it as-is (lists are already formatted)
@@ -5364,32 +5602,23 @@ async function getThumbnailHTML(rawText, theme) {
         .split(/\n{2,}/)
         .map(p => {
           // Don't wrap our alignment divs in paragraph tags
-          if (p.trim().startsWith('__ALIGN_')) return p; 
+          if (p.trim().startsWith('__ALIGN_')) return p;
+          if (p.trim().startsWith('<blockquote')) return p;
           return `<p>${p.replace(/\n/g, '<br />')}</p>`;
         })
         .join('\n');
     } else {
       // No bullets, use original logic
-      let safeText = escapeHtml(text);
-      
-      // Process markdown-style formatting
-      safeText = safeText.replace(/\*\*\*(.*?)\*\*\*/g, '<strong><em>$1</em></strong>');
-      safeText = safeText.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-      safeText = safeText.replace(/\*(.*?)\*/g, '<em>$1</em>');
-      // Convert text arrows to Unicode arrows
-      safeText = safeText.replace(/&lt;==&gt;/g, '⇔');  // <=>
-      safeText = safeText.replace(/==&gt;/g, '⇒');      // ==>
-      safeText = safeText.replace(/&lt;==/g, '⇐');      // <==
-      safeText = safeText.replace(/&lt;-&gt;/g, '↔');   // <->
-      safeText = safeText.replace(/--&gt;/g, '→');      // -->
-      safeText = safeText.replace(/&lt;--/g, '←');      // <--
+      let safeText = applyInlineMarkdownAndArrows(escapeHtml(text));
+      safeText = convertQuoteBlocks(safeText);
       
       return safeText
         .replace(/\r\n/g, '\n')
         .split(/\n{2,}/)
         .map(p => {
           // Don't wrap our alignment divs in paragraph tags
-          if (p.trim().startsWith('__ALIGN_')) return p; 
+          if (p.trim().startsWith('__ALIGN_')) return p;
+          if (p.trim().startsWith('<blockquote')) return p;
           return `<p>${p.replace(/\n/g, '<br />')}</p>`;
         })
         .join('\n');
@@ -5467,28 +5696,46 @@ async function getThumbnailHTML(rawText, theme) {
       // Preserve empty lines in the buffer (they represent blank lines)
       const bodyRaw = buf.join("\n");
       // Support manual line breaks with \\ (convert to actual newlines first)
-      const bodyWithBreaks = bodyRaw.replace(/\\\\/g, '\n');
-      const bodyWithPlaceholders = bodyWithBreaks.replace(INLINE_PAIR_RE, (match, tok, body, offset) => {
-        const leadingBreak = bodyWithBreaks.lastIndexOf('\n', offset - 1);
-        const beforeToken = leadingBreak === -1 ? bodyWithBreaks.slice(0, offset) : bodyWithBreaks.slice(leadingBreak + 1, offset);
-        const blockOpening = /^\s*$/.test(beforeToken);
+      const bodyWithLineBreaks = bodyRaw.replace(/\\\\/g, '\n');
 
-        const closingIndex = offset + tok.length + body.length;
-        const closingLineBreak = bodyWithBreaks.lastIndexOf('\n', closingIndex - 1);
-        const beforeClosing = closingLineBreak === -1
-          ? bodyWithBreaks.slice(0, closingIndex)
-          : bodyWithBreaks.slice(closingLineBreak + 1, closingIndex);
-        const blockClosing = /^\s*$/.test(beforeClosing);
+      // Split on standalone "Break: N" lines so they render as spacers
+      const BREAK_LINE_RE = /^Break:\s*([\d.]+)\s*$/m;
+      const segments = bodyWithLineBreaks.split(BREAK_LINE_RE);
+      // segments alternates: [text, breakAmount, text, breakAmount, text, ...]
 
-        if (blockOpening && blockClosing) {
-          return match;
+      const processSegment = (seg) => {
+        const segWithPlaceholders = seg.replace(INLINE_PAIR_RE, (match, tok, body, offset) => {
+          const leadingBreak = seg.lastIndexOf('\n', offset - 1);
+          const beforeToken = leadingBreak === -1 ? seg.slice(0, offset) : seg.slice(leadingBreak + 1, offset);
+          const blockOpening = /^\s*$/.test(beforeToken);
+
+          const closingIndex = offset + tok.length + body.length;
+          const closingLineBreak = seg.lastIndexOf('\n', closingIndex - 1);
+          const beforeClosing = closingLineBreak === -1
+            ? seg.slice(0, closingIndex)
+            : seg.slice(closingLineBreak + 1, closingIndex);
+          const blockClosing = /^\s*$/.test(beforeClosing);
+
+          if (blockOpening && blockClosing) {
+            return match;
+          }
+
+          return addAlignedPlaceholder(tok, body, { block: false });
+        });
+        return replaceInlineKeys(plainTextToHtml(segWithPlaceholders));
+      };
+
+      let blockHtml = '';
+      for (let i = 0; i < segments.length; i++) {
+        if (i % 2 === 0) {
+          blockHtml += processSegment(segments[i]);
+        } else {
+          const amount = Math.max(0, parseFloat(segments[i]) || 1);
+          blockHtml += `<div aria-hidden="true" style="display:block;height:${amount * 1.5}em;flex:none;"></div>`;
         }
+      }
 
-        return addAlignedPlaceholder(tok, body, { block: false });
-      });
-      // plainTextToHtml will convert double newlines to paragraph breaks
-      const bodyHtml = replaceInlineKeys(plainTextToHtml(bodyWithPlaceholders));
-      out.push(`<div style="width:100%; ${BLOCK_ALIGN_STYLE[token]}">${bodyHtml}</div>`);
+      out.push(`<div style="width:100%; ${BLOCK_ALIGN_STYLE[token]}">${blockHtml}</div>`);
       buf = [];
     };
 
@@ -6199,15 +6446,33 @@ const imgLineRe = /^\s*(?:Image:\s*)?(.+\.(?:png|jpe?g|gif|webp|svg)(?:\?.*)?|da
     }
 
     // Process lines
+    let fenceMarker = null; // Track if we're inside a <<</|||/>>> block
     for (const line of lines) {
       // Skip comment lines (lines starting with # that aren't special markers)
       const trimmedLine = line.trim();
       if (trimmedLine.startsWith('#') && 
           !trimmedLine.startsWith('# METADATA:') && 
-          !trimmedLine.startsWith('# Slide(')) {
+          !/^#\s*Slide(?:\(\d+\))?:?\s*$/.test(trimmedLine)) {
         continue; // Skip this line entirely
       }
-      
+
+      // Track fence state so directives inside <<</|||/>>> are not parsed as top-level directives
+      if (ALIGNMENT_MARKERS.includes(trimmedLine)) {
+        if (fenceMarker === null) {
+          fenceMarker = trimmedLine;
+        } else if (fenceMarker === trimmedLine) {
+          fenceMarker = null;
+        }
+        buffer.push(line);
+        continue;
+      }
+
+      // Only match top-level directives when not inside a fence block
+      if (fenceMarker !== null) {
+        buffer.push(line);
+        continue;
+      }
+
       const match = line.match(/^([A-Za-z][A-Za-z0-9.]*):\s*(.*)/);
       if (match) {
         const directiveInfo = resolveDirectiveToken(match[1]);
@@ -6487,7 +6752,12 @@ async function applyTheme(themeId) {
 
     window.presentationBaseUrl = baseFolderUrl;
 
-    fetch(fetchUrl)
+    const initialCacheBuster = `_t=${Date.now()}`;
+    const initialFetchUrl = fetchUrl.includes('?')
+      ? `${fetchUrl}&${initialCacheBuster}`
+      : `${fetchUrl}?${initialCacheBuster}`;
+
+    fetch(initialFetchUrl, { cache: 'no-store' })
       .then(res => {
         if (!res.ok) throw new Error(`Load failed: ${res.status}`);
         return res.text();
@@ -6498,6 +6768,7 @@ async function applyTheme(themeId) {
         const newXml = convertTxtToXML(txt, fileLeaf);
         state.currentFilename = cleanName;
         sessionStorage.setItem(`Slides_${cleanName}`, newXml);
+        state.lastFileContent = txt;
         const savedSlideIndex = localStorage.getItem(LAST_SLIDE_INDEX_KEY);
         const slideIndex = savedSlideIndex ? parseInt(savedSlideIndex, 10) : 0;
         console.log(`[Slide Position] Loading from URL, restoring slide index: ${slideIndex} (from localStorage: ${savedSlideIndex})`);
@@ -6542,7 +6813,7 @@ async function applyTheme(themeId) {
           ? `${fileUrl}&${cacheBuster}` 
           : `${fileUrl}?${cacheBuster}`;
 
-        const response = await fetch(urlWithCacheBuster);
+        const response = await fetch(urlWithCacheBuster, { cache: 'no-store' });
         if (!response.ok) return;
 
         const newContent = await response.text();
