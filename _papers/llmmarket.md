@@ -1,16 +1,16 @@
 ---
 layout: default
-title: "The Emerging Market for Intelligence: Pricing, Supply, and Demand for LLMs"
-abstract: We document six facts about the structure and dynamics of the LLM market using API usage data from OpenRouter and Microsoft Azure. First, we show rapid growth in the number of models, creators, and inference providers, driven by open-source entrants. Second, we show price declines and persistent price heterogeneity across and within intelligence tiers, with open-source models being 90% cheaper than comparable closed-source models of the same intelligence. Third, we document market dynamism, with frequent turnover among leading models and creators. Fourth, we present evidence of horizontal and vertical differentiation, with no single model dominating across use cases, and demand for intelligence varying widely across applications. Fifth, we estimate preliminary short-run price elasticities just above one, suggesting limited scope for Jevons-Paradox effects. Finally, we show that although the share of firms that use multiple models increased over time, most firms concentrate their use on a single model, consistent with experimentation rather than persistent reliance on multiple models.
+title: "The Emerging Market for Intelligence: How Firms Buy and Sell AI"
+abstract: "We describe the emerging business-to-business market for large language model (LLM) inference and document key empirical patterns in its supply, pricing, and dynamics, using data from OpenRouter. First, supply has expanded rapidly: the number of commercially available models, model creators, and inference providers has grown sharply, driven heavily by open-source entrants. Second, the price of intelligence has fallen roughly a thousandfold, and open-source models now cost about 90 percent less than comparable closed-source ones. Third, the market is highly dynamic, with frequent turnover among leading models and creators. Fourth, we document substantial horizontal and vertical differentiation: no single model dominates across use cases, and demand for intelligence varies widely across applications. We place these patterns in historical perspective alongside earlier general-purpose technologies."
 category: research
-journal: "Accepted at the Journal of Economic Perspectives. <br> This paper supersedes \"Demand for LLMs: Descriptive Evidence on Substitution, Market Expansion, and Multi-Homing\"."
-link: "/assets/LLM_Demand_12_12_2025.pdf"
-coauthors: with <a href="https://www.mertdemirer.com/"> Mert Demirer</a>, <a href="https://nadavtadelis.com/"> Nadav Tadelis</a>, and <a href="https://www.sidapeng.com/"> Sida Peng</a>
+journal: >-
+  Forthcoming at the Journal of Economic Perspectives. <br> A longer paper with more results, including price elasticities, is available <a href="/assets/LLM_Demand_12_12_2025.pdf">here</a>. <br> This paper supersedes "Demand for LLMs: Descriptive Evidence on Substitution, Market Expansion, and Multi-Homing".
+link: "/assets/jep_llm_preprint.pdf"
+coauthors: with <a href="https://www.mertdemirer.com/"> Mert Demirer</a> and <a href="https://nadavtadelis.com/"> Nadav Tadelis</a>
 js: "toggleMe('llmmarket'); return false;"
 js_abbrev: 'llmmarket'
 order: -2026.1
-trueyear: 2025
+trueyear: 2026
 peer: 1
 published: "0"
 ---
-
