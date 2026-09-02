@@ -76,7 +76,7 @@ redcloth:
   hard_breaks: true
 
 permalink: /:categories/:year/:month/:day/:title 
-exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
+exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md", "vendor"]
 ### auto: true
 
 # Themes are encouraged to use these universal variables 

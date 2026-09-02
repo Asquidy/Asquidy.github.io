@@ -1,12 +1,12 @@
 ---
 layout: post
 title: "Potentially competing interests"
-modified: June 7, 2026
+modified: Sep 2, 2026
 ---
 
 - Andrey Fradkin is currently on leave from Boston University.
 - A.F. is affiliated with the MIT Initiative on the Digital Economy and the Stanford Digital Economy Lab.
-- A.F. is currently an employee of Amazon.
+- A.F. was previously an employee of Amazon while on leave.
 - A.F. is an advisor to Refine.
 - A.F. has previously been an independent contractor for Pro Unlimited at Facebook/Meta for a research collaboration. He holds no material financial interest in the company.
 - A.F. has previously been an employee of Airbnb. He is involved in research projects with Airbnb without compensation. He holds no material financial interest in the company.
