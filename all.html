@@ -39,6 +39,9 @@ All Work (Reverse Chronological)
         <a href="{{ paper.link }}">Link</a>
       {% endif %}
     {% endif %}
+    {% if paper.chapter_link %}
+      <a href="{{ paper.chapter_link }}" target="_blank">Book Chapter</a>
+    {% endif %}
     {% if paper.appendix %}
       <a href="{{ paper.appendix }}">Appendix</a>
     {% endif %}

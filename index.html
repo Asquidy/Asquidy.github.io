@@ -55,6 +55,9 @@ I am now <a href="https://empiricrafting.substack.com/">blogging</a> and co-host
         {% if paper.link %}
         <a href={{ paper.link }}>PDF</a> 
         {% endif %}
+        {% if paper.chapter_link %}
+        <a href={{ paper.chapter_link }} target="_blank">Book Chapter</a>
+        {% endif %}
         {% if paper.appendix %}
         <a href={{ paper.appendix }}>Appendix</a> 
         {% endif %}
@@ -106,6 +109,9 @@ I am now <a href="https://empiricrafting.substack.com/">blogging</a> and co-host
     <div class="paper-links">
     <a href="javascript:void(0)" onclick={{ paper.js }} class="abstract-link">Abstract</a>
     <a href={{ paper.link }}>PDF</a> 
+    {% if paper.chapter_link %}
+    <a href={{ paper.chapter_link }} target="_blank">Book Chapter</a>
+    {% endif %}
     {% if paper.appendix %}
     <a href={{ paper.appendix }}>Appendix</a> 
     {% endif %}
@@ -158,6 +164,9 @@ I am now <a href="https://empiricrafting.substack.com/">blogging</a> and co-host
         <div class="paper-links">
         <a href="javascript:void(0)" onclick={{ paper.js }} class="abstract-link">Abstract</a>
         <a href={{ paper.link }}>PDF</a> 
+        {% if paper.chapter_link %}
+        <a href={{ paper.chapter_link }} target="_blank">Book Chapter</a>
+        {% endif %}
         {% if paper.appendix %}
         <a href={{ paper.appendix }}>Appendix</a> 
         {% endif %}
@@ -209,6 +218,9 @@ I am now <a href="https://empiricrafting.substack.com/">blogging</a> and co-host
     <div class="paper-links">
     <a href="javascript:void(0)" onclick={{ paper.js }} class="abstract-link">Abstract</a>
     <a href={{ paper.link }}>Link</a> 
+    {% if paper.chapter_link %}
+    <a href={{ paper.chapter_link }} target="_blank">Book Chapter</a>
+    {% endif %}
     {% if paper.appendix %}
     <a href={{ paper.appendix }}>Appendix</a> 
     {% endif %}
