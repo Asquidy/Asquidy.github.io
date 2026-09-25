@@ -8,7 +8,7 @@ link: "https://dl.acm.org/doi/pdf/10.1145/3531146.3533077"
 coauthors: with Chiara Longoni, Luca Cian, and Gordon Pennycook
 js: "toggleMe('ainews'); return false;"
 js_abbrev: 'ainews'
-order: 11
+order: -2022.1
 published: 2
 trueyear: 2022
 bibjs: "toggleMe('ainews_bib'); return false;"

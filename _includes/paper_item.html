@@ -1,0 +1,47 @@
+{% assign toggle_id = include.paper.js_abbrev %}
+{% if include.suffix %}{% assign toggle_id = toggle_id | append: include.suffix %}{% endif %}
+<li class="paper-item" style="list-style: none;">
+    <div class="paper-title">
+    {{ include.paper.title }}
+    </div>
+
+    <div class="paper-authors">{{ include.paper.coauthors }}</div>
+
+    {% if include.paper.journal %}
+    <div class="paper-venue">
+        {{ include.paper.journal }}
+    </div>
+    {% endif %}
+
+    {% if include.paper.other %}
+    <div class="paper-venue">
+        {{ include.paper.other }}
+    </div>
+    {% endif %}
+
+    <div class="paper-links">
+    <a href="javascript:void(0)" onclick="toggleMe('{{ toggle_id }}'); return false;" class="abstract-link">Abstract</a>
+    {% if include.paper.link %}
+    <a href={{ include.paper.link }}>PDF</a>
+    {% endif %}
+    {% if include.paper.chapter_link %}
+    <a href={{ include.paper.chapter_link }} target="_blank">Book Chapter</a>
+    {% endif %}
+    {% if include.paper.appendix %}
+    <a href={{ include.paper.appendix }}>Appendix</a>
+    {% endif %}
+    {% if include.paper.data %}
+    <a href={{ include.paper.data }}>Data</a>
+    {% endif %}
+    {% if include.paper.code %}
+    <a href={{ include.paper.code }}>Code</a>
+    {% endif %}
+    {% if include.paper.viz_link %}
+    <a href={{ include.paper.viz_link }} target="_blank">Visualization</a>
+    {% endif %}
+    </div>
+
+    <div id="{{ toggle_id }}" class="paper-abstract" style="display: none;">
+        {{ include.paper.abstract }}
+    </div>
+</li>

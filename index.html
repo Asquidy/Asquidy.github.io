@@ -16,181 +16,54 @@ I am now <a href="https://empiricrafting.substack.com/">blogging</a> and co-host
 </div>
 
 <div class="research-nav">
-    <a href='#workingpapers'>Working Papers</a>
-    <a href='#publications'>Publications</a>
-    <a href='#conf'>Conference Papers</a>
-    <a href='#other'>Other Writing</a>
-    <a href='all.html'>All Work </a>
+    <a href='#selected-ai'>Recent AI Economics Papers</a>
+    <a href='#selected-platforms'>Recent Digital Platforms Papers</a>
+    <a href='#allpapers'>All Papers</a>
+    <a href='#other'>Public Writing</a>
 </div>
 <div class="content-header">
-<a name = 'workingpapers', style='color:inherit;text-decoration: none;'>Recent Working Papers:</a>
+<a name = 'selected-ai', style='color:inherit;text-decoration: none;'>Recent AI Economics Papers:</a>
 </div>
 
 <ul style="list-style: none;margin-bottom: -30px;" class="research_list">
-{% assign sorted_papers = site.papers  | where: "published", "0" | sort: 'order' %}
-
-{% for paper in sorted_papers %}
-
-        <li class="paper-item" style="list-style: none;">
-        <div class="paper-title">
-        {{ paper.title }}
-        </div>
-
-        <div class="paper-authors">{{paper.coauthors}}</div>
-
-        {% if paper.journal %}
-        <div class="paper-venue">
-            {{ paper.journal}}
-        </div>
-        {% endif %}
-
-        {% if paper.other %}
-        <div class="paper-venue">
-            {{ paper.other}}
-        </div>
-        {% endif %}
-        
-        <div class="paper-links">
-        <a href="javascript:void(0)" onclick={{ paper.js }} class="abstract-link">Abstract</a>
-        {% if paper.link %}
-        <a href={{ paper.link }}>PDF</a> 
-        {% endif %}
-        {% if paper.chapter_link %}
-        <a href={{ paper.chapter_link }} target="_blank">Book Chapter</a>
-        {% endif %}
-        {% if paper.appendix %}
-        <a href={{ paper.appendix }}>Appendix</a> 
-        {% endif %}
-        {% if paper.data %}  
-        <a href={{ paper.data }}>Data</a>
-        {% endif %}
-        {% if paper.code %}  
-        <a href={{ paper.code }}>Code</a>
-        {% endif %}
-        {% if paper.viz_link %}
-        <a href={{ paper.viz_link }} target="_blank">Visualization</a>
-        {% endif %}
-        </div>
-
-   <div id={{ paper.js_abbrev }} class="paper-abstract" style="display: none;">
-           {{ paper.abstract }}
-        </div>
-
-        </li>
+{% assign selected_ai_slugs = "llmmarket,coasean,marketbench" | split: "," %}
+{% for slug in selected_ai_slugs %}
+{% assign paper = site.papers | where: "js_abbrev", slug | first %}
+{% include paper_item.html paper=paper suffix="-sel" %}
 {% endfor %}
 </ul>
 <br><br>
-<div class="content-header"}">
-<a name = 'publications', style='color:inherit;text-decoration: none;'>Selected Publications:</a>
+
+<div class="content-header">
+<a name = 'selected-platforms', style='color:inherit;text-decoration: none;'>Recent Digital Platforms Papers:</a>
+</div>
+
+<ul style="list-style: none;margin-bottom: -30px;" class="research_list">
+{% assign selected_platform_slugs = "amexp,dp,whitepaper" | split: "," %}
+{% for slug in selected_platform_slugs %}
+{% assign paper = site.papers | where: "js_abbrev", slug | first %}
+{% include paper_item.html paper=paper suffix="-sel" %}
+{% endfor %}
+</ul>
+<br><br>
+
+<div class="content-header">
+<a name = 'allpapers', style='color:inherit;text-decoration: none;'>All Working Papers & Publications:</a>
 </div>
 
 <ul style="list-style: none;" class="research_list">
-{% assign sorted_papers = site.papers  | where: "published", "1" | where: "peer", "1" | sort: 'order' %}
-{% for paper in sorted_papers %}
-<li class="paper-item" style="list-style: none;">
-    <div class="paper-title">
-    {{ paper.title }}
-    </div>
-
-    <div class="paper-authors">{{paper.coauthors}}</div>
-
-    {% if paper.journal %}
-    <div class="paper-venue">
-        {{ paper.journal}}
-    </div>
-    {% endif %}
-
-    {% if paper.other %}
-    <div class="paper-venue">
-        {{ paper.other}}
-    </div>
-    {% endif %}
-    
-    <div class="paper-links">
-    <a href="javascript:void(0)" onclick={{ paper.js }} class="abstract-link">Abstract</a>
-    <a href={{ paper.link }}>PDF</a> 
-    {% if paper.chapter_link %}
-    <a href={{ paper.chapter_link }} target="_blank">Book Chapter</a>
-    {% endif %}
-    {% if paper.appendix %}
-    <a href={{ paper.appendix }}>Appendix</a> 
-    {% endif %}
-    {% if paper.data %}  
-    <a href={{ paper.data }}>Data</a>
-    {% endif %}
-    {% if paper.code %}  
-    <a href={{ paper.code }}>Code</a>
-    {% endif %}
-    {% if paper.viz_link %}
-    <a href={{ paper.viz_link }} target="_blank">Visualization</a>
-    {% endif %}
-    </div>
-
-    <div id={{ paper.js_abbrev }} class="paper-abstract" style="display: none;">
-        {{ paper.abstract }}
-     </div>
-
-        </li>
+{% assign working_papers = site.papers | where: "published", "0" %}
+{% assign published_papers = site.papers | where: "published", "1" | where: "peer", "1" %}
+{% assign conference_papers = site.papers | where: "published", "2" %}
+{% assign all_papers = working_papers | concat: published_papers | concat: conference_papers | sort: 'order' %}
+{% for paper in all_papers %}
+{% include paper_item.html paper=paper %}
 {% endfor %}
 </ul>
 
 
 <div class="content-header">
-    <a name = 'conf', style='color:inherit;text-decoration: none;'>Refereed Conference Proceedings:</a>
-    </div>
-    
-    <ul style="list-style: none;" class="research_list">
-    {% assign sorted_papers = site.papers  | where: "published", "2" | sort: 'order' %}
-    {% for paper in sorted_papers %}
-    <li class="paper-item" style="list-style: none;">
-        <div class="paper-title">
-        {{ paper.title }}
-        </div>
-    
-        <div class="paper-authors">{{paper.coauthors}}</div>
-    
-        {% if paper.journal %}
-        <div class="paper-venue">
-            {{ paper.journal}}
-        </div>
-        {% endif %}
-    
-        {% if paper.other %}
-        <div class="paper-venue">
-            {{ paper.other}}
-        </div>
-        {% endif %}
-        
-        <div class="paper-links">
-        <a href="javascript:void(0)" onclick={{ paper.js }} class="abstract-link">Abstract</a>
-        <a href={{ paper.link }}>PDF</a> 
-        {% if paper.chapter_link %}
-        <a href={{ paper.chapter_link }} target="_blank">Book Chapter</a>
-        {% endif %}
-        {% if paper.appendix %}
-        <a href={{ paper.appendix }}>Appendix</a> 
-        {% endif %}
-        {% if paper.data %}  
-        <a href={{ paper.data }}>Data</a>
-        {% endif %}
-        {% if paper.code %}  
-        <a href={{ paper.code }}>Code</a>
-        {% endif %}
-        {% if paper.viz_link %}
-        <a href={{ paper.viz_link }} target="_blank">Visualization</a>
-        {% endif %}
-        </div>
-    
-        <div id={{ paper.js_abbrev }} class="paper-abstract" style="display: none;">
-            {{ paper.abstract }}
-         </div>
-    
-            </li>
-    {% endfor %}
-    </ul>
-    
-<div class="content-header">
-<a name = 'other', style='color:inherit;text-decoration: none;'>Other Papers / Writing:</a>
+<a name = 'other', style='color:inherit;text-decoration: none;'>Public Writing:</a>
 </div>
 
 <ul style="list-style: none;" class="research_list">
