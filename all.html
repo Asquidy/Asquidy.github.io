@@ -31,7 +31,9 @@ All Work (Reverse Chronological)
   {% endif %}
   
   <div class="paper-links">
+    {% if paper.abstract %}
     <a href="javascript:void(0)" onclick="{{ paper.js }}" class="abstract-link">Abstract</a>
+    {% endif %}
     {% if paper.link %}
       {% if paper.link contains '.pdf' %}
         <a href="{{ paper.link }}">PDF</a>
@@ -56,9 +58,11 @@ All Work (Reverse Chronological)
     {% endif %}
   </div>
 
+  {% if paper.abstract %}
   <div id="{{ paper.js_abbrev }}" class="paper-abstract" style="display: none;">
     {{ paper.abstract }}
   </div>
+  {% endif %}
 </li>
 {% endfor %}
 </ul>

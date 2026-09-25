@@ -12,5 +12,5 @@ js_abbrev: 'llmmarket'
 order: -2026.1
 trueyear: 2026
 peer: 1
-published: "0"
+published: 1
 ---

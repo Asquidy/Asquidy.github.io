@@ -89,8 +89,10 @@ I am now <a href="https://empiricrafting.substack.com/">blogging</a> and co-host
     {% endif %}
     
     <div class="paper-links">
+    {% if paper.abstract %}
     <a href="javascript:void(0)" onclick={{ paper.js }} class="abstract-link">Abstract</a>
-    <a href={{ paper.link }}>Link</a> 
+    {% endif %}
+    <a href={{ paper.link }}>Link</a>
     {% if paper.chapter_link %}
     <a href={{ paper.chapter_link }} target="_blank">Book Chapter</a>
     {% endif %}
@@ -108,9 +110,11 @@ I am now <a href="https://empiricrafting.substack.com/">blogging</a> and co-host
     {% endif %}
     </div>
 
+    {% if paper.abstract %}
     <div id={{ paper.js_abbrev }} class="paper-abstract" style="display: none;">
         {{ paper.abstract }}
      </div>
+    {% endif %}
 
         </li>
 {% endfor %}

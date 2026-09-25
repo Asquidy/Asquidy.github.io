@@ -20,7 +20,9 @@
     {% endif %}
 
     <div class="paper-links">
+    {% if include.paper.abstract %}
     <a href="javascript:void(0)" onclick="toggleMe('{{ toggle_id }}'); return false;" class="abstract-link">Abstract</a>
+    {% endif %}
     {% if include.paper.link %}
     <a href={{ include.paper.link }}>PDF</a>
     {% endif %}
@@ -41,7 +43,9 @@
     {% endif %}
     </div>
 
+    {% if include.paper.abstract %}
     <div id="{{ toggle_id }}" class="paper-abstract" style="display: none;">
         {{ include.paper.abstract }}
     </div>
+    {% endif %}
 </li>

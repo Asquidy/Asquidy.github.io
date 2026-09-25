@@ -6,11 +6,11 @@ category: research
 journal: In "The Economics of Transformative AI" (University of Chicago Press, 2026)
 link: "/assets/coasean_singularity.pdf"
 chapter_link: "https://www.nber.org/books-and-chapters/economics-transformative-ai/coasean-singularity-demand-supply-and-market-design-ai-agents"
-coauthors: with <a href="#">Peyman Shahidi</a>, <a href="#">Gili Rusak</a>, <a href="#">Benjamin S. Manning</a>, and <a href="https://www.john-joseph-horton.com/">John J. Horton</a>
+coauthors: with <a href="https://peymanshahidi.github.io/">Peyman Shahidi</a>, <a href="https://gilirusak.github.io/">Gili Rusak</a>, <a href="https://www.benjaminmanning.com/">Benjamin S. Manning</a>, and <a href="https://www.john-joseph-horton.com/">John J. Horton</a>
 js: "toggleMe('coasean'); return false;"
 js_abbrev: 'coasean'
 order: -2026
-published: "0"
+published: 1
 peer: 1
 trueyear: 2026
 bibjs: "toggleMe('coasean_bib'); return false;"
