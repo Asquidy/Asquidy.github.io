@@ -768,3 +768,67 @@ li{
     transform: translateX(30px);
   }
 }
+
+/* Compact phone header so papers appear near the top of the first screen */
+@media only screen and (max-width: 480px) {
+  #name {
+    margin-bottom: 6px;
+  }
+  .span5 {
+    margin-bottom: 4px;
+  }
+  .linksbox {
+    margin-top: 0;
+    gap: 6px;
+    font-size: 15px;
+  }
+  .linksbox a {
+    margin: 0;
+    padding: 6px 10px;
+    min-height: 26px;
+    min-width: 0;
+  }
+  .theme-toggle-wrapper {
+    min-height: 38px;
+    padding: 0 6px;
+    gap: 6px;
+  }
+  .theme-icon {
+    font-size: 16px;
+  }
+  .theme-toggle {
+    width: 50px;
+    height: 26px;
+  }
+  .theme-slider:before {
+    height: 20px;
+    width: 20px;
+  }
+  .theme-toggle input:checked + .theme-slider:before {
+    transform: translateX(24px);
+  }
+  .affiliations {
+    font-size: 15px;
+    line-height: 1.4;
+    padding-top: 12px;
+    padding-bottom: 8px;
+  }
+  .research-nav {
+    margin-top: 12px;
+    margin-bottom: 4px;
+    font-size: 16px;
+    line-height: 1.4;
+  }
+  .research-nav a {
+    padding: 6px 12px;
+    margin-right: 8px;
+  }
+  .content-header {
+    margin-top: 16px;
+    padding-top: 12px;
+  }
+  .research_list {
+    margin-left: 0;
+    width: auto;
+  }
+}
